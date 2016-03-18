@@ -1,0 +1,88 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 41
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[software-properties-common])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(Exec[add-apt-repository-ppa:webupd8team/java])
+  4. (success) exec(Exec[/usr/bin/apt-get update])
+  5. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  6. (failure) assert(Exec[/usr/bin/apt-get update])
+
+=====================================================================
+1. exec(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 11.130482598 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[software-properties-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.14078247 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 7.288792276 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Apt::Ppa[ppa:webupd8team/java]/Exec[add-apt-repository-ppa:webupd8team/java]/returns: executed successfully
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    success
+Execution time: 5.075906632 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 5.312298478 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    failure
+Execution time: 124.385866333 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /var/lib/apt/periodic/update-success-stamp
+##########  CHANGE SUMMARY END  ##########
+

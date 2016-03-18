@@ -1,0 +1,18 @@
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: Archive:  /tmp/glassfish-3.1.2.2.zip
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: replace glassfish3/.org.opensolaris,pkg/catalog/stable.glassfish.org/catalog? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: (EOF or read error, treating as "[N]one" ...)
+Error: unzip /tmp/glassfish-3.1.2.2.zip returned 1 instead of one of [0]
+Error: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: change from notrun to 0 failed: unzip /tmp/glassfish-3.1.2.2.zip returned 1 instead of one of [0]
+ERROR 09:00:14.065 [citac-puppet]: Failed to apply 'Exec[unzip-downloaded]'.
+Notice: /Stage[main]/Glassfish::Install/Exec[change-ownership]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[change-ownership]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Exec[change-mode]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[change-mode]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Exec[move-glassfish3]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[move-glassfish3]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/File[remove-domain1]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/File[remove-domain1]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Anchor[glassfish::install::end]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Anchor[glassfish::install::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Path/File[/etc/profile.d/glassfish.sh]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Path/File[/etc/profile.d/glassfish.sh]: Skipping because of failed dependencies

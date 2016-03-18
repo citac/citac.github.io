@@ -1,0 +1,357 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 188
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  3. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  4. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  5. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  6. (success) assert(Package[openjdk-7-jre])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 83.233559452 seconds
+
+############## OUTPUT START ##############
+INFO  20:14:33.614 [citac-puppet]: Applying 'Package[openjdk-7-jre]'...
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+INFO  20:15:55.603 [citac-puppet]: Applied 'Package[openjdk-7-jre]'.
+DEBUG 20:15:55.606 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:55.607 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.646 [citac-puppet]: Skipping 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.647 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.649 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:15:56.650 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:15:56.650 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:15:56.651 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:15:56.651 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:15:56.653 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:15:56.653 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+DEBUG 20:15:56.655 [citac-puppet]: Skipping 'File[/etc/apt/apt.conf.d/15update-stamp]' because of single resource exec mode.
+DEBUG 20:15:56.658 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.659 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.660 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.661 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:15:56.736 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.737 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.737 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:15:56.738 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:15:56.739 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:15:56.739 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.739 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.740 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.740 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:15:56.740 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:15:56.741 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:15:56.741 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:15:56.742 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:15:56.742 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:15:56.743 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:15:56.743 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:15:56.743 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:15:56.744 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:15:56.744 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:15:56.745 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:15:56.745 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:15:56.745 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:15:56.746 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:15:56.746 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:15:56.747 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:15:56.747 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.395143261 seconds
+
+############## OUTPUT START ##############
+DEBUG 20:15:56.860 [citac-puppet]: Skipping 'Package[openjdk-7-jre]' because of single resource exec mode.
+DEBUG 20:15:56.864 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:56.864 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+INFO  20:15:57.891 [citac-puppet]: Applying 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]'...
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+INFO  20:15:59.082 [citac-puppet]: Applied 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]'.
+DEBUG 20:15:59.084 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.085 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:15:59.085 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:15:59.086 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:15:59.086 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:15:59.086 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:15:59.087 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:15:59.087 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+DEBUG 20:15:59.089 [citac-puppet]: Skipping 'File[/etc/apt/apt.conf.d/15update-stamp]' because of single resource exec mode.
+DEBUG 20:15:59.091 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.093 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.094 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.095 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:15:59.129 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.129 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.129 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:15:59.130 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:15:59.130 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:15:59.131 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.131 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.131 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.132 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:15:59.132 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:15:59.133 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:15:59.133 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:15:59.134 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:15:59.134 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:15:59.135 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:15:59.135 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:15:59.135 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:15:59.136 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:15:59.136 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:15:59.136 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:15:59.137 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:15:59.138 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:15:59.138 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:15:59.139 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:15:59.139 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:15:59.139 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.268087793 seconds
+
+############## OUTPUT START ##############
+DEBUG 20:15:59.255 [citac-puppet]: Skipping 'Package[openjdk-7-jre]' because of single resource exec mode.
+DEBUG 20:15:59.258 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:15:59.259 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.298 [citac-puppet]: Skipping 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.300 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.301 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:16:00.302 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:16:00.302 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:16:00.303 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:16:00.303 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:16:00.303 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:16:00.304 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+INFO  20:16:00.306 [citac-puppet]: Applying 'File[/etc/apt/apt.conf.d/15update-stamp]'...
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+INFO  20:16:00.311 [citac-puppet]: Applied 'File[/etc/apt/apt.conf.d/15update-stamp]'.
+DEBUG 20:16:00.314 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.316 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.317 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.317 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:16:00.396 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.397 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.397 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:16:00.398 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:16:00.398 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:16:00.399 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.399 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.400 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:00.400 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:16:00.400 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:00.401 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:00.401 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:16:00.402 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:00.402 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:16:00.403 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:00.403 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:00.404 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:00.404 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:16:00.404 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:00.405 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:00.405 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:16:00.406 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:16:00.406 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:16:00.407 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:00.407 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:00.407 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 7.190622355 seconds
+
+############## OUTPUT START ##############
+DEBUG 20:16:04.947 [citac-puppet]: Skipping 'Package[openjdk-7-jre]' because of single resource exec mode.
+DEBUG 20:16:04.950 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:04.951 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+INFO  20:16:06.022 [citac-puppet]: Applying 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]'...
+DEBUG 20:16:06.024 [strace]: Attaching strace with command 'strace -o /tmp/d20151027-7-g2dkd6/trace.txt -qq -f -e trace=file -e signal=none -p 6386'...
+INFO  20:16:06.233 [citac-puppet]: Applied 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]'.
+DEBUG 20:16:06.236 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.238 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:16:06.239 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:16:06.241 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:16:06.241 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:16:06.242 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:16:06.243 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:16:06.243 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+DEBUG 20:16:06.246 [citac-puppet]: Skipping 'File[/etc/apt/apt.conf.d/15update-stamp]' because of single resource exec mode.
+DEBUG 20:16:06.248 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.249 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.251 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.251 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:16:06.322 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.323 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.324 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:16:06.324 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:16:06.325 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:16:06.325 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.325 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.326 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:06.326 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:16:06.326 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:06.327 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:06.336 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:16:06.337 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:06.337 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:16:06.338 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:06.338 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:06.338 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:06.339 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:16:06.339 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:06.340 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:06.340 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:16:06.341 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:16:06.342 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:16:06.343 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:06.343 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:06.344 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.391568858 seconds
+
+############## OUTPUT START ##############
+DEBUG 20:16:07.703 [citac-puppet]: Skipping 'Package[openjdk-7-jre]' because of single resource exec mode.
+DEBUG 20:16:07.706 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:07.706 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.745 [citac-puppet]: Skipping 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.747 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.748 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:16:08.748 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:16:08.749 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:16:08.749 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:16:08.750 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:16:08.750 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:16:08.750 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+INFO  20:16:08.752 [citac-puppet]: Applying 'File[/etc/apt/apt.conf.d/15update-stamp]'...
+DEBUG 20:16:08.753 [strace]: Attaching strace with command 'strace -o /tmp/d20151027-7-g2dkd6/trace.txt -qq -f -e trace=file -e signal=none -p 6498'...
+INFO  20:16:08.866 [citac-puppet]: Applied 'File[/etc/apt/apt.conf.d/15update-stamp]'.
+DEBUG 20:16:08.873 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.874 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.876 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.876 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:16:08.953 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.954 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.955 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:16:08.955 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:16:08.956 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:16:08.956 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.957 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.957 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:08.957 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:16:08.958 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:08.958 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:08.959 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:16:08.959 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:08.960 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:16:08.960 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:08.960 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:08.961 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:08.961 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:16:08.961 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:08.962 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:08.962 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:16:08.963 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:16:08.963 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:16:08.964 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:08.964 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:08.964 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 2.85067822 seconds
+
+############## OUTPUT START ##############
+INFO  20:16:10.095 [citac-puppet]: Applying 'Package[openjdk-7-jre]'...
+DEBUG 20:16:10.096 [strace]: Attaching strace with command 'strace -o /tmp/d20151027-7-g2dkd6/trace.txt -qq -f -e trace=file -e signal=none -p 6609'...
+INFO  20:16:10.304 [citac-puppet]: Applied 'Package[openjdk-7-jre]'.
+DEBUG 20:16:10.308 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:10.308 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.332 [citac-puppet]: Skipping 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.333 [citac-puppet]: Skipping 'Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.334 [citac-puppet]: Skipping 'File[preferences.d]' because of single resource exec mode.
+DEBUG 20:16:11.335 [citac-puppet]: Skipping 'File[sources.list]' because of single resource exec mode.
+DEBUG 20:16:11.335 [citac-puppet]: Skipping 'File[sources.list.d]' because of single resource exec mode.
+DEBUG 20:16:11.336 [citac-puppet]: Skipping 'File[elasticsearch.list]' because of single resource exec mode.
+DEBUG 20:16:11.336 [citac-puppet]: Skipping 'File[old-proxy-file]' because of single resource exec mode.
+DEBUG 20:16:11.336 [citac-puppet]: Skipping 'File[01proxy]' because of single resource exec mode.
+DEBUG 20:16:11.337 [citac-puppet]: Skipping 'Exec[apt_update]' because of single resource exec mode.
+DEBUG 20:16:11.339 [citac-puppet]: Skipping 'File[/etc/apt/apt.conf.d/15update-stamp]' because of single resource exec mode.
+DEBUG 20:16:11.343 [citac-puppet]: Skipping 'Apt::Source[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.345 [citac-puppet]: Skipping 'Package[elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.346 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.346 [citac-puppet]: Skipping 'File[/usr/lib/systemd/system/elasticsearch.service]' because of single resource exec mode.
+DEBUG 20:16:11.421 [citac-puppet]: Skipping 'File[/var/log/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.422 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.422 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data]' because of single resource exec mode.
+DEBUG 20:16:11.423 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/bin]' because of single resource exec mode.
+DEBUG 20:16:11.424 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/plugins]' because of single resource exec mode.
+DEBUG 20:16:11.424 [citac-puppet]: Skipping 'File[/etc/default/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.424 [citac-puppet]: Skipping 'Exec[mkdir_templates_elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.425 [citac-puppet]: Skipping 'File[/etc/elasticsearch]' because of single resource exec mode.
+DEBUG 20:16:11.425 [citac-puppet]: Skipping 'File[/etc/elasticsearch/templates_import]' because of single resource exec mode.
+DEBUG 20:16:11.425 [citac-puppet]: Skipping 'File[/etc/elasticsearch/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:11.425 [citac-puppet]: Skipping 'File[/etc/elasticsearch/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:11.426 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+DEBUG 20:16:11.427 [citac-puppet]: Skipping 'Exec[mkdir_configdir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:11.427 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01]' because of single resource exec mode.
+DEBUG 20:16:11.428 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/logging.yml]' because of single resource exec mode.
+DEBUG 20:16:11.428 [citac-puppet]: Skipping 'File[/etc/elasticsearch/es-01/elasticsearch.yml]' because of single resource exec mode.
+DEBUG 20:16:11.428 [citac-puppet]: Skipping 'Exec[mkdir_datadir_elasticsearch_es-01]' because of single resource exec mode.
+DEBUG 20:16:11.429 [citac-puppet]: Skipping 'File[/usr/share/elasticsearch/data/es-01]' because of single resource exec mode.
+DEBUG 20:16:11.429 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:11.430 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:11.430 [citac-puppet]: Skipping 'File[/etc/init.d/elasticsearch-es-01]' because of single resource exec mode.
+DEBUG 20:16:11.430 [citac-puppet]: Skipping 'Augeas[defaults_es-01]' because of single resource exec mode.
+DEBUG 20:16:11.432 [citac-puppet]: Skipping 'Service[elasticsearch-instance-es-01]' because of single resource exec mode.
+DEBUG 20:16:11.433 [citac-puppet]: Skipping 'Elasticsearch::Service::Init[es-01]' because of single resource exec mode.
+DEBUG 20:16:11.433 [citac-puppet]: Skipping 'Elasticsearch::Service[es-01]' because of single resource exec mode.
+DEBUG 20:16:11.433 [citac-puppet]: Skipping 'Elasticsearch::Instance[es-01]' because of single resource exec mode.
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

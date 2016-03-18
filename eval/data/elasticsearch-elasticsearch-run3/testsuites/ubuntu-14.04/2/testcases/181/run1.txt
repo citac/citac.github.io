@@ -1,0 +1,150 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 181
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  4. (success) exec(File[elasticsearch.list])
+  5. (success) exec(File[sources.list])
+  6. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  7. (success) assert(File[elasticsearch.list])
+  8. (success) assert(File[sources.list.d])
+  9. (success) assert(File[sources.list])
+  10. (success) assert(Package[openjdk-7-jre])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 99.462676409 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.882236938 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.634004565 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 6.296908355 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.870533234 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 23.233544721 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.688205572 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.543961879 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.143067095 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 3.395690193 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,377 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 128
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  2. (success) exec(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[/etc/apt/sources.list.d/nginx.list])
+  5. (success) exec(File[preferences.d])
+  6. (success) exec(File[preferences])
+  7. (success) exec(File[sources.list])
+  8. (success) exec(Exec[apt_update])
+  9. (success) exec(Package[nginx])
+  10. (success) exec(File[/etc/nginx])
+  11. (success) exec(File[/etc/nginx/conf.d])
+  12. (success) exec(File[/etc/nginx/conf.d/default.conf])
+  13. (success) exec(File[/var/log/nginx])
+  14. (success) assert(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+  15. (success) assert(Exec[apt_update])
+  16. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  17. (success) assert(File[/etc/apt/sources.list.d/nginx.list])
+  18. (success) assert(File[/etc/nginx/conf.d/default.conf])
+  19. (success) assert(File[/etc/nginx/conf.d])
+  20. (success) assert(File[/etc/nginx])
+  21. (success) assert(File[/var/log/nginx])
+  22. (success) assert(File[preferences.d])
+  23. (success) assert(File[preferences])
+  24. (success) assert(File[sources.list.d])
+  25. (success) assert(File[sources.list])
+  26. (success) assert(Package[nginx])
+
+=====================================================================
+1. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.731816673 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 0.427672291 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.212070173 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/sources.list.d/nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.307389851 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Setting[list-nginx]/File[/etc/apt/sources.list.d/nginx.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.213952478 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.122932195 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.215623085 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219373921 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 2.353265177 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Package[nginx]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 0.319740555 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.297927221 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/etc/nginx/conf.d/default.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.279916488 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]/ensure: removed
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(File[/var/log/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 0.21705568 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. assert(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 5.209514176 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.578423015 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.504886146 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/etc/apt/sources.list.d/nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.547375365 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/etc/nginx/conf.d/default.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.420992019 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.543834921 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.638638603 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[/var/log/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.619596864 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.518063769 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 3.452368932 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.442477881 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.171559391 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.624012666 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

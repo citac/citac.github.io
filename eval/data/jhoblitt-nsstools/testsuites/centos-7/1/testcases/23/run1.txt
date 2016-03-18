@@ -1,0 +1,135 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 23
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openssl])
+  2. (success) exec(File[ca-certificates.crt])
+  3. (success) exec(File[/etc/dirsrv])
+  4. (success) exec(File[/etc/dirsrv/slapd-ldap1])
+  5. (success) exec(Package[nss-tools])
+  6. (success) exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+  7. (success) exec(Exec[create_nss_db_/etc/dirsrv/slapd-ldap1])
+  8. (success) exec(Package[nss-tools])
+  9. (success) exec(File[/etc/dirsrv/slapd-ldap1/key3.db])
+  10. (success) assert(Package[nss-tools])
+
+=====================================================================
+1. exec(Package[openssl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Packages/Package[openssl]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[ca-certificates.crt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Config/File[ca-certificates.crt]/ensure: ensure changed 'link' to 'file'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/dirsrv])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/etc/dirsrv]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[nss-tools])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/nss-password.txt]/ensure: defined content as '{md5}1a79a4d60de6718e8e5b326e338ae533'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[create_nss_db_/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/Exec[create_nss_db_/etc/dirsrv/slapd-ldap1]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[nss-tools])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/dirsrv/slapd-ldap1/key3.db])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/key3.db]/owner: owner changed 'root' to 'nobody'
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/key3.db]/group: group changed 'root' to 'nobody'
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/key3.db]/mode: mode changed '0600' to '0660'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(Package[nss-tools])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

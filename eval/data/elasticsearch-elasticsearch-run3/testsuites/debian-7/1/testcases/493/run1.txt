@@ -1,0 +1,330 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 493
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[sources.list])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[01proxy])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  7. (success) exec(File[elasticsearch.list])
+  8. (success) exec(Exec[apt_update])
+  9. (success) exec(Package[elasticsearch])
+  10. (success) exec(File[/etc/elasticsearch])
+  11. (success) exec(File[/var/log/elasticsearch])
+  12. (success) exec(File[/usr/share/elasticsearch])
+  13. (success) exec(Exec[mkdir_templates_elasticsearch])
+  14. (success) exec(File[/etc/init.d/elasticsearch])
+  15. (success) exec(File[/usr/lib/systemd/system/elasticsearch.service])
+  16. (success) exec(File[/etc/default/elasticsearch])
+  17. (success) exec(File[/usr/share/elasticsearch/bin])
+  18. (success) exec(File[/usr/share/elasticsearch/plugins])
+  19. (success) exec(File[/usr/share/elasticsearch/data])
+  20. (success) exec(File[/etc/elasticsearch/templates_import])
+  21. (success) exec(File[/etc/elasticsearch/elasticsearch.yml])
+  22. (success) exec(File[/etc/elasticsearch/logging.yml])
+  23. (success) exec(Exec[mkdir_datadir_elasticsearch_es-01])
+  24. (success) exec(File[/etc/elasticsearch/elasticsearch.yml])
+  25. (success) exec(File[/usr/share/elasticsearch/data/es-01])
+  26. (success) assert(File[/etc/elasticsearch/elasticsearch.yml])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 71.951944639 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.326661201 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.305699764 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.236109234 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.267631339 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.535339662 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.788448616 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.254021616 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 5.029662275 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Package/Package[elasticsearch]/ensure: ensure changed 'purged' to '1.4.2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.448245706 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/var/log/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.414438432 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.302239353 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.408373156 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/Exec[mkdir_templates_elasticsearch]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. exec(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.431538066 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+15. exec(File[/usr/lib/systemd/system/elasticsearch.service])
+=====================================================================
+
+Step result:    success
+Execution time: 0.305436847 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. exec(File[/etc/default/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.491552859 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/default/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+17. exec(File[/usr/share/elasticsearch/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.421649893 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+18. exec(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 0.325277462 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/plugins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+19. exec(File[/usr/share/elasticsearch/data])
+=====================================================================
+
+Step result:    success
+Execution time: 0.30363453 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/data]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+20. exec(File[/etc/elasticsearch/templates_import])
+=====================================================================
+
+Step result:    success
+Execution time: 0.305103846 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+21. exec(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.329147869 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/elasticsearch.yml]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. exec(File[/etc/elasticsearch/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.339229865 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/logging.yml]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+23. exec(Exec[mkdir_datadir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.474500883 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_datadir_elasticsearch_es-01]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+24. exec(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.30549317 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+25. exec(File[/usr/share/elasticsearch/data/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.307520432 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/usr/share/elasticsearch/data/es-01]/owner: owner changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+26. assert(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 29.238626972 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

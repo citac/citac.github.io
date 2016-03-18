@@ -1,0 +1,1013 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[unattended-upgrades])
+  2. (success) assert(Package[unattended-upgrades])
+  3. (success) exec(File[/etc/apt/apt.conf.d/10periodic])
+  4. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  5. (success) assert(Package[unattended-upgrades])
+  6. (success) exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  7. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  8. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  9. (success) assert(Package[unattended-upgrades])
+  10. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  11. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  12. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  13. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  14. (success) assert(Package[unattended-upgrades])
+  15. (success) exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  16. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  17. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  18. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  19. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  20. (success) assert(Package[unattended-upgrades])
+  21. (success) exec(File[preferences.d])
+  22. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  23. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  24. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  25. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  26. (success) assert(File[preferences.d])
+  27. (success) assert(Package[unattended-upgrades])
+  28. (success) exec(File[preferences])
+  29. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  30. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  31. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  32. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  33. (success) assert(File[preferences.d])
+  34. (success) assert(File[preferences])
+  35. (success) assert(Package[unattended-upgrades])
+  36. (success) exec(File[sources.list.d])
+  37. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  38. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  39. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  40. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  41. (success) assert(File[preferences.d])
+  42. (success) assert(File[preferences])
+  43. (success) assert(File[sources.list.d])
+  44. (success) assert(Package[unattended-upgrades])
+  45. (success) exec(File[sources.list])
+  46. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  47. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  48. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  49. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  50. (success) assert(File[preferences.d])
+  51. (success) assert(File[preferences])
+  52. (success) assert(File[sources.list.d])
+  53. (success) assert(File[sources.list])
+  54. (success) assert(Package[unattended-upgrades])
+  55. (success) exec(Exec[apt_update])
+  56. (success) assert(Exec[apt_update])
+  57. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  58. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  59. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  60. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  61. (success) assert(File[preferences.d])
+  62. (success) assert(File[preferences])
+  63. (success) assert(File[sources.list.d])
+  64. (success) assert(File[sources.list])
+  65. (success) assert(Package[unattended-upgrades])
+
+=====================================================================
+1. exec(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Package[unattended-upgrades]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[periodic]/Apt::Setting[conf-periodic]/File[/etc/apt/apt.conf.d/10periodic]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[unattended-upgrades]/Apt::Setting[conf-unattended-upgrades]/File[/etc/apt/apt.conf.d/50unattended-upgrades]/content: content changed '{md5}0428073601d9609c42a8746ffed25437' to '{md5}407e29c5e54df5b4a0b94db792b9f97a'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+37. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+46. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+51. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+52. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+53. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+54. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+55. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+56. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+57. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+58. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+59. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+60. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+61. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+62. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+63. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+64. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+65. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

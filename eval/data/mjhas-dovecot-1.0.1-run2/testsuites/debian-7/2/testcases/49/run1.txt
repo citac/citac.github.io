@@ -1,0 +1,569 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 49
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/dovecot])
+  2. (success) exec(Package[dovecot-imapd])
+  3. (success) exec(Package[dovecot-sieve])
+  4. (success) exec(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+  5. (success) exec(Package[dovecot-pgsql])
+  6. (success) exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+  7. (success) exec(File[/usr/share/augeas/lenses/dist/build.aug])
+  8. (success) exec(Exec[dovecot])
+  9. (success) exec(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+  10. (success) exec(File[/usr/share/augeas/lenses/dist/util.aug])
+  11. (success) exec(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+  12. (success) exec(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+  13. (success) assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+  14. (success) assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+  15. (success) assert(Exec[dovecot])
+  16. (success) assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+  17. (success) assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+  18. (success) assert(File[/usr/share/augeas/lenses/dist/build.aug])
+  19. (success) assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+  20. (success) assert(File[/usr/share/augeas/lenses/dist/util.aug])
+  21. (success) assert(File[/var/lib/dovecot])
+  22. (success) assert(Package[dovecot-imapd])
+  23. (success) assert(Package[dovecot-pgsql])
+  24. (success) assert(Package[dovecot-sieve])
+  25. (success) exec(Augeas[dovecot /etc/dovecot/dovecot.conf base])
+  26. (success) assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+  27. (success) assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+  28. (success) assert(Augeas[dovecot /etc/dovecot/dovecot.conf base])
+  29. (success) assert(Exec[dovecot])
+  30. (success) assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+  31. (success) assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+  32. (success) assert(File[/usr/share/augeas/lenses/dist/build.aug])
+  33. (success) assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+  34. (success) assert(File[/usr/share/augeas/lenses/dist/util.aug])
+  35. (success) assert(File[/var/lib/dovecot])
+  36. (success) assert(Package[dovecot-imapd])
+  37. (success) assert(Package[dovecot-pgsql])
+  38. (success) assert(Package[dovecot-sieve])
+
+=====================================================================
+1. exec(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 0.23941704 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/var/lib/dovecot]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 19.899167765 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot/Package[dovecot-imapd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 3.000756647 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Sieve/Package[dovecot-sieve]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.243968445 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/File[/etc/dovecot/conf.d/15-mailboxes.conf]/content: content changed '{md5}4f49ced7b3f3a758551604acabb8f0a6' to '{md5}22ef0eeb065f4c1aa1990b1af5df68c1'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.310466453 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/Package[dovecot-pgsql]/ensure: ensure changed 'purged' to 'present'
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 0.396661263 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/content: content changed '{md5}aee3a57c9c18a3b9a27fd0c4f8ce7f17' to '{md5}1bac2daadef8e82eea87cf2bf3463791'
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/mode: mode changed '0640' to '0600'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/usr/share/augeas/lenses/dist/build.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.589319787 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/build.aug]/content: content changed '{md5}26d8754dc35bc9c6f69f62804f00ac88' to '{md5}8d0632d6b10ba8767c44ffe8d8ee74cf'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 0.246945607 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.370264299 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/dovecot.aug]/ensure: defined content as '{md5}0adfd4d9b4a4fc6b2bd4aff7f40f6cd2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/usr/share/augeas/lenses/dist/util.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.395559807 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/util.aug]/content: content changed '{md5}081ddce7ba9143a6ffd4e21622b22992' to '{md5}be95cc7041de3f8902f62298be95b442'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+=====================================================================
+
+Step result:    success
+Execution time: 1.211685052 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.260681903 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfmulti[/etc/dovecot/conf.d/10-master.conf-userdblistener1]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1]/returns: executed successfully
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+=====================================================================
+
+Step result:    success
+Execution time: 8.622657699 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+=====================================================================
+
+Step result:    success
+Execution time: 5.433563142 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Exec[dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 3.284958402 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 4.378053103 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 3.917033768 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/usr/share/augeas/lenses/dist/build.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 4.68719194 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 5.427496235 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/usr/share/augeas/lenses/dist/util.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 4.770628183 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 4.1059559 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 4.915969611 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 4.664638748 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 4.785623842 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. exec(Augeas[dovecot /etc/dovecot/dovecot.conf base])
+=====================================================================
+
+Step result:    success
+Execution time: 1.373894945 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Base/Dovecot::Config::Dovecotcfmulti[base]/Augeas[dovecot /etc/dovecot/dovecot.conf base]/returns: executed successfully
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+26. assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0])
+=====================================================================
+
+Step result:    success
+Execution time: 8.918398448 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1])
+=====================================================================
+
+Step result:    success
+Execution time: 5.170045939 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(Augeas[dovecot /etc/dovecot/dovecot.conf base])
+=====================================================================
+
+Step result:    success
+Execution time: 5.685664481 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(Exec[dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 3.444437054 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 4.243977316 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 4.385811478 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[/usr/share/augeas/lenses/dist/build.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 4.944802385 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 4.952929419 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(File[/usr/share/augeas/lenses/dist/util.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 4.570458332 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 3.905427577 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 4.527432932 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+37. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 4.868106696 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 5.151438703 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

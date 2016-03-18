@@ -1,0 +1,75 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 22
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[supervisor])
+  2. (success) exec(File[/etc/supervisor/conf.d])
+  3. (success) exec(File[/etc/default/supervisor])
+  4. (success) exec(File[/etc/supervisor/conf.d/04-supervisorctl.conf])
+  5. (success) assert(File[/etc/default/supervisor])
+
+=====================================================================
+1. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.498527285 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisor/Package[supervisor]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/supervisor/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.10610611 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 0.20187356 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisor/File[/etc/default/supervisor]/content: content changed '{md5}67439cde76c4bdea63553b8893172e53' to '{md5}5dabd63457e4b614af0910aabd0196e2'
+Notice: /Stage[main]/Supervisor/Service[supervisor]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/supervisor/conf.d/04-supervisorctl.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.138152701 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisor/File[/etc/supervisor/conf.d/04-supervisorctl.conf]/ensure: created
+Notice: /Stage[main]/Supervisor/Service[supervisor]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.001106856 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

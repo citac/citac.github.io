@@ -1,0 +1,318 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 171
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[01proxy])
+  3. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  4. (success) exec(File[sources.list.d])
+  5. (success) exec(File[elasticsearch.list])
+  6. (success) exec(File[old-proxy-file])
+  7. (success) exec(File[sources.list])
+  8. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  9. (success) exec(Exec[apt_update])
+  10. (success) exec(Package[elasticsearch])
+  11. (success) exec(Exec[mkdir_templates_elasticsearch])
+  12. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  13. (success) assert(Exec[apt_update])
+  14. (success) assert(Exec[mkdir_templates_elasticsearch])
+  15. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  16. (success) assert(File[01proxy])
+  17. (success) assert(File[elasticsearch.list])
+  18. (success) assert(File[old-proxy-file])
+  19. (success) assert(File[sources.list.d])
+  20. (success) assert(File[sources.list])
+  21. (success) assert(Package[elasticsearch])
+  22. (success) assert(Package[openjdk-7-jre])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 71.258978825 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.331738701 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.592063537 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.382995744 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.786378444 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.259674335 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.262141686 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 0.268893927 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.261818439 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 3.789401322 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Package/Package[elasticsearch]/ensure: ensure changed 'purged' to '1.4.2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.453836334 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/Exec[mkdir_templates_elasticsearch]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 34.260381308 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.988948067 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.387154799 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.750323465 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.034556507 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.979361705 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.995335355 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.726728062 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.958935918 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.781762285 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 2.463649942 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

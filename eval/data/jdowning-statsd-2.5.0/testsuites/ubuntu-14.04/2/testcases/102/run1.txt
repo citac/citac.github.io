@@ -1,0 +1,158 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 102
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[apt-transport-https])
+  2. (success) exec(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+  3. (success) exec(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+  4. (success) exec(File[sources.list.d])
+  5. (success) exec(File[/etc/apt/sources.list.d/nodesource.list])
+  6. (success) exec(Package[npm])
+  7. (success) exec(File[preferences.d])
+  8. (success) assert(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+  9. (skipped) assert(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+  10. (skipped) assert(File[/etc/apt/sources.list.d/nodesource.list])
+  11. (skipped) assert(File[preferences.d])
+  12. (skipped) assert(File[sources.list.d])
+  13. (skipped) assert(Package[apt-transport-https])
+  14. (skipped) assert(Package[npm])
+
+=====================================================================
+1. exec(Package[apt-transport-https])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[apt-transport-https]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nodejs::Repo::Nodesource::Apt/Apt::Source[nodesource]/Apt::Key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource]/Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/sources.list.d/nodesource.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nodejs::Repo::Nodesource::Apt/Apt::Source[nodesource]/Apt::Setting[list-nodesource]/File[/etc/apt/sources.list.d/nodesource.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[npm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(File[/etc/apt/sources.list.d/nodesource.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Package[apt-transport-https])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Package[npm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

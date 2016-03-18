@@ -1,0 +1,63 @@
+Error: Execution of '/usr/bin/apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62' returned 2: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.iP5ZdhmegS --trustdb-name /etc/apt//trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-security-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-stable.gpg --keyserver keyserver.ubuntu.com --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
+gpg: requesting key 7BD9BF62 from hkp server keyserver.ubuntu.com
+gpgkeys: key 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 not found on keyserver
+gpg: no valid OpenPGP data found.
+gpg: Total number processed: 0
+Error: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/ensure: change from absent to present failed: Execution of '/usr/bin/apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62' returned 2: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.iP5ZdhmegS --trustdb-name /etc/apt//trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-security-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-stable.gpg --keyserver keyserver.ubuntu.com --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
+gpg: requesting key 7BD9BF62 from hkp server keyserver.ubuntu.com
+gpgkeys: key 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 not found on keyserver
+gpg: no valid OpenPGP data found.
+gpg: Total number processed: 0
+ERROR 00:31:38.749 [citac-puppet]: Failed to apply 'Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]'.
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/Anchor[apt_key 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 present]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/Anchor[apt_key 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Setting[list-nginx]/File[/etc/apt/sources.list.d/nginx.list]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Setting[list-nginx]/File[/etc/apt/sources.list.d/nginx.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Package[nginx]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Package[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/log/nginx]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/log/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt_last]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt_last]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Service/Service[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx/Anchor[nginx::end]: Dependency Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx/Anchor[nginx::end]: Skipping because of failed dependencies

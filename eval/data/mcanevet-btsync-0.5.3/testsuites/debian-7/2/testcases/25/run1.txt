@@ -1,0 +1,260 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 25
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+  2. (success) exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[/etc/apt/sources.list.d/btsync.list])
+  5. (success) exec(Exec[/usr/bin/apt-get update])
+  6. (success) assert(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+  7. (success) assert(Exec[/usr/bin/apt-get update])
+  8. (success) assert(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+  9. (success) assert(File[/etc/apt/sources.list.d/btsync.list])
+  10. (success) assert(File[sources.list.d])
+  11. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  12. (success) assert(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+  13. (failure) assert(Exec[/usr/bin/apt-get update])
+  14. (success) assert(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+  15. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  16. (success) assert(File[/etc/apt/sources.list.d/btsync.list])
+  17. (success) assert(File[sources.list.d])
+
+=====================================================================
+1. exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.215815208 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 1.289469664 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Apt_key[Add key: 6BF18B15 from Apt::Source btsync]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.324203075 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/sources.list.d/btsync.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.964987988 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Setting[list-btsync]/File[/etc/apt/sources.list.d/btsync.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.551533788 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 2.283973357 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    success
+Execution time: 5.229079418 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.837183438 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/etc/apt/sources.list.d/btsync.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.159805618 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.202591726 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.587382719 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 2.613915461 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.974772267 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /var/lib/apt/periodic/update-success-stamp
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.858623548 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.307852073 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/apt/sources.list.d/btsync.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.069054153 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.136218419 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

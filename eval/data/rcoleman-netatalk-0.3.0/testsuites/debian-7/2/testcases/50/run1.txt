@@ -1,0 +1,490 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 50
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+  5. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+  6. (success) exec(File[/var/lib/puppet/concat/bin])
+  7. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  8. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+  9. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+  10. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+  11. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+  12. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+  13. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+  14. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+  15. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+  16. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+  17. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+  18. (success) assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  19. (success) assert(File[/var/lib/puppet/concat/bin])
+  20. (success) assert(File[/var/lib/puppet/concat])
+  21. (success) exec(Exec[concat_/etc/netatalk/afpd.conf])
+  22. (success) assert(Exec[concat_/etc/netatalk/afpd.conf])
+  23. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+  24. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+  25. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+  26. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+  27. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+  28. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+  29. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+  30. (success) assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  31. (success) assert(File[/var/lib/puppet/concat/bin])
+  32. (success) assert(File[/var/lib/puppet/concat])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153195917 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.154304007 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[servers]/File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf]/ensure: created
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 0.172255586 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[servers]/File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments]/ensure: created
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.161394166 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[servers]/File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.249388212 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat::Fragment[afpd_conf]/File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf]/ensure: defined content as '{md5}4b15e4cb311593b71377b4f0ae15cfe3'
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.157177122 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.252525059 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.rb]/ensure: defined content as '{md5}b684db0eac243553a6a79365119a363d'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+=====================================================================
+
+Step result:    success
+Execution time: 0.333804575 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[volumes]/File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default]/ensure: created
+Notice: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]/returns: /var/lib/puppet/concat/bin/concatfragments.rb:106:in `<main>': Cannot access the fragments directory (RuntimeError)
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: Failed to call refresh: /var/lib/puppet/concat/bin/concatfragments.rb -o "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default" returned 1 instead of one of [0]
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: /var/lib/puppet/concat/bin/concatfragments.rb -o "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default" returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 0.339727858 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[volumes]/File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments]/ensure: created
+Notice: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]/returns: /var/lib/puppet/concat/bin/concatfragments.rb:112:in `<main>': The fragments directory is empty, cowardly refusing to make empty config files (RuntimeError)
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: Failed to call refresh: /var/lib/puppet/concat/bin/concatfragments.rb -o "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default" returned 1 instead of one of [0]
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: /var/lib/puppet/concat/bin/concatfragments.rb -o "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default" returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+=====================================================================
+
+Step result:    success
+Execution time: 0.387806447 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat::Fragment[volumes_default]/File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default]/ensure: defined content as '{md5}db0c379c11ce402ad68d7b2672a15b1d'
+Notice: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+=====================================================================
+
+Step result:    success
+Execution time: 4.804592233 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.209661801 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+=====================================================================
+
+Step result:    success
+Execution time: 2.35473209 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 2.202129355 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.266767458 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.283494118 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.361829851 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 3.615162137 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.805838682 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.756498699 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(Exec[concat_/etc/netatalk/afpd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.410805707 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[servers]/Exec[concat_/etc/netatalk/afpd.conf]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Exec[concat_/etc/netatalk/afpd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 5.264985584 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments/00_volumes_default])
+=====================================================================
+
+Step result:    success
+Execution time: 3.559160567 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.537034833 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+=====================================================================
+
+Step result:    success
+Execution time: 2.4134856 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 2.607451647 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments/01_afpd_conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.409693539 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.593775682 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(File[/var/lib/puppet/concat/_etc_netatalk_afpd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.530308631 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 3.400473464 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.404993561 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.5041172 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

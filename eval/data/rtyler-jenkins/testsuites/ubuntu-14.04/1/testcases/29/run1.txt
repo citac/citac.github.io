@@ -1,0 +1,61 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 29
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[java])
+  2. (success) exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+  3. (success) exec(Exec[update-java-alternatives])
+  4. (success) assert(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+
+=====================================================================
+1. exec(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jenkins::Repo::Debian/Apt::Source[jenkins]/Apt::Key[Add key: D50582E6 from Apt::Source jenkins]/Apt_key[Add key: D50582E6 from Apt::Source jenkins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[update-java-alternatives])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,50 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/tmp/test.txt])
+  2. (success) exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+  3. (failure) assert(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+
+=====================================================================
+1. exec(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.052722516 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/tmp/test.txt]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+=====================================================================
+
+Step result:    success
+Execution time: 0.082233453 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.431353078 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /tmp/test.txt
+##########  CHANGE SUMMARY END  ##########
+

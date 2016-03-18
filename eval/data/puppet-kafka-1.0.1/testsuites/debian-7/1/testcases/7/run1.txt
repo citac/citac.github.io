@@ -1,0 +1,97 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 7
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[wget])
+  2. (success) exec(Group[kafka])
+  3. (success) exec(User[kafka])
+  4. (success) exec(File[/var/lib/kafka])
+  5. (success) exec(Package[java])
+  6. (success) exec(Exec[download-kafka-package])
+  7. (success) assert(Package[java])
+
+=====================================================================
+1. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.090901521 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.133075649 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.138280145 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.103854147 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time: 129.878379164 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.581764112 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time: 56.067009075 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

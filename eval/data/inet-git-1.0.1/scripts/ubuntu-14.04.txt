@@ -1,0 +1,13 @@
+# https://forge.puppetlabs.com/inet/git
+
+class { 'git':
+    git_config => {
+        "color.ui" => {
+            value => 'auto',
+        }
+    }
+}
+
+git::config { 'user.name':
+  value => 'oliver',
+}

@@ -1,0 +1,530 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 29
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) assert(File[sources.list.d])
+  3. (success) exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  4. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  5. (success) assert(File[sources.list.d])
+  6. (failure) exec(Package[php5-common])
+  7. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  8. (skipped) assert(File[sources.list.d])
+  9. (skipped) assert(Package[php5-common])
+  10. (skipped) exec(Package[php5-cli])
+  11. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  12. (skipped) assert(File[sources.list.d])
+  13. (skipped) assert(Package[php5-cli])
+  14. (skipped) assert(Package[php5-common])
+  15. (skipped) exec(Package[php5-fpm])
+  16. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  17. (skipped) assert(File[sources.list.d])
+  18. (skipped) assert(Package[php5-cli])
+  19. (skipped) assert(Package[php5-common])
+  20. (skipped) assert(Package[php5-fpm])
+  21. (skipped) exec(File[/etc/php5/fpm/pool.d])
+  22. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  23. (skipped) assert(File[/etc/php5/fpm/pool.d])
+  24. (skipped) assert(File[sources.list.d])
+  25. (skipped) assert(Package[php5-cli])
+  26. (skipped) assert(Package[php5-common])
+  27. (skipped) assert(Package[php5-fpm])
+  28. (skipped) exec(File[/etc/php5/fpm/pool.d/www.conf])
+  29. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  30. (skipped) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  31. (skipped) assert(File[/etc/php5/fpm/pool.d])
+  32. (skipped) assert(File[sources.list.d])
+  33. (skipped) assert(Package[php5-cli])
+  34. (skipped) assert(Package[php5-common])
+  35. (skipped) assert(Package[php5-fpm])
+  36. (skipped) exec(File[/etc/php5/fpm/php-fpm.conf])
+  37. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  38. (skipped) assert(File[/etc/php5/fpm/php-fpm.conf])
+  39. (skipped) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  40. (skipped) assert(File[/etc/php5/fpm/pool.d])
+  41. (skipped) assert(File[sources.list.d])
+  42. (skipped) assert(Package[php5-cli])
+  43. (skipped) assert(Package[php5-common])
+  44. (skipped) assert(Package[php5-fpm])
+  45. (skipped) exec(Service[php5-fpm])
+  46. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  47. (skipped) assert(File[/etc/php5/fpm/php-fpm.conf])
+  48. (skipped) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  49. (skipped) assert(File[/etc/php5/fpm/pool.d])
+  50. (skipped) assert(File[sources.list.d])
+  51. (skipped) assert(Package[php5-cli])
+  52. (skipped) assert(Package[php5-common])
+  53. (skipped) assert(Package[php5-fpm])
+  54. (skipped) assert(Service[php5-fpm])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.199377596 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 5.217399881 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.101501179 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[dotdeb-wheezy]/Apt::Setting[list-dotdeb-wheezy]/File[/etc/apt/sources.list.d/dotdeb-wheezy.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 5.207043429 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.536076595 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Package[php5-common])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.009559537 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-common' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  lsof psmisc ucf
+The following NEW packages will be installed:
+  lsof php5-common psmisc ucf
+0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1142 kB of archives.
+After this operation, 2281 kB of additional disk space will be used.
+WARNING: The following packages cannot be authenticated!
+  php5-common
+E: There are problems and -y was used without --force-yes
+Error: /Stage[main]/Php::Packages/Package[php5-common]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-common' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  lsof psmisc ucf
+The following NEW packages will be installed:
+  lsof php5-common psmisc ucf
+0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1142 kB of archives.
+After this operation, 2281 kB of additional disk space will be used.
+WARNING: The following packages cannot be authenticated!
+  php5-common
+E: There are problems and -y was used without --force-yes
+ERROR 02:03:34.281 [citac-puppet]: Failed to apply 'Package[php5-common]'.
+Notice: /Stage[main]/Php::Composer/Exec[download composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer/Exec[download composer]: Skipping because of failed dependencies
+Notice: /Package[php5-fpm]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Skipping because of failed dependencies
+Notice: /Package[php-pear]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php-pear]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Skipping because of failed dependencies
+Notice: /Package[php5-dev]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php5-dev]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php/Anchor[php::end]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php/Anchor[php::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. exec(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. exec(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. exec(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+30. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+31. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+32. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+33. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+34. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+35. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+36. exec(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+37. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+38. assert(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+39. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+40. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+41. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+42. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+43. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+44. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+45. exec(Service[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+46. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+47. assert(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+48. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+49. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+50. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+51. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+52. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+53. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+54. assert(Service[php5-fpm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

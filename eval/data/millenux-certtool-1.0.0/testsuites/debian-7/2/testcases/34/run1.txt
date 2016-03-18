@@ -1,0 +1,233 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 34
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[gnutls-bin])
+  2. (success) exec(File[/etc/ssl/certs])
+  3. (success) exec(File[/etc/ssl/private])
+  4. (success) exec(Exec[certtool-key-mail.puppet-certtool.test])
+  5. (success) exec(File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg])
+  6. (success) exec(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+  7. (success) exec(Exec[certtool-csr-mail.puppet-certtool.test])
+  8. (success) exec(File[/etc/ssl/certs/certtool-TestCA.cfg])
+  9. (success) assert(Exec[certtool-csr-mail.puppet-certtool.test])
+  10. (success) assert(Exec[certtool-key-mail.puppet-certtool.test])
+  11. (success) assert(File[/etc/ssl/certs/certtool-TestCA.cfg])
+  12. (success) assert(File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg])
+  13. (success) assert(File[/etc/ssl/certs])
+  14. (success) assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+  15. (success) assert(File[/etc/ssl/private])
+  16. (success) assert(Package[gnutls-bin])
+
+=====================================================================
+1. exec(Package[gnutls-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 2.426611874 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Certtool/Package[gnutls-bin]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/ssl/certs])
+=====================================================================
+
+Step result:    success
+Execution time: 0.143254315 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    success
+Execution time: 0.142021007 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    success
+Execution time: 0.467081397 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-key-mail.puppet-certtool.test]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg])
+=====================================================================
+
+Step result:    success
+Execution time: 0.155781585 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg]/ensure: defined content as '{md5}7f57f178e33040adb568bfd1a649c5ce'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.14593627 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[certtool-csr-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    success
+Execution time: 0.198990614 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-csr-mail.puppet-certtool.test]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/etc/ssl/certs/certtool-TestCA.cfg])
+=====================================================================
+
+Step result:    success
+Execution time: 0.163987134 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/certs/certtool-TestCA.cfg]/ensure: defined content as '{md5}0e2dbc7b3045d3c8646f7bfa931948bc'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Exec[certtool-csr-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    success
+Execution time: 4.959256257 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    success
+Execution time: 3.291395466 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/ssl/certs/certtool-TestCA.cfg])
+=====================================================================
+
+Step result:    success
+Execution time: 3.348223185 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg])
+=====================================================================
+
+Step result:    success
+Execution time: 3.279065407 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/etc/ssl/certs])
+=====================================================================
+
+Step result:    success
+Execution time: 2.603225376 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+=====================================================================
+
+Step result:    success
+Execution time: 3.264892443 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    success
+Execution time: 3.038007137 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Package[gnutls-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.569213073 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,171 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 518
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[sources.list])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[01proxy])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  7. (success) exec(File[elasticsearch.list])
+  8. (success) exec(Exec[apt_update])
+  9. (success) exec(Package[elasticsearch])
+  10. (success) exec(File[/usr/share/elasticsearch])
+  11. (success) exec(File[/etc/init.d/elasticsearch])
+  12. (success) exec(File[/usr/share/elasticsearch/data])
+  13. (success) assert(File[/etc/init.d/elasticsearch])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 74.778011792 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.357514762 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.356132054 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.360501483 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.379338292 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.528060732 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.59497436 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.306379512 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 4.03992087 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Package/Package[elasticsearch]/ensure: ensure changed 'purged' to '1.4.2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.498615802 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.495590771 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/usr/share/elasticsearch/data])
+=====================================================================
+
+Step result:    success
+Execution time: 0.501843261 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/data]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 26.587120055 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

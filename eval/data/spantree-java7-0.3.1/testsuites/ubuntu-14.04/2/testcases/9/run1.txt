@@ -1,0 +1,392 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 9
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(File[preferences.d])
+  3. (success) exec(Package[software-properties-common])
+  4. (success) exec(Exec[add-apt-repository-ppa:webupd8team/java])
+  5. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  6. (success) exec(File[preferences])
+  7. (success) exec(File[sources.list])
+  8. (success) exec(Exec[apt_update])
+  9. (success) assert(Exec[add-apt-repository-ppa:webupd8team/java])
+  10. (success) assert(Exec[apt_update])
+  11. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  12. (success) assert(File[preferences.d])
+  13. (success) assert(File[preferences])
+  14. (success) assert(File[sources.list.d])
+  15. (success) assert(File[sources.list])
+  16. (success) assert(Package[software-properties-common])
+  17. (success) exec(File[/tmp/java.preseed])
+  18. (success) assert(Exec[add-apt-repository-ppa:webupd8team/java])
+  19. (success) assert(Exec[apt_update])
+  20. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  21. (success) assert(File[/tmp/java.preseed])
+  22. (success) assert(File[preferences.d])
+  23. (success) assert(File[preferences])
+  24. (success) assert(File[sources.list.d])
+  25. (success) assert(File[sources.list])
+  26. (success) assert(Package[software-properties-common])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.093727578 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.097940945 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 11.221276139 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[software-properties-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 7.399423837 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Apt::Ppa[ppa:webupd8team/java]/Exec[add-apt-repository-ppa:webupd8team/java]/returns: executed successfully
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 5.779418019 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 6.042012616 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.092964213 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.092704023 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 2.38238158 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.649751928 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.637625361 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.185635169 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 1.727772835 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.631285451 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.674445501 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 1.851631168 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. exec(File[/tmp/java.preseed])
+=====================================================================
+
+Step result:    success
+Execution time: 0.248775921 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/File[/tmp/java.preseed]/ensure: defined content as '{md5}4f7ef454a73ea3f105f61e45176da36b'
+##############  OUTPUT END  ##############
+
+=====================================================================
+18. assert(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 2.481085183 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.611786105 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.610478223 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[/tmp/java.preseed])
+=====================================================================
+
+Step result:    success
+Execution time: 1.74513453 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.641389563 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 1.619453091 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.679288473 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.672696107 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 2.183293349 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

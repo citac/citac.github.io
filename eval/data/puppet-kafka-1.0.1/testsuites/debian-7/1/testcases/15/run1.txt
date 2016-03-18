@@ -1,0 +1,121 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 15
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[wget])
+  2. (success) exec(Group[kafka])
+  3. (success) exec(User[kafka])
+  4. (success) exec(File[/var/lib/kafka])
+  5. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  6. (success) exec(Exec[download-kafka-package])
+  7. (success) exec(Group[kafka])
+  8. (success) exec(Exec[untar-kafka-package])
+  9. (success) assert(Group[kafka])
+
+=====================================================================
+1. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.12091601 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.22309605 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.250025781 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.176976746 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.175775865 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.673137264 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153183233 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.420094185 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[untar-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 2.530318594 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

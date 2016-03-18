@@ -1,0 +1,69 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 253
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[python-memcache])
+  2. (success) exec(Package[python-cairo])
+  3. (success) assert(Package[python-cairo])
+  4. (skipped) assert(Package[python-memcache])
+
+=====================================================================
+1. exec(Package[python-memcache])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-memcache]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[python-cairo])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-cairo]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(Package[python-cairo])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[python-memcache])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

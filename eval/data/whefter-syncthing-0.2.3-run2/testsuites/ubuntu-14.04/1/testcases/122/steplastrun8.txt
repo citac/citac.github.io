@@ -1,0 +1,23 @@
+Error: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install syncthing' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package syncthing
+Error: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: change from purged to latest failed: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install syncthing' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package syncthing
+ERROR 15:31:22.898 [citac-puppet]: Failed to apply 'Package[syncthing]'.
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/Service[syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/Service[syncthing]: Skipping because of failed dependencies

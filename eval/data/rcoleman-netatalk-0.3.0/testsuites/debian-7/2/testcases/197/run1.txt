@@ -1,0 +1,123 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 197
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/bin])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat])
+  5. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+  7. (success) assert(File[/var/lib/puppet/concat/bin])
+  8. (success) assert(File[/var/lib/puppet/concat])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.143951333 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.150715417 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+=====================================================================
+
+Step result:    success
+Execution time: 0.151587673 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[volumes]/File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default]/ensure: created
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Netatalk/Concat[volumes]/Exec[concat_/etc/netatalk/AppleVolumes.default]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.151093586 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Concat[volumes]/File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 4.381876419 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_netatalk_AppleVolumes.default])
+=====================================================================
+
+Step result:    success
+Execution time: 2.547449216 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.316757979 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.45552947 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 76
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  3. (success) exec(File[logstash.list])
+  4. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  5. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  6. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  7. (success) assert(File[logstash.list])
+  8. (success) assert(File[sources.list.d])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.186481029 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 0.744034195 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/Apt::Key[Add key: D88E42B4 from Apt::Source logstash]/Apt_key[Add key: D88E42B4 from Apt::Source logstash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.489869532 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/File[logstash.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 0.315697774 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 5.712852062 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.883119795 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.86778899 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.839441392 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

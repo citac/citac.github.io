@@ -1,0 +1,16 @@
+exec { 'create archive':
+    command => 'tar -cf /tmp/archive.tar /etc/hosts /etc/hostname',
+    creates => '/tmp/archive.tar',
+    path    => '/bin:/usr/bin'
+}
+->
+exec { 'extract archive': 
+    command => 'tar -xf /tmp/archive.tar -C /tmp',
+    creates => '/tmp/etc',
+    path    => '/bin:/usr/bin'
+}
+->
+file { 'delete archive':
+    path    => '/tmp/archive.tar',
+    ensure  => absent
+}

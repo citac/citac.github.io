@@ -1,0 +1,66 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 66
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  2. (success) exec(Package[software-properties-common])
+  3. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  4. (success) assert(Package[software-properties-common])
+
+=====================================================================
+1. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 6.985101785 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 13.600635564 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[software-properties-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.329452421 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 2.195672454 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

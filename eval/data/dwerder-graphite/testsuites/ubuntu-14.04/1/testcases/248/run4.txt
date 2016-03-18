@@ -1,0 +1,373 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 248
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[python-pip])
+  2. (success) exec(Package[python-dev])
+  3. (success) exec(Package[python-cairo])
+  4. (failure) exec(Package[python-django])
+  5. (skipped) exec(Package[python-ldap])
+  6. (skipped) exec(Package[python-memcache])
+  7. (skipped) exec(Package[python-mysqldb])
+  8. (skipped) exec(Package[python-psycopg2])
+  9. (skipped) exec(Package[python-simplejson])
+  10. (skipped) exec(Package[python-sqlite])
+  11. (skipped) exec(Package[python-twisted])
+  12. (skipped) exec(Package[apache2])
+  13. (skipped) exec(Package[django-tagging])
+  14. (skipped) exec(Package[twisted])
+  15. (skipped) exec(Package[txamqp])
+  16. (skipped) exec(Package[graphite-web])
+  17. (skipped) exec(Package[carbon])
+  18. (skipped) exec(Package[whisper])
+  19. (skipped) exec(File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info])
+  20. (skipped) exec(File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info])
+  21. (skipped) exec(Package[libapache2-mod-wsgi])
+  22. (skipped) exec(File[/opt/graphite/webapp/graphite/local_settings.py])
+  23. (skipped) exec(Exec[Initial django db creation])
+  24. (skipped) exec(Exec[Chown graphite for web user])
+  25. (skipped) exec(File[/etc/apache2/ports.conf])
+  26. (skipped) exec(File[/etc/apache2/sites-available/graphite.conf])
+  27. (skipped) exec(File[/opt/graphite/conf/graphite.wsgi])
+  28. (skipped) exec(File[/etc/apache2/sites-enabled/graphite.conf])
+  29. (skipped) assert(File[/opt/graphite/conf/graphite.wsgi])
+
+=====================================================================
+1. exec(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-pip]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-dev]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[python-cairo])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-cairo]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[python-django])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python-django' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libjs-jquery
+Suggested packages:
+  javascript-common python-psycopg2 python-psycopg python-mysqldb python-flup
+  python-sqlite python-yaml geoip-database-contrib gettext python-django-doc
+  ipython bpython libgdal1
+The following NEW packages will be installed:
+  libjs-jquery python-django
+0 upgraded, 2 newly installed, 0 to remove and 9 not upgraded.
+Need to get 2292 kB of archives.
+After this operation, 27.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 [78.8 kB]
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.91.23 80]
+Fetched 78.8 kB in 0s (233 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-django/python-django_1.6.1-2ubuntu0.8_all.deb  404  Not Found [IP: 91.189.91.23 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Graphite::Install/Package[python-django]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python-django' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libjs-jquery
+Suggested packages:
+  javascript-common python-psycopg2 python-psycopg python-mysqldb python-flup
+  python-sqlite python-yaml geoip-database-contrib gettext python-django-doc
+  ipython bpython libgdal1
+The following NEW packages will be installed:
+  libjs-jquery python-django
+0 upgraded, 2 newly installed, 0 to remove and 9 not upgraded.
+Need to get 2292 kB of archives.
+After this operation, 27.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 [78.8 kB]
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.91.23 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.91.23 80]
+Fetched 78.8 kB in 0s (233 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-django/python-django_1.6.1-2ubuntu0.8_all.deb  404  Not Found [IP: 91.189.91.23 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 00:30:27.123 [citac-puppet]: Failed to apply 'Package[python-django]'.
+Notice: /Package[django-tagging]: Dependency Package[python-django] has failures: true
+Warning: /Package[django-tagging]: Skipping because of failed dependencies
+Notice: /Package[twisted]: Dependency Package[python-django] has failures: true
+Warning: /Package[twisted]: Skipping because of failed dependencies
+Notice: /Package[txamqp]: Dependency Package[python-django] has failures: true
+Warning: /Package[txamqp]: Skipping because of failed dependencies
+Notice: /Package[graphite-web]: Dependency Package[python-django] has failures: true
+Warning: /Package[graphite-web]: Skipping because of failed dependencies
+Notice: /Package[carbon]: Dependency Package[python-django] has failures: true
+Warning: /Package[carbon]: Skipping because of failed dependencies
+Notice: /Package[whisper]: Dependency Package[python-django] has failures: true
+Warning: /Package[whisper]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-schemas.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-schemas.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/carbon.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/carbon.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-aggregation.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-aggregation.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/webapp/graphite/local_settings.py]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/webapp/graphite/local_settings.py]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/whitelist.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/whitelist.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/bin/carbon-logrotate.sh]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/bin/carbon-logrotate.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Cron[Rotate carbon logs]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Cron[Rotate carbon logs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/etc/init.d/carbon-cache]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/etc/init.d/carbon-cache]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Service[carbon-cache]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Service[carbon-cache]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/graphite.wsgi]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/graphite.wsgi]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/ports.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/ports.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-available/graphite.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-available/graphite.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-enabled/graphite.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-enabled/graphite.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/Service[apache2]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/Service[apache2]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/blacklist.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/blacklist.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite/Anchor[graphite::end]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite/Anchor[graphite::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[python-ldap])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. exec(Package[python-memcache])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(Package[python-mysqldb])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. exec(Package[python-psycopg2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. exec(Package[python-simplejson])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(Package[python-sqlite])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. exec(Package[python-twisted])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. exec(Package[apache2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. exec(Package[django-tagging])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. exec(Package[twisted])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. exec(Package[txamqp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. exec(Package[graphite-web])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. exec(Package[carbon])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. exec(Package[whisper])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. exec(File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. exec(File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. exec(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. exec(File[/opt/graphite/webapp/graphite/local_settings.py])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. exec(Exec[Initial django db creation])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. exec(Exec[Chown graphite for web user])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. exec(File[/etc/apache2/ports.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. exec(File[/etc/apache2/sites-available/graphite.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. exec(File[/opt/graphite/conf/graphite.wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. exec(File[/etc/apache2/sites-enabled/graphite.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(File[/opt/graphite/conf/graphite.wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

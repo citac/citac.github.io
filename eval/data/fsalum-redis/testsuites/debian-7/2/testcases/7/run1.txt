@@ -1,0 +1,126 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 7
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[redis])
+  2. (success) exec(File[/etc/logrotate.d/redis-server])
+  3. (success) assert(File[/etc/logrotate.d/redis-server])
+  4. (success) assert(Package[redis])
+  5. (success) exec(File[/etc/redis/redis.conf])
+  6. (success) assert(File[/etc/logrotate.d/redis-server])
+  7. (success) assert(File[/etc/redis/redis.conf])
+  8. (success) assert(Package[redis])
+
+=====================================================================
+1. exec(Package[redis])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Redis/Package[redis]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/logrotate.d/redis-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Redis/File[/etc/logrotate.d/redis-server]/content: content changed '{md5}06755b99ef70d62a56cff94cbfc36de7' to '{md5}74d711e8f1af7d1133fc9c556185108a'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/logrotate.d/redis-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[redis])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(File[/etc/redis/redis.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Redis/File[/etc/redis/redis.conf]/content: content changed '{md5}e96569eb8c04d6cd087399dc561e0272' to '{md5}acf1349c404355108d292df99dee06ed'
+Notice: /Stage[main]/Redis/Service[redis]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/etc/logrotate.d/redis-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/etc/redis/redis.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[redis])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

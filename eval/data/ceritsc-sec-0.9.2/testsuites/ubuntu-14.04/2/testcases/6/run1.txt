@@ -1,0 +1,90 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[sec])
+  2. (success) exec(File[/etc/sec/])
+  3. (success) assert(File[/etc/sec/])
+  4. (skipped) assert(Package[sec])
+  5. (skipped) exec(File[/etc/sec.conf])
+  6. (skipped) assert(File[/etc/sec.conf])
+  7. (skipped) assert(File[/etc/sec/])
+  8. (skipped) assert(Package[sec])
+
+=====================================================================
+1. exec(Package[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Install/Package[sec]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/sec/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Config/File[/etc/sec/]/ensure: created
+Notice: /Stage[main]/Sec::Service/Service[sec]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/sec/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[sec])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(File[/etc/sec.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(File[/etc/sec.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[/etc/sec/])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[sec])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

@@ -1,0 +1,181 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 32
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[postfix])
+  2. (success) exec(Exec[inet_interfaces])
+  3. (success) exec(Exec[myhostname])
+  4. (success) exec(Exec[mydestination])
+  5. (success) exec(Exec[relayhost])
+  6. (success) exec(Package[libsasl2-modules])
+  7. (failure) assert(Exec[inet_interfaces])
+  8. (failure) assert(Exec[mydestination])
+  9. (failure) assert(Exec[myhostname])
+  10. (failure) assert(Exec[relayhost])
+  11. (success) assert(Package[libsasl2-modules])
+  12. (success) assert(Package[postfix])
+
+=====================================================================
+1. exec(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 16.163387932 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Package[postfix]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    success
+Execution time: 0.103056869 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[myhostname])
+=====================================================================
+
+Step result:    success
+Execution time: 0.108764243 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[myhostname]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[mydestination])
+=====================================================================
+
+Step result:    success
+Execution time: 0.164676481 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[mydestination]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[relayhost])
+=====================================================================
+
+Step result:    success
+Execution time: 0.178971413 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[relayhost]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    success
+Execution time: 0.194496267 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    failure
+Execution time: 5.53421159 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Exec[mydestination])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.46841944 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[mydestination]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[myhostname])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.667469642 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[myhostname]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Exec[relayhost])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.310875609 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[relayhost]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    success
+Execution time: 3.025050882 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 3.887155493 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

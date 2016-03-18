@@ -1,0 +1,745 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 28
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (success) exec(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[nginx.list])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(File[sources.list])
+  7. (success) exec(Exec[apt_update])
+  8. (success) exec(Package[nginx])
+  9. (success) exec(File[/etc/nginx])
+  10. (success) exec(File[/etc/nginx/conf.d])
+  11. (success) exec(File[/var/nginx])
+  12. (success) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  13. (success) assert(Exec[apt_update])
+  14. (success) assert(File[/etc/nginx/conf.d])
+  15. (success) assert(File[/etc/nginx])
+  16. (success) assert(File[/var/nginx])
+  17. (success) assert(File[01proxy])
+  18. (success) assert(File[nginx.list])
+  19. (success) assert(File[old-proxy-file])
+  20. (success) assert(File[sources.list.d])
+  21. (success) assert(File[sources.list])
+  22. (success) assert(Package[nginx])
+  23. (success) exec(File[/var/nginx/proxy_temp])
+  24. (success) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  25. (success) assert(Exec[apt_update])
+  26. (success) assert(File[/etc/nginx/conf.d])
+  27. (success) assert(File[/etc/nginx])
+  28. (success) assert(File[/var/nginx/proxy_temp])
+  29. (success) assert(File[/var/nginx])
+  30. (success) assert(File[01proxy])
+  31. (success) assert(File[nginx.list])
+  32. (success) assert(File[old-proxy-file])
+  33. (success) assert(File[sources.list.d])
+  34. (success) assert(File[sources.list])
+  35. (success) assert(Package[nginx])
+  36. (success) exec(File[/etc/nginx/conf.d/proxy.conf])
+  37. (success) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  38. (success) assert(Exec[apt_update])
+  39. (success) assert(File[/etc/nginx/conf.d/proxy.conf])
+  40. (success) assert(File[/etc/nginx/conf.d])
+  41. (success) assert(File[/etc/nginx])
+  42. (success) assert(File[/var/nginx/proxy_temp])
+  43. (success) assert(File[/var/nginx])
+  44. (success) assert(File[01proxy])
+  45. (success) assert(File[nginx.list])
+  46. (success) assert(File[old-proxy-file])
+  47. (success) assert(File[sources.list.d])
+  48. (success) assert(File[sources.list])
+  49. (success) assert(Package[nginx])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.24284554 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 1.7674263 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 7BD9BF62 from Apt::Source nginx]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.875563421 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 7.261450385 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/File[nginx.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.933092303 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.052935906 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.848636409 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 7.354597683 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Package[nginx]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 1.122001732 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.860103563 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/var/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 0.889361723 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx]/ensure: created
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 5.628826706 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 3.365334926 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.946659407 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.101427021 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/var/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.096832515 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 3.142960227 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.211089506 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 3.110760109 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 4.303556185 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.103870348 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.31559282 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. exec(File[/var/nginx/proxy_temp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.111179307 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]/ensure: created
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+24. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 6.458191762 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 3.226698111 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 4.331134441 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.103693265 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(File[/var/nginx/proxy_temp])
+=====================================================================
+
+Step result:    success
+Execution time: 4.208340219 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(File[/var/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.348930135 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 3.312955495 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.852711044 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.764455846 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.301579454 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.523751374 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.47659584 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. exec(File[/etc/nginx/conf.d/proxy.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 1.003072122 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]/ensure: defined content as '{md5}e95bf8af1827f37e90cd6b2152ef770c'
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+37. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 5.924412221 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.756407621 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/etc/nginx/conf.d/proxy.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.916504405 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[/etc/nginx/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.881217349 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.383704943 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(File[/var/nginx/proxy_temp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.717608356 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(File[/var/nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.218269841 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 3.088708032 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. assert(File[nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.222269116 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+46. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 3.393385899 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 4.24915199 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.463517044 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(Package[nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 3.853932857 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

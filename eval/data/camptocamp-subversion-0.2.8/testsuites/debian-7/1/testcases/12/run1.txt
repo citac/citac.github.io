@@ -1,0 +1,158 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 12
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[augeas-lenses])
+  2. (success) exec(Package[libaugeas0])
+  3. (success) exec(Package[augeas-tools])
+  4. (success) exec(Package[ruby-augeas])
+  5. (success) exec(File[/usr/share/augeas/lenses])
+  6. (success) exec(Package[subversion])
+  7. (success) exec(File[/etc/subversion])
+  8. (success) exec(File[/usr/share/augeas/lenses/subversion.aug])
+  9. (success) exec(Exec[Typecheck lens subversion])
+  10. (success) exec(File[/usr/share/augeas/lenses/dist])
+  11. (success) exec(Augeas[avoid svn password saving])
+  12. (success) assert(File[/usr/share/augeas/lenses/dist])
+
+=====================================================================
+1. exec(Package[augeas-lenses])
+=====================================================================
+
+Step result:    success
+Execution time: 0.183363906 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[libaugeas0])
+=====================================================================
+
+Step result:    success
+Execution time: 0.205084546 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[augeas-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.9717052 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[augeas-tools]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[ruby-augeas])
+=====================================================================
+
+Step result:    success
+Execution time: 4.417151876 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[ruby-augeas]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/usr/share/augeas/lenses])
+=====================================================================
+
+Step result:    success
+Execution time: 0.216851726 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 4.2747385 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Package[subversion]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 0.215793527 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/usr/share/augeas/lenses/subversion.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.353002438 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Augeas::Lens[subversion]/File[/usr/share/augeas/lenses/subversion.aug]/ensure: created
+Notice: /Stage[main]/Subversion::Base/Augeas::Lens[subversion]/Exec[Typecheck lens subversion]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[Typecheck lens subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 0.217654398 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/usr/share/augeas/lenses/dist])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219827782 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Augeas[avoid svn password saving])
+=====================================================================
+
+Step result:    success
+Execution time: 0.325407296 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Augeas[avoid svn password saving]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(File[/usr/share/augeas/lenses/dist])
+=====================================================================
+
+Step result:    success
+Execution time: 4.157586599 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,137 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 148
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[python-sqlite])
+  2. (success) exec(Package[apache2])
+  3. (success) assert(Package[apache2])
+  4. (skipped) assert(Package[python-sqlite])
+  5. (skipped) exec(Package[libapache2-mod-wsgi])
+  6. (skipped) assert(Package[apache2])
+  7. (skipped) assert(Package[libapache2-mod-wsgi])
+  8. (skipped) assert(Package[python-sqlite])
+  9. (skipped) exec(Exec[Disable default apache site])
+  10. (skipped) assert(Exec[Disable default apache site])
+  11. (skipped) assert(Package[apache2])
+  12. (skipped) assert(Package[libapache2-mod-wsgi])
+  13. (skipped) assert(Package[python-sqlite])
+
+=====================================================================
+1. exec(Package[python-sqlite])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-sqlite]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[apache2])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Config_apache/Package[apache2]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(Package[apache2])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[python-sqlite])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Package[apache2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[python-sqlite])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. exec(Exec[Disable default apache site])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Exec[Disable default apache site])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(Package[apache2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Package[python-sqlite])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

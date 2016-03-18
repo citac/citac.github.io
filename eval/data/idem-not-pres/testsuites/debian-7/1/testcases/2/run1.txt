@@ -1,0 +1,62 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/tmp/test.txt])
+  2. (success) exec(File[/tmp/test.txt])
+  3. (success) exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+  4. (failure) assert(File[/tmp/test.txt])
+
+=====================================================================
+1. exec(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.074873325 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/tmp/test.txt]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.061558185 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+=====================================================================
+
+Step result:    success
+Execution time: 0.087375074 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.781513849 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/tmp/test.txt]/content: content changed '{md5}efb938a458e54efca3a011194fbab8a8' to '{md5}206a9b642b3e16c89a61696ab28f3d5c'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /tmp/test.txt
+##########  CHANGE SUMMARY END  ##########
+

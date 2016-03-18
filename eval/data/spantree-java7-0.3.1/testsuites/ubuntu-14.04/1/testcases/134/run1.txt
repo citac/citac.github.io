@@ -1,0 +1,172 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 134
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[software-properties-common])
+  2. (success) exec(File[sources.list])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[preferences])
+  5. (success) exec(File[preferences.d])
+  6. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  7. (success) exec(Exec[add-apt-repository-ppa:webupd8team/java])
+  8. (success) exec(File[/tmp/java.preseed])
+  9. (success) exec(Exec[/usr/bin/apt-get update])
+  10. (success) exec(File[/etc/apt/sources.list.d/webupd8team-java-trusty.list])
+  11. (success) exec(Exec[apt_update])
+  12. (success) exec(Package[oracle-java7-installer])
+  13. (success) assert(Exec[apt_update])
+
+=====================================================================
+1. exec(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 15.093137588 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[software-properties-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.149314792 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153687643 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 6.148775801 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.104869014 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 5.522593369 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 8.225885929 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Apt::Ppa[ppa:webupd8team/java]/Exec[add-apt-repository-ppa:webupd8team/java]/returns: executed successfully
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/tmp/java.preseed])
+=====================================================================
+
+Step result:    success
+Execution time: 0.200805473 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/File[/tmp/java.preseed]/ensure: defined content as '{md5}4f7ef454a73ea3f105f61e45176da36b'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    success
+Execution time: 5.580341093 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/apt/sources.list.d/webupd8team-java-trusty.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.10613913 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.24473875 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(Package[oracle-java7-installer])
+=====================================================================
+
+Step result:    success
+Execution time: 40.722341358 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Package[oracle-java7-installer]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 19.242523143 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

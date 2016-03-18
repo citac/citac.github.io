@@ -1,0 +1,73 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 12
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Yumrepo[datadog])
+  2. (success) exec(Package[datadog-agent-base])
+  3. (success) exec(Package[datadog-agent])
+  4. (success) exec(File[/etc/dd-agent])
+  5. (success) assert(File[/etc/dd-agent])
+
+=====================================================================
+1. exec(Yumrepo[datadog])
+=====================================================================
+
+Step result:    success
+Execution time: 0.172989553 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Yumrepo[datadog]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.212292451 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[datadog-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 17.375788349 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Package[datadog-agent]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.360240019 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent]/owner: owner changed 'dd-agent' to 'root'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 18.869343885 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

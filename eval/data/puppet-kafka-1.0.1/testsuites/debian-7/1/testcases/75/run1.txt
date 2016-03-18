@@ -1,0 +1,159 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 75
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Group[kafka])
+  2. (success) exec(User[kafka])
+  3. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  4. (success) exec(File[/opt/kafka])
+  5. (success) exec(Package[wget])
+  6. (success) exec(File[/var/lib/kafka])
+  7. (success) exec(Exec[download-kafka-package])
+  8. (success) exec(File[/opt/kafka/config])
+  9. (success) exec(Exec[untar-kafka-package])
+  10. (success) exec(File[/opt/kafka/config])
+  11. (success) exec(File[/opt/kafka/config/server.properties])
+  12. (success) assert(File[/opt/kafka/config])
+
+=====================================================================
+1. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.11924824 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.166641252 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.12942698 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.128872437 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.127380902 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.133229759 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.281828238 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.128529096 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka/config]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.352843641 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[untar-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.137422717 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/opt/kafka/config/server.properties])
+=====================================================================
+
+Step result:    success
+Execution time: 0.174977053 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka::Broker::Config/File[/opt/kafka/config/server.properties]/content: content changed '{md5}6ff0212962a67389eb825b5995dbf2b8' to '{md5}1e5c6d1550984ea945c840c1faafeb2b'
+Error: /Stage[main]/Kafka::Broker::Service/Service[kafka]: Failed to call refresh: Could not find init script for 'kafka'
+Error: /Stage[main]/Kafka::Broker::Service/Service[kafka]: Could not find init script for 'kafka'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 2.16302151 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

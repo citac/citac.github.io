@@ -1,0 +1,14 @@
+# https://forge.puppetlabs.com/jdowning/statsd
+
+package { 'apt-transport-https': } ->
+
+class { 'nodejs': } ->
+
+class { 'statsd':
+  backends         => [ './backends/graphite'],
+  graphiteHost     => 'my.graphite.host',
+  flushInterval    => 1000,
+  percentThreshold => [75, 90, 99],
+  require => Package['npm'],
+  manage_service => false
+}

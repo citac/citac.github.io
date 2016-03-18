@@ -1,0 +1,211 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  2. (success) exec(File[/usr/lib/jvm])
+  3. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  4. (success) assert(File[/usr/lib/jvm])
+  5. (success) exec(Package[tar])
+  6. (success) exec(Exec[extract_java])
+  7. (success) exec(Exec[move_java])
+  8. (success) exec(Package[unzip])
+  9. (failure) assert(Exec[extract_java])
+  10. (failure) assert(Exec[move_java])
+  11. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  12. (success) assert(File[/usr/lib/jvm])
+  13. (success) assert(Package[tar])
+  14. (success) assert(Package[unzip])
+
+=====================================================================
+1. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 5.99244048 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.129551113 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/usr/lib/jvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 11.477963944 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 3.512016254 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.102178456 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 4.942935073 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[move_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.1591126 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[move_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[unzip])
+=====================================================================
+
+Step result:    success
+Execution time: 3.945101837 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[unzip]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 21.106537736 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Exec[move_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.356635141 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 7.728998575 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 2.939797511 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 3.037737963 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[unzip])
+=====================================================================
+
+Step result:    success
+Execution time: 3.372226003 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

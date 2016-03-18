@@ -1,0 +1,95 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 211
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[dovecot-pgsql])
+  2. (success) exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+  3. (success) exec(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+  4. (success) assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+  5. (success) assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+  6. (success) assert(Package[dovecot-pgsql])
+
+=====================================================================
+1. exec(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 11.998714578 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/Package[dovecot-pgsql]/ensure: ensure changed 'purged' to 'present'
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 0.24840083 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/content: content changed '{md5}aee3a57c9c18a3b9a27fd0c4f8ce7f17' to '{md5}1bac2daadef8e82eea87cf2bf3463791'
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/mode: mode changed '0640' to '0600'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.285893671 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/dovecot.aug]/ensure: defined content as '{md5}0adfd4d9b4a4fc6b2bd4aff7f40f6cd2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 5.386774157 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[/usr/share/augeas/lenses/dist/dovecot.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 3.422228477 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.495975144 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

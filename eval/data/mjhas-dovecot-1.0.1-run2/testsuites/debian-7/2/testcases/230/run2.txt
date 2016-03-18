@@ -1,0 +1,80 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 230
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[/usr/share/augeas/lenses/dist/build.aug])
+  2. (failure) exec(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+  3. (skipped) assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+  4. (skipped) assert(File[/usr/share/augeas/lenses/dist/build.aug])
+
+=====================================================================
+1. exec(File[/usr/share/augeas/lenses/dist/build.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.227824266 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/build.aug]/content: content changed '{md5}26d8754dc35bc9c6f69f62804f00ac88' to '{md5}8d0632d6b10ba8767c44ffe8d8ee74cf'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.144721424 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/dovecot/conf.d/15-mailboxes.conf20151018-99-14ibaay.lock at 39:/tmp/citac/modules/dovecot/manifests/mail.pp
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/dovecot/conf.d/15-mailboxes.conf20151018-99-14ibaay.lock at 39:/tmp/citac/modules/dovecot/manifests/mail.pp
+Wrapped exception:
+No such file or directory @ dir_s_rmdir - /etc/dovecot/conf.d/15-mailboxes.conf20151018-99-14ibaay.lock
+Error: /Stage[main]/Dovecot::Mail/File[/etc/dovecot/conf.d/15-mailboxes.conf]/ensure: change from absent to present failed: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/dovecot/conf.d/15-mailboxes.conf20151018-99-14ibaay.lock at 39:/tmp/citac/modules/dovecot/manifests/mail.pp
+ERROR 14:45:42.027 [citac-puppet]: Failed to apply 'File[/etc/dovecot/conf.d/15-mailboxes.conf]'.
+Notice: /Stage[main]/Dovecot/Exec[dovecot]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot/Exec[dovecot]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfmulti[/etc/dovecot/conf.d/10-master.conf-userdblistener0]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfmulti[/etc/dovecot/conf.d/10-master.conf-userdblistener0]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener0]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Imap/Dovecot::Config::Dovecotcfmulti[imap]/Augeas[dovecot /etc/dovecot/conf.d/20-imap.conf imap]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Imap/Dovecot::Config::Dovecotcfmulti[imap]/Augeas[dovecot /etc/dovecot/conf.d/20-imap.conf imap]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Sieve/Dovecot::Config::Dovecotcfmulti[plugin]/Augeas[dovecot /etc/dovecot/conf.d/90-plugin.conf plugin]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Sieve/Dovecot::Config::Dovecotcfmulti[plugin]/Augeas[dovecot /etc/dovecot/conf.d/90-plugin.conf plugin]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfsingle[service[ . = "auth-worker"]/group]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf service[ . = "auth-worker"]/group]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfsingle[service[ . = "auth-worker"]/group]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf service[ . = "auth-worker"]/group]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Mail/Dovecot::Config::Dovecotcfmulti[mail]/Augeas[dovecot /etc/dovecot/conf.d/10-mail.conf mail]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Mail/Dovecot::Config::Dovecotcfmulti[mail]/Augeas[dovecot /etc/dovecot/conf.d/10-mail.conf mail]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfmulti[/etc/dovecot/conf.d/10-master.conf-userdblistener1]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfmulti[/etc/dovecot/conf.d/10-master.conf-userdblistener1]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf-userdblistener1]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Lda/Dovecot::Config::Dovecotcfmulti[lda]/Augeas[dovecot /etc/dovecot/conf.d/15-lda.conf lda]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Lda/Dovecot::Config::Dovecotcfmulti[lda]/Augeas[dovecot /etc/dovecot/conf.d/15-lda.conf lda]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Postgres/Dovecot::Config::Dovecotcfmulti[sqlauth]/Augeas[dovecot /etc/dovecot/conf.d/10-auth.conf sqlauth]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Postgres/Dovecot::Config::Dovecotcfmulti[sqlauth]/Augeas[dovecot /etc/dovecot/conf.d/10-auth.conf sqlauth]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Base/Dovecot::Config::Dovecotcfmulti[base]/Augeas[dovecot /etc/dovecot/dovecot.conf base]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Base/Dovecot::Config::Dovecotcfmulti[base]/Augeas[dovecot /etc/dovecot/dovecot.conf base]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Auth/Dovecot::Config::Dovecotcfmulti[auth]/Augeas[dovecot /etc/dovecot/conf.d/10-auth.conf auth]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Auth/Dovecot::Config::Dovecotcfmulti[auth]/Augeas[dovecot /etc/dovecot/conf.d/10-auth.conf auth]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfsingle[service[ . = "auth-worker"]/user]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf service[ . = "auth-worker"]/user]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot::Master/Dovecot::Config::Dovecotcfsingle[service[ . = "auth-worker"]/user]/Augeas[dovecot /etc/dovecot/conf.d/10-master.conf service[ . = "auth-worker"]/user]: Skipping because of failed dependencies
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Dependency File[/etc/dovecot/conf.d/15-mailboxes.conf] has failures: true
+Warning: /Stage[main]/Dovecot/Service[dovecot]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/dovecot/conf.d/15-mailboxes.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(File[/usr/share/augeas/lenses/dist/build.aug])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

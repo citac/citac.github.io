@@ -1,0 +1,61 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[ldap-client])
+  2. (success) exec(Package[net-ldap])
+  3. (success) exec(File[/etc/ldap/ldap.conf])
+  4. (success) assert(File[/etc/ldap/ldap.conf])
+
+=====================================================================
+1. exec(Package[ldap-client])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[net-ldap])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldap::Client::Install/Package[net-ldap]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/ldap/ldap.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldap::Client::Config/File[/etc/ldap/ldap.conf]/content: content changed '{md5}0b3f4d19d88498314478273ce10b0a70' to '{md5}cf555ad1ee5790f612604fa6cc629d3b'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/ldap/ldap.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

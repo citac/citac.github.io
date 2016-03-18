@@ -1,0 +1,62 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[supervisor])
+  2. (success) exec(Package[supervisor])
+  3. (success) exec(File[/etc/default/supervisor])
+  4. (success) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.85639988 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisor/Package[supervisor]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 0.111837746 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 0.200601558 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisor/File[/etc/default/supervisor]/content: content changed '{md5}67439cde76c4bdea63553b8893172e53' to '{md5}5dabd63457e4b614af0910aabd0196e2'
+Notice: /Stage[main]/Supervisor/Service[supervisor]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.560222706 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

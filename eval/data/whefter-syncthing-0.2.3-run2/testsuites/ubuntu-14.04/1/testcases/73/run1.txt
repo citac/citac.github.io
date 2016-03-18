@@ -1,0 +1,146 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 73
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[01proxy])
+  4. (success) exec(File[old-proxy-file])
+  5. (success) exec(Apt_key[00654A3E])
+  6. (success) exec(File[syncthing.list])
+  7. (success) exec(Exec[apt_update])
+  8. (success) exec(Package[syncthing])
+  9. (success) exec(Package[syncthing])
+  10. (success) exec(File[/etc/default/syncthing])
+  11. (success) assert(Package[syncthing])
+
+=====================================================================
+1. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.52845488 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.808891882 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.814876059 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.805989311 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.11366106 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 6.907510599 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.802663566 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 8.738295481 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 3.101171033 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/default/syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 0.82054785 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]/ensure: defined content as '{md5}2a6d9f1a9c3ae708c473d093be7c3dfa'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 33.908049354 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

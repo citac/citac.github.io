@@ -1,0 +1,123 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 50
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat])
+  4. (success) exec(Ssh_authorized_key[perunv3])
+  5. (success) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  7. (success) assert(File[/var/lib/puppet/concat])
+  8. (success) assert(Ssh_authorized_key[perunv3])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/File[/var/lib/puppet/concat/_etc_perunv3.conf]/ensure: created
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Ssh_authorized_key[perunv3]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

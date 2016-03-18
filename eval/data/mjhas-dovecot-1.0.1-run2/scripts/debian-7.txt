@@ -1,0 +1,25 @@
+# https://forge.puppetlabs.com/mjhas/dovecot
+
+file {'/var/lib/dovecot':
+    ensure => directory
+}
+-> class {'dovecot': }
+
+include dovecot::sieve
+class { dovecot::master:
+  postfix    => yes
+}
+
+class { dovecot::postgres:
+  dbname     => 'dbname',
+  dbpassword => 'dbpassword',
+  dbusername => 'dbuser',
+}
+include dovecot::mail
+
+class { dovecot::lda: 
+  postmaster_address => 'postmaster@example.org'
+}
+include dovecot::imap
+include dovecot::base
+include dovecot::auth

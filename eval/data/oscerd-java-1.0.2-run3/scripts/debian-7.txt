@@ -1,0 +1,25 @@
+# https://forge.puppetlabs.com/oscerd/java
+
+# http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-i586.tar.gz
+
+java::setup { "java":
+  type => "jdk",
+  family => "7",
+  update_version => "79",
+  architecture => "x64",
+  os => "linux",
+  extension => ".tar.gz",
+  tmpdir => "",
+  alternatives => "",
+  export => ""
+}
+
+Exec {
+  path => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+}
+ package { 'tar':
+  ensure => installed
+}
+ package { 'unzip':
+  ensure => installed
+}

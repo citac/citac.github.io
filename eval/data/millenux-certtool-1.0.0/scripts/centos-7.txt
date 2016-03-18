@@ -1,0 +1,28 @@
+# https://forge.puppetlabs.com/millenux/certtool
+
+include certtool
+
+$caname = "TestCA"
+Certtool::Cert {
+  organization    => "Test Organization",
+  unit            => "IT",
+  locality        => "Somecity",
+  state           => "Somestate",
+  country         => "US",
+  caname          => $caname,
+  expiration_days => 3650
+}
+
+certtool::cert { $caname:
+  is_ca => true,
+  require => Class['certtool']
+}
+
+certtool::cert { "www.puppet-certtool.test": 
+  usage => [ "tls_www_server" ],
+  require => Class['certtool']
+}
+
+certtool::cert { "mail.puppet-certtool.test":
+  require => Class['certtool']
+}

@@ -1,0 +1,109 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 101
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[java-common])
+  2. (success) exec(Package[java])
+  3. (success) exec(Group[kafka])
+  4. (success) exec(User[kafka])
+  5. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  6. (success) exec(Exec[update-java-alternatives])
+  7. (success) exec(File[/opt/kafka])
+  8. (success) assert(Exec[update-java-alternatives])
+
+=====================================================================
+1. exec(Package[java-common])
+=====================================================================
+
+Step result:    success
+Execution time: 1.696719914 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time: 88.772214478 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.210252451 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.214078343 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.177885606 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[update-java-alternatives])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179740026 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.161909896 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Exec[update-java-alternatives])
+=====================================================================
+
+Step result:    success
+Execution time: 53.02783928 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

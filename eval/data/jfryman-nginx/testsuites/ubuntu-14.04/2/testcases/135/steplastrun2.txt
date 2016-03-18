@@ -1,0 +1,58 @@
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Network is unreachable - connect(2) for "nginx.org" port 80
+Error: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 7BD9BF62 from Apt::Source nginx]/ensure: change from absent to present failed: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 12:22:10.587 [citac-puppet]: Failed to apply 'Apt_key[Add key: 7BD9BF62 from Apt::Source nginx]'.
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Anchor[apt_key 7BD9BF62 present]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Anchor[apt_key 7BD9BF62 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/File[nginx.list]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/File[nginx.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Package[nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Package[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt::update]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt::update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Anchor[apt::source::nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Anchor[apt::source::nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Service/Service[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx/Anchor[nginx::end]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx/Anchor[nginx::end]: Skipping because of failed dependencies

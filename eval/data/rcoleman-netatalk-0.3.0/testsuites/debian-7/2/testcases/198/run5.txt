@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 198
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(Package[netatalk])
+  3. (success) exec(File[/etc/default/netatalk])
+  4. (success) exec(File[/var/lib/puppet/concat/bin])
+  5. (success) assert(File[/etc/default/netatalk])
+  6. (success) assert(File[/var/lib/puppet/concat/bin])
+  7. (success) assert(File[/var/lib/puppet/concat])
+  8. (success) assert(Package[netatalk])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.149877134 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[netatalk])
+=====================================================================
+
+Step result:    success
+Execution time: 9.10263836 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/Package[netatalk]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/default/netatalk])
+=====================================================================
+
+Step result:    success
+Execution time: 0.294001513 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Netatalk/File[/etc/default/netatalk]/content: content changed '{md5}cebe96b362b30d3ceb5a2b2f2a3cd4f6' to '{md5}0470b9c5ddd26fba05b687d18d8a6b30'
+Notice: /Stage[main]/Netatalk/Service[netatalk]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.222677504 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/etc/default/netatalk])
+=====================================================================
+
+Step result:    success
+Execution time: 5.876676929 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.372989987 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.620439623 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[netatalk])
+=====================================================================
+
+Step result:    success
+Execution time: 3.659707794 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

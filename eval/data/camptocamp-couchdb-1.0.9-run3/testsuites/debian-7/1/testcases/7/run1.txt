@@ -1,0 +1,63 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 7
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[couchdb])
+  2. (success) exec(Package[couchdb])
+  3. (success) exec(Service[couchdb])
+  4. (failure) assert(Package[couchdb])
+
+=====================================================================
+1. exec(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 9.468889541 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Package[couchdb]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.097194065 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Service[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.569227269 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.334207527 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>682, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+

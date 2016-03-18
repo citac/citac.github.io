@@ -1,0 +1,184 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 32
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[software-properties-common])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[/tmp/java.preseed])
+  4. (success) exec(Exec[add-apt-repository-ppa:webupd8team/java])
+  5. (success) exec(Exec[/usr/bin/apt-get update])
+  6. (success) exec(File[/etc/apt/sources.list.d/webupd8team-java-trusty.list])
+  7. (success) exec(Package[oracle-java7-installer])
+  8. (success) exec(File[sources.list])
+  9. (success) exec(File[preferences])
+  10. (success) exec(File[preferences.d])
+  11. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  12. (success) exec(File[/etc/profile.d/set_java_home.sh])
+  13. (success) exec(Exec[apt_update])
+  14. (success) assert(File[/etc/profile.d/set_java_home.sh])
+
+=====================================================================
+1. exec(Package[software-properties-common])
+=====================================================================
+
+Step result:    success
+Execution time: 13.377222568 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[software-properties-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.135498257 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/tmp/java.preseed])
+=====================================================================
+
+Step result:    success
+Execution time: 0.272955006 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/File[/tmp/java.preseed]/ensure: defined content as '{md5}4f7ef454a73ea3f105f61e45176da36b'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[add-apt-repository-ppa:webupd8team/java])
+=====================================================================
+
+Step result:    success
+Execution time: 8.228108764 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Apt::Ppa[ppa:webupd8team/java]/Exec[add-apt-repository-ppa:webupd8team/java]/returns: executed successfully
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[/usr/bin/apt-get update])
+=====================================================================
+
+Step result:    success
+Execution time: 5.385679164 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/sources.list.d/webupd8team-java-trusty.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.092807738 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Package[oracle-java7-installer])
+=====================================================================
+
+Step result:    success
+Execution time: 43.404122009 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/Package[oracle-java7-installer]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.173201649 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 8.022960591 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.0968903 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 5.83395098 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/etc/profile.d/set_java_home.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 0.308192884 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java7/File[/etc/profile.d/set_java_home.sh]/ensure: defined content as '{md5}c12952228fbab17b18fc4207b1f593bb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.101353648 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. assert(File[/etc/profile.d/set_java_home.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 24.77678159 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

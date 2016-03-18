@@ -1,0 +1,87 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 3
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Exec[Download Kibana4])
+  2. (success) exec(File[/opt/kibana4])
+  3. (success) exec(File[/opt/kibana4/config/kibana.yml])
+  4. (success) exec(Exec[Download Kibana4])
+  5. (success) exec(File[/etc/init.d/kibana4])
+  6. (failure) assert(Exec[Download Kibana4])
+
+=====================================================================
+1. exec(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 2.037632098 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/opt/kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 0.051002553 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/opt/kibana4/config/kibana.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.094620884 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4/config/kibana.yml]/content: content changed '{md5}386a7a9d23fa212b900c5073582e8fea' to '{md5}a62c36d6e7c0193cb722fcd8c7d709c4'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 0.050258818 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/init.d/kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 0.156885869 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/File[/etc/init.d/kibana4]/ensure: defined content as '{md5}c50a1d80515085c8a5269a7eaf86f2e0'
+Notice: /Stage[main]/Kibana4/Service[kibana4]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    failure
+Execution time: 7.52394379 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /opt/kibana-4.0.0-linux-x64
+##########  CHANGE SUMMARY END  ##########
+

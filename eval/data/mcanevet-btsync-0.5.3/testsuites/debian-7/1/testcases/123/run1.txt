@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 123
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+  3. (success) exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+  4. (success) exec(File[/etc/apt/sources.list.d/btsync.list])
+  5. (success) exec(File[preferences.d])
+  6. (success) exec(Package[btsync])
+  7. (success) assert(File[preferences.d])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.247861222 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.182221301 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 1.197376558 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Apt_key[Add key: 6BF18B15 from Apt::Source btsync]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/sources.list.d/btsync.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.699599876 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Setting[list-btsync]/File[/etc/apt/sources.list.d/btsync.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.185774435 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 4.211060201 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Install/Package[btsync]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.235043791 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

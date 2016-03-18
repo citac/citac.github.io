@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 216
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+  3. (success) exec(File[/etc/apt/sources.list.d/nginx.list])
+  4. (success) exec(File[/var/www])
+  5. (success) assert(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+  6. (success) assert(File[/etc/apt/sources.list.d/nginx.list])
+  7. (success) assert(File[/var/www])
+  8. (success) assert(File[sources.list.d])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219666299 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 0.418234006 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/sources.list.d/nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.363010827 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Setting[list-nginx]/File[/etc/apt/sources.list.d/nginx.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/www])
+=====================================================================
+
+Step result:    success
+Execution time: 0.231501306 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Capistrano/File[/var/www]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Apt_key[Add key: 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    success
+Execution time: 4.856780088 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/etc/apt/sources.list.d/nginx.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.183764063 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/www])
+=====================================================================
+
+Step result:    success
+Execution time: 3.152582873 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.526608748 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

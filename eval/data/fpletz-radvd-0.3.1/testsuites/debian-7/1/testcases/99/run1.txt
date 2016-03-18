@@ -1,0 +1,91 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 99
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[radvd])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+  5. (success) exec(File[/var/lib/puppet/concat/bin])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+
+=====================================================================
+1. exec(Package[radvd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.589683863 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Install/Package[radvd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.200193825 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.229758051 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 0.229027945 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.20762441 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.189474395 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

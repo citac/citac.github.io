@@ -1,0 +1,126 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 43
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[postfix])
+  2. (success) exec(File[sasl_passwd])
+  3. (success) assert(File[sasl_passwd])
+  4. (success) assert(Package[postfix])
+  5. (success) exec(Exec[sasl_passwd.db])
+  6. (failure) assert(Exec[sasl_passwd.db])
+  7. (success) assert(File[sasl_passwd])
+  8. (success) assert(Package[postfix])
+
+=====================================================================
+1. exec(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 17.182610049 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Package[postfix]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.088457719 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/File[sasl_passwd]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.781192923 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 1.729677324 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    success
+Execution time: 0.140644133 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.192901093 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/sasl_passwd.db
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 1.585763664 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 1.807073434 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

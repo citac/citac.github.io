@@ -1,0 +1,68 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 126
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Exec[get_ldirectord])
+  2. (skipped) exec(File[/usr/sbin/ldirectord])
+  3. (skipped) exec(Package[perl-Socket6])
+  4. (skipped) assert(Exec[get_ldirectord])
+  5. (skipped) assert(File[/usr/sbin/ldirectord])
+  6. (skipped) assert(Package[perl-Socket6])
+
+=====================================================================
+1. exec(Exec[get_ldirectord])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.486952661 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:                                  Dload  Upload   Total   Spent    Left  Speed
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) Failed to connect to 2001:470:1f0f:297::2: Network is unreachable
+Error: /usr/bin/curl -k http://horms.net/projects/ldirectord/download/ldirectord-latest  -o /var/tmp/ldirectord-latest returned 7 instead of one of [0]
+Error: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns: change from notrun to 0 failed: /usr/bin/curl -k http://horms.net/projects/ldirectord/download/ldirectord-latest  -o /var/tmp/ldirectord-latest returned 7 instead of one of [0]
+ERROR 13:15:33.893 [citac-puppet]: Failed to apply 'Exec[get_ldirectord]'.
+Notice: /Stage[main]/Ldirectord::Install::Http/File[/usr/sbin/ldirectord]: Dependency Exec[get_ldirectord] has failures: true
+Warning: /Stage[main]/Ldirectord::Install::Http/File[/usr/sbin/ldirectord]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/usr/sbin/ldirectord])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. exec(Package[perl-Socket6])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(Exec[get_ldirectord])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(File[/usr/sbin/ldirectord])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Package[perl-Socket6])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

@@ -1,0 +1,28 @@
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:                                  Dload  Upload   Total   Spent    Left  Speed
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) couldn't connect to host
+Error: curl  -f -L -o /opt/staging/jira/atlassian-jira-6.4.1.tar.gz http://www.atlassian.com/software/jira/downloads/binary//atlassian-jira-6.4.1.tar.gz returned 7 instead of one of [0]
+Error: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns: change from notrun to 0 failed: curl  -f -L -o /opt/staging/jira/atlassian-jira-6.4.1.tar.gz http://www.atlassian.com/software/jira/downloads/binary//atlassian-jira-6.4.1.tar.gz returned 7 instead of one of [0]
+ERROR 09:18:30.334 [citac-puppet]: Failed to apply 'Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]'.
+Notice: /Stage[main]/Jira::Install/Staging::Extract[atlassian-jira-6.4.1.tar.gz]/Exec[extract atlassian-jira-6.4.1.tar.gz]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/Staging::Extract[atlassian-jira-6.4.1.tar.gz]/Exec[extract atlassian-jira-6.4.1.tar.gz]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Install/File[/home/jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/File[/home/jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/user.sh]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/user.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/setenv.sh]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/setenv.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/home/jira/dbconfig.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/home/jira/dbconfig.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/server.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/server.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/context.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/context.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Service/File[/etc/init.d/jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Service/File[/etc/init.d/jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Service/Service[jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Service/Service[jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira/Anchor[jira::end]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira/Anchor[jira::end]: Skipping because of failed dependencies

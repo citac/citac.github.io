@@ -1,0 +1,311 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 177
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[dovecot-pgsql])
+  2. (success) assert(Package[dovecot-pgsql])
+  3. (success) exec(Group[vmail])
+  4. (success) assert(Group[vmail])
+  5. (success) assert(Package[dovecot-pgsql])
+  6. (success) exec(User[vmail])
+  7. (success) assert(Group[vmail])
+  8. (success) assert(Package[dovecot-pgsql])
+  9. (success) assert(User[vmail])
+  10. (success) exec(File[/srv/vmail])
+  11. (success) assert(File[/srv/vmail])
+  12. (success) assert(Group[vmail])
+  13. (success) assert(Package[dovecot-pgsql])
+  14. (success) assert(User[vmail])
+  15. (success) exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+  16. (success) assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+  17. (success) assert(File[/srv/vmail])
+  18. (success) assert(Group[vmail])
+  19. (success) assert(Package[dovecot-pgsql])
+  20. (success) assert(User[vmail])
+
+=====================================================================
+1. exec(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 10.899232877 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/Package[dovecot-pgsql]/ensure: ensure changed 'purged' to 'present'
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 5.357261691 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.230586113 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/Group[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 5.110710814 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.288451831 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.242362974 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/User[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 5.463293836 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.323873484 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.515864365 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(File[/srv/vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.231252962 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/File[/srv/vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/srv/vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 5.412015015 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.29179988 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.49737708 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.480271568 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 0.291890848 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/content: content changed '{md5}aee3a57c9c18a3b9a27fd0c4f8ce7f17' to '{md5}1bac2daadef8e82eea87cf2bf3463791'
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/mode: mode changed '0640' to '0600'
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 5.644702413 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/srv/vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.2735918 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.172514146 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.460603971 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.920478704 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

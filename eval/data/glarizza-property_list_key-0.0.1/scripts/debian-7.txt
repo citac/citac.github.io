@@ -1,0 +1,10 @@
+# https://forge.puppetlabs.com/glarizza/property_list_key
+# https://github.com/glarizza/puppet-property_list_key/issues/2
+
+property_list_key { 'hashtest':
+  ensure     => present,
+  path       => '/tmp/com.puppetlabs.puppet',
+  key        => 'hashtest',
+  value      => { 'key' => 'value' },
+  value_type => 'hash'
+}

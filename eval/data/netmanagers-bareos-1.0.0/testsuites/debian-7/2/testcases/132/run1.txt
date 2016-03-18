@@ -1,0 +1,196 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 132
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Group[bareos])
+  2. (success) exec(File[/etc/apt/sources.list.d/bareos.list])
+  3. (success) exec(Exec[bareos-key])
+  4. (success) exec(Exec[update-apt])
+  5. (failure) exec(Package[bareos-filedaemon])
+  6. (skipped) assert(Exec[bareos-key])
+  7. (skipped) assert(Exec[update-apt])
+  8. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  9. (skipped) assert(Group[bareos])
+  10. (skipped) assert(Package[bareos-filedaemon])
+  11. (skipped) exec(User[bareos])
+  12. (skipped) exec(File[/var/log/bareos])
+  13. (skipped) assert(Exec[bareos-key])
+  14. (skipped) assert(Exec[update-apt])
+  15. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  16. (skipped) assert(File[/var/log/bareos])
+  17. (skipped) assert(Group[bareos])
+  18. (skipped) assert(Package[bareos-filedaemon])
+  19. (skipped) assert(User[bareos])
+
+=====================================================================
+1. exec(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.178932762 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/Group[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.215985624 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Repository/File[/etc/apt/sources.list.d/bareos.list]/ensure: defined content as '{md5}05a78b17c3a94760f65d7058ba9772d8'
+Notice: /Stage[main]/Bareos::Repository/Exec[bareos-key]/returns: gpg: no valid OpenPGP data found.
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: Failed to call refresh: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.158379913 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153620246 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.565215847 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-filedaemon' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-filedaemon
+Error: /Stage[main]/Bareos::Client/Package[bareos-filedaemon]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-filedaemon' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-filedaemon
+ERROR 11:06:02.054 [citac-puppet]: Failed to apply 'Package[bareos-filedaemon]'.
+Notice: /Stage[main]/Bareos::Client/File[bareos-fd.conf]: Dependency Package[bareos-filedaemon] has failures: true
+Warning: /Stage[main]/Bareos::Client/File[bareos-fd.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Client/Service[bareos-fd]: Dependency Package[bareos-filedaemon] has failures: true
+Warning: /Stage[main]/Bareos::Client/Service[bareos-fd]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. exec(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. exec(File[/var/log/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/var/log/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

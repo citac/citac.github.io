@@ -1,0 +1,85 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 32
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openssl])
+  2. (success) exec(File[/etc/dirsrv])
+  3. (success) exec(File[/etc/dirsrv/slapd-ldap1])
+  4. (success) exec(File[ca-certificates.crt])
+  5. (success) exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+  6. (success) assert(File[ca-certificates.crt])
+
+=====================================================================
+1. exec(Package[openssl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Packages/Package[openssl]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/dirsrv])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/etc/dirsrv]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[ca-certificates.crt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Config/File[ca-certificates.crt]/ensure: ensure changed 'link' to 'file'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/nss-password.txt]/ensure: defined content as '{md5}1a79a4d60de6718e8e5b326e338ae533'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[ca-certificates.crt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

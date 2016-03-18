@@ -1,0 +1,87 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 173
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  3. (success) exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  5. (success) exec(Yumrepo[perunv3])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/ensure: defined content as '{md5}828c6b3ec538e4dc713c8521989cf443'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/File[/var/lib/puppet/concat/_etc_perunv3.conf]/ensure: created
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yumrepo[perunv3]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

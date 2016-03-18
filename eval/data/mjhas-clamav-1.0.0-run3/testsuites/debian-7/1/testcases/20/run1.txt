@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 20
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[amavisd-new])
+  2. (success) exec(Package[clamav-daemon])
+  3. (success) exec(User[clamav])
+  4. (success) exec(Package[clamav-freshclam])
+  5. (success) exec(Service[clamav-daemon])
+  6. (success) exec(Service[clamav-freshclam])
+  7. (success) assert(Service[clamav-daemon])
+
+=====================================================================
+1. exec(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 9.095815609 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[amavisd-new]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 6.654854219 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Package[clamav-daemon]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 0.616102242 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/User[clamav]/groups: groups changed '' to 'amavis'
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 1.37209636 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Service[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 0.650642782 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Service[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 0.330295947 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Service[clamav-freshclam]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Service[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 5.373215686 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

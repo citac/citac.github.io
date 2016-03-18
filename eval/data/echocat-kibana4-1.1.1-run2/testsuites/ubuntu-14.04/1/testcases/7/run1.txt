@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 7
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Exec[Download Kibana4])
+  2. (success) exec(File[/opt/kibana4])
+  3. (success) exec(Exec[Download Kibana4])
+  4. (success) exec(File[/opt/kibana4/config/kibana.yml])
+  5. (failure) assert(Exec[Download Kibana4])
+
+=====================================================================
+1. exec(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 2.801126965 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/opt/kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 0.076361343 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    success
+Execution time: 0.077869109 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/opt/kibana4/config/kibana.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.162555355 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4/config/kibana.yml]/content: content changed '{md5}386a7a9d23fa212b900c5073582e8fea' to '{md5}a62c36d6e7c0193cb722fcd8c7d709c4'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    failure
+Execution time: 8.646316952 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /opt/kibana-4.0.0-linux-x64
+##########  CHANGE SUMMARY END  ##########
+

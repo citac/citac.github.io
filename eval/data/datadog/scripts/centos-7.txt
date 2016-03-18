@@ -1,0 +1,8 @@
+class { 'datadog_agent':
+    api_key => '2a2ef478bc2584e3c49d34eb7cbcc90c',
+    host    => 'hugo',
+    service_ensure => 'stopped'
+  } ->
+  class { 'datadog_agent::integrations::solr':
+    port => 8081,
+  }

@@ -1,0 +1,154 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 93
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[proftpd-basic])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf/fragments.concat])
+  5. (success) exec(File[/var/log/proftpd])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf/fragments.concat])
+  7. (success) assert(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf])
+  8. (success) assert(File[/var/lib/puppet/concat])
+  9. (success) assert(File[/var/log/proftpd])
+  10. (success) assert(Package[proftpd-basic])
+
+=====================================================================
+1. exec(Package[proftpd-basic])
+=====================================================================
+
+Step result:    success
+Execution time: 7.424231828 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Proftpd::Install/Package[proftpd-basic]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.314726963 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+Notice: /Stage[main]/Proftpd::Service/Service[proftpd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.302182492 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Proftpd::Config/Concat[/etc/proftpd/modules.conf]/File[/var/lib/puppet/concat/_etc_proftpd_modules.conf]/ensure: created
+Error: /Stage[main]/Proftpd::Config/Concat[/etc/proftpd/modules.conf]/Exec[concat_/etc/proftpd/modules.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Proftpd::Config/Concat[/etc/proftpd/modules.conf]/Exec[concat_/etc/proftpd/modules.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Notice: /Stage[main]/Proftpd::Service/Service[proftpd]: Triggered 'refresh' from 2 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.303727161 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Proftpd::Config/Concat[/etc/proftpd/modules.conf]/File[/var/lib/puppet/concat/_etc_proftpd_modules.conf/fragments.concat]/ensure: created
+Notice: /Stage[main]/Proftpd::Service/Service[proftpd]: Triggered 'refresh' from 2 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/log/proftpd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.255337646 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 4.248694162 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat/_etc_proftpd_modules.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.407980208 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.260164112 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/var/log/proftpd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.241725688 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[proftpd-basic])
+=====================================================================
+
+Step result:    success
+Execution time: 3.460440554 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 17
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Group[rvm])
+  2. (success) exec(Package[curl])
+  3. (success) exec(Exec[system-rvm-gpg-key])
+  4. (success) exec(File[/etc/rvmrc])
+  5. (success) exec(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+  6. (success) exec(Exec[system-rvm])
+  7. (failure) assert(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+
+=====================================================================
+1. exec(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Group/Group[rvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[system-rvm-gpg-key])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/rvmrc])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Rvmrc/File[/etc/rvmrc]/ensure: defined content as '{md5}3ec590d219afbf91a7c1a149a15e72cb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[system-rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/hosts
+##########  CHANGE SUMMARY END  ##########
+

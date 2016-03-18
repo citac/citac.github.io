@@ -1,0 +1,303 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 60
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-cli])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[php5-fpm])
+  4. (success) exec(File[/etc/php5/fpm/pool.d])
+  5. (success) exec(File[/etc/php5/fpm/pool.d/www.conf])
+  6. (success) exec(File[sources.list.d])
+  7. (success) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  8. (success) assert(File[/etc/php5/fpm/pool.d])
+  9. (success) assert(File[sources.list.d])
+  10. (success) assert(Package[php5-cli])
+  11. (success) assert(Package[php5-common])
+  12. (success) assert(Package[php5-fpm])
+  13. (success) exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  14. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  15. (success) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  16. (success) assert(File[/etc/php5/fpm/pool.d])
+  17. (success) assert(File[sources.list.d])
+  18. (success) assert(Package[php5-cli])
+  19. (success) assert(Package[php5-common])
+  20. (success) assert(Package[php5-fpm])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.911130845 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 0.266843136 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 2.520174466 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm/Package[php5-fpm]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.253344303 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.348217936 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]/content: content changed '{md5}4e7a0aab17c868d744c5cbcc98c5547d' to '{md5}015cfedac2a22b40b2c6cd7eb232d3d1'
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.267864404 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 5.889861842 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.593498858 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.539303735 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.33298079 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.612790301 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 4.07365628 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.691492172 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[dotdeb-wheezy]/Apt::Setting[list-dotdeb-wheezy]/File[/etc/apt/sources.list.d/dotdeb-wheezy.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 5.542293813 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.561815961 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.494496953 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.562228412 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.570957483 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.582239968 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 3.707331512 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

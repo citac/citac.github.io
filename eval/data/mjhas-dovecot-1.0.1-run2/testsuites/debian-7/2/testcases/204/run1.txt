@@ -1,0 +1,93 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 204
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/dovecot])
+  2. (success) exec(Package[dovecot-imapd])
+  3. (success) exec(File[/usr/share/augeas/lenses/dist/util.aug])
+  4. (success) assert(File[/usr/share/augeas/lenses/dist/util.aug])
+  5. (success) assert(File[/var/lib/dovecot])
+  6. (success) assert(Package[dovecot-imapd])
+
+=====================================================================
+1. exec(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 0.122724941 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/var/lib/dovecot]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 11.218832249 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot/Package[dovecot-imapd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/share/augeas/lenses/dist/util.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.336304424 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Config::Augeas/File[/usr/share/augeas/lenses/dist/util.aug]/content: content changed '{md5}081ddce7ba9143a6ffd4e21622b22992' to '{md5}be95cc7041de3f8902f62298be95b442'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/usr/share/augeas/lenses/dist/util.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 5.160909104 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 2.8599286 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.492444796 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

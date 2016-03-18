@@ -1,0 +1,168 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 21
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[radvd])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(File[/var/lib/puppet/concat/bin])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+  5. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+  6. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+  7. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+  8. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+  9. (success) exec(Exec[concat_/etc/radvd.conf])
+  10. (success) exec(Exec[concat_/etc/radvd.conf])
+  11. (success) exec(File[/etc/radvd.conf])
+  12. (success) assert(Exec[concat_/etc/radvd.conf])
+
+=====================================================================
+1. exec(Package[radvd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.120569277 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Install/Package[radvd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.210190288 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.208695809 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.231963578 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 0.280908172 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.sh]/ensure: defined content as '{md5}256169ee61115a6b717b2844d2ea3128'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 0.256170807 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments]/ensure: created
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]/returns: The fragments directory is empty, cowardly refusing to make empty config files
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: /var/lib/puppet/concat/bin/concatfragments.sh -o /var/lib/puppet/concat/_etc_radvd.conf/fragments.concat.out -d /var/lib/puppet/concat/_etc_radvd.conf    returned 1 instead of one of [0]
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: /var/lib/puppet/concat/bin/concatfragments.sh -o /var/lib/puppet/concat/_etc_radvd.conf/fragments.concat.out -d /var/lib/puppet/concat/_etc_radvd.conf    returned 1 instead of one of [0]
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.228256915 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat]/ensure: created
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.297531942 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Radvd::Interface[eth1]/Concat::Fragment[radvd.conf-interface-eth1]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1]/ensure: created
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[concat_/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.237961907 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[concat_/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.233576744 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.208176523 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/etc/radvd.conf]/ensure: defined content as '{md5}87bcb57b4b1b9b9528255f3f989a738c'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Exec[concat_/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.096204615 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

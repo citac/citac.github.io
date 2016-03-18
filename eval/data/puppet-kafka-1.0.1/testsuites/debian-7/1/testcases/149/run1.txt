@@ -1,0 +1,121 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 149
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[wget])
+  2. (success) exec(Group[kafka])
+  3. (success) exec(User[kafka])
+  4. (success) exec(File[/var/lib/kafka])
+  5. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  6. (success) exec(Exec[download-kafka-package])
+  7. (success) exec(Exec[untar-kafka-package])
+  8. (success) exec(Package[java-common])
+  9. (success) assert(Exec[untar-kafka-package])
+
+=====================================================================
+1. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.145256843 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.237677727 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.280144363 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179531979 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153270046 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 33.12225256 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.485984335 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[untar-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[java-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.105084746 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 3.692457261 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

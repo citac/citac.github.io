@@ -1,0 +1,169 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 54
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Ssh_authorized_key[perunv3])
+  2. (success) assert(Ssh_authorized_key[perunv3])
+  3. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  4. (success) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  5. (success) assert(Ssh_authorized_key[perunv3])
+  6. (success) exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  7. (failure) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  8. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  9. (skipped) assert(Ssh_authorized_key[perunv3])
+  10. (skipped) exec(Yumrepo[perunv3])
+  11. (skipped) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  12. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  13. (skipped) assert(Ssh_authorized_key[perunv3])
+  14. (skipped) assert(Yumrepo[perunv3])
+
+=====================================================================
+1. exec(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Ssh_authorized_key[perunv3]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/ensure: defined content as '{md5}828c6b3ec538e4dc713c8521989cf443'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+4 changes:
+  file/changed: /etc/hosts
+  file/changed: /var/lib/rpm/__db.001
+  file/changed: /var/lib/rpm/__db.002
+  file/changed: /var/lib/rpm/__db.003
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Ssh_authorized_key[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

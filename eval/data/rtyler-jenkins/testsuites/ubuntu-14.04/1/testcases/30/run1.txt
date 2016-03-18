@@ -1,0 +1,86 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 30
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+  3. (success) exec(Package[java])
+  4. (success) exec(File[jenkins.list])
+  5. (success) exec(Exec[update-java-alternatives])
+  6. (success) assert(File[jenkins.list])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jenkins::Repo::Debian/Apt::Source[jenkins]/Apt::Key[Add key: D50582E6 from Apt::Source jenkins]/Apt_key[Add key: D50582E6 from Apt::Source jenkins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[jenkins.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jenkins::Repo::Debian/Apt::Source[jenkins]/File[jenkins.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[update-java-alternatives])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[jenkins.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

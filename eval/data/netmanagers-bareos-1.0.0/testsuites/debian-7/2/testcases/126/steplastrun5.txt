@@ -1,0 +1,27 @@
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-database-mysql' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-database-mysql
+Error: /Stage[main]/Bareos::Database/Package[bareos-database]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-database-mysql' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-database-mysql
+ERROR 10:41:03.832 [citac-puppet]: Failed to apply 'Package[bareos-database]'.
+Notice: /Package[bareos-director]: Dependency Package[bareos-database] has failures: true
+Warning: /Package[bareos-director]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-dir.conf]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-dir.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-director_clients_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-director_clients_dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/Service[bareos-dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/Service[bareos-dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-director_configs_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-director_configs_dir]: Skipping because of failed dependencies
+Notice: /Package[bareos-storage]: Dependency Package[bareos-database] has failures: true
+Warning: /Package[bareos-storage]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/File[bareos-sd.conf]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/File[bareos-sd.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/File[bareos-storage_configs_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/File[bareos-storage_configs_dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/Service[bareos-sd]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/Service[bareos-sd]: Skipping because of failed dependencies

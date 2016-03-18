@@ -1,0 +1,51 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 23
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/openssl])
+  2. (success) exec(File[/openssl/apache.cnf])
+  3. (success) assert(File[/openssl/apache.cnf])
+
+=====================================================================
+1. exec(File[/openssl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Setup/File[/openssl]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/openssl/apache.cnf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Openssl::Self_signed_certificate[apache]/File[/openssl/apache.cnf]/ensure: defined content as '{md5}c793259b9ee07c51d3e92beff13e04e3'
+Notice: /Stage[main]/Main/Openssl::Self_signed_certificate[apache]/Exec[openssl gen-private-key /etc/ssl/private/apache.key]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Main/Openssl::Self_signed_certificate[apache]/Exec[openssl req-self-signed-x509 /etc/ssl/apache.pem]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/openssl/apache.cnf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

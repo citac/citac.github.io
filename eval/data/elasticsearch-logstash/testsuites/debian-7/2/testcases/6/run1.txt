@@ -1,0 +1,811 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (success) assert(File[01proxy])
+  3. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  4. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  5. (success) assert(File[01proxy])
+  6. (success) exec(File[sources.list.d])
+  7. (success) exec(File[logstash.list])
+  8. (success) exec(File[old-proxy-file])
+  9. (success) exec(File[sources.list])
+  10. (success) exec(Exec[apt_update])
+  11. (success) exec(Package[logstash])
+  12. (success) exec(File[/etc/logstash])
+  13. (success) exec(File[/etc/logstash/plugins])
+  14. (success) exec(File[/etc/logstash/plugins/logstash])
+  15. (success) exec(File[/etc/logstash/conf.d])
+  16. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  17. (success) assert(Exec[apt_update])
+  18. (success) assert(File[/etc/logstash/conf.d])
+  19. (success) assert(File[/etc/logstash/plugins/logstash])
+  20. (success) assert(File[/etc/logstash/plugins])
+  21. (success) assert(File[/etc/logstash])
+  22. (success) assert(File[01proxy])
+  23. (success) assert(File[logstash.list])
+  24. (success) assert(File[old-proxy-file])
+  25. (success) assert(File[sources.list.d])
+  26. (success) assert(File[sources.list])
+  27. (success) assert(Package[logstash])
+  28. (success) exec(File[/etc/logstash/plugins/logstash/codecs])
+  29. (success) exec(File[/etc/logstash/patterns])
+  30. (success) exec(File[/etc/logstash/plugins/logstash/filters])
+  31. (success) exec(File[/etc/logstash/plugins/logstash/inputs])
+  32. (success) exec(File[/etc/logstash/plugins/logstash/outputs])
+  33. (success) exec(File_concat[ls-config])
+  34. (success) exec(File[/etc/init/logstash.conf])
+  35. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  36. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  37. (success) assert(Exec[apt_update])
+  38. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  39. (success) assert(File[/etc/init/logstash.conf])
+  40. (success) assert(File[/etc/logstash/conf.d])
+  41. (success) assert(File[/etc/logstash/patterns])
+  42. (success) assert(File[/etc/logstash/plugins/logstash/codecs])
+  43. (success) assert(File[/etc/logstash/plugins/logstash/filters])
+  44. (success) assert(File[/etc/logstash/plugins/logstash/inputs])
+  45. (success) assert(File[/etc/logstash/plugins/logstash/outputs])
+  46. (success) assert(File[/etc/logstash/plugins/logstash])
+  47. (success) assert(File[/etc/logstash/plugins])
+  48. (success) assert(File[/etc/logstash])
+  49. (success) assert(File[01proxy])
+  50. (success) assert(File[logstash.list])
+  51. (success) assert(File[old-proxy-file])
+  52. (success) assert(File[sources.list.d])
+  53. (success) assert(File[sources.list])
+  54. (success) assert(File_concat[ls-config])
+  55. (success) assert(Package[logstash])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.162411084 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 4.426820637 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 0.693544385 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/Apt::Key[Add key: D88E42B4 from Apt::Source logstash]/Apt_key[Add key: D88E42B4 from Apt::Source logstash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 5.204405552 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 2.504404841 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.2529115 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.594793048 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/File[logstash.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.171227475 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.171948952 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.169866118 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Package[logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 21.760226974 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Package/Logstash::Package::Install[logstash]/Package[logstash]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/etc/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 0.193557717 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179768909 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. exec(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 0.178456268 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+15. exec(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.17739348 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 9.778068137 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.449117089 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.430274702 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.518276939 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 3.631418825 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[/etc/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.896312859 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 2.636849637 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.334995898 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.647477252 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.6077171 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.520637889 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Package[logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.67093808 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. exec(File[/etc/logstash/plugins/logstash/codecs])
+=====================================================================
+
+Step result:    success
+Execution time: 0.30859905 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/codecs]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. exec(File[/etc/logstash/patterns])
+=====================================================================
+
+Step result:    success
+Execution time: 0.213326276 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/patterns]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+30. exec(File[/etc/logstash/plugins/logstash/filters])
+=====================================================================
+
+Step result:    success
+Execution time: 0.213183618 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/filters]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+31. exec(File[/etc/logstash/plugins/logstash/inputs])
+=====================================================================
+
+Step result:    success
+Execution time: 0.218957949 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/inputs]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+32. exec(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    success
+Execution time: 0.214437508 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/outputs]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+33. exec(File_concat[ls-config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.246207963 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Config/File_concat[ls-config]/ensure: created
+Notice: /Stage[main]/Logstash::Service/Logstash::Service::Init[logstash]/Service[logstash]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+34. exec(File[/etc/init/logstash.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.215092609 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+35. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 0.233584014 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+##############  OUTPUT END  ##############
+
+=====================================================================
+36. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 8.022085107 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+37. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.45399233 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.487204159 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/etc/init/logstash.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.085940265 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.144860699 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(File[/etc/logstash/patterns])
+=====================================================================
+
+Step result:    success
+Execution time: 3.541956303 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(File[/etc/logstash/plugins/logstash/codecs])
+=====================================================================
+
+Step result:    success
+Execution time: 3.481023771 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(File[/etc/logstash/plugins/logstash/filters])
+=====================================================================
+
+Step result:    success
+Execution time: 3.532028878 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(File[/etc/logstash/plugins/logstash/inputs])
+=====================================================================
+
+Step result:    success
+Execution time: 3.485721857 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. assert(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    success
+Execution time: 3.488651079 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+46. assert(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.573369875 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 3.402761885 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[/etc/logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.479398277 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 2.529415857 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.480744705 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+51. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.517080307 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+52. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.532826983 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+53. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.443445338 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+54. assert(File_concat[ls-config])
+=====================================================================
+
+Step result:    success
+Execution time: 3.503147027 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+55. assert(Package[logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 3.787179045 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

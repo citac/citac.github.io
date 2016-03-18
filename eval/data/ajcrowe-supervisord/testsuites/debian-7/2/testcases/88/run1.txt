@@ -1,0 +1,219 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 88
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[curl])
+  2. (success) exec(Package[python])
+  3. (success) exec(Exec[install_setuptools])
+  4. (success) exec(Exec[install_pip])
+  5. (success) exec(Package[supervisor])
+  6. (success) exec(File[/etc/default/supervisor])
+  7. (success) exec(File[/etc/supervisor.d])
+  8. (success) assert(Exec[install_pip])
+  9. (success) assert(Exec[install_setuptools])
+  10. (success) assert(File[/etc/default/supervisor])
+  11. (success) assert(File[/etc/supervisor.d])
+  12. (success) assert(Package[curl])
+  13. (success) assert(Package[python])
+  14. (success) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 0.13889218 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 0.154565762 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 2.290946835 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 4.2464978 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_pip]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.83393037 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Install/Package[supervisor]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 1.098275005 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]/ensure: created
+Error: /Stage[main]/Supervisord::Service/Service[supervisord]: Failed to call refresh: Could not find init script for 'supervisord'
+Error: /Stage[main]/Supervisord::Service/Service[supervisord]: Could not find init script for 'supervisord'
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/supervisor.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.896448603 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/File[/etc/supervisor.d]/ensure: created
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.896864526 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.913392939 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.942292223 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/supervisor.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.971555841 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.819353886 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.999569921 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.399098946 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

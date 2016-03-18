@@ -1,0 +1,300 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[radvd])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+  5. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+  6. (success) exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+  7. (success) exec(File[/var/lib/puppet/concat/bin])
+  8. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+  9. (success) exec(Exec[concat_/etc/radvd.conf])
+  10. (success) exec(File[/usr/local/bin/concatfragments.sh])
+  11. (success) assert(Exec[concat_/etc/radvd.conf])
+  12. (success) assert(File[/usr/local/bin/concatfragments.sh])
+  13. (success) assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+  14. (success) assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+  15. (success) assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+  16. (success) assert(File[/var/lib/puppet/concat/_etc_radvd.conf])
+  17. (success) assert(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+  18. (success) assert(File[/var/lib/puppet/concat/bin])
+  19. (success) assert(File[/var/lib/puppet/concat])
+  20. (success) assert(Package[radvd])
+
+=====================================================================
+1. exec(Package[radvd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.802333907 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Install/Package[radvd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.193648431 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.24657777 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 0.247157062 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.248240258 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat]/ensure: created
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.254781673 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Radvd::Interface[eth1]/Concat::Fragment[radvd.conf-interface-eth1]/File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1]/ensure: created
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.222902031 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 0.324460271 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.sh]/ensure: defined content as '{md5}256169ee61115a6b717b2844d2ea3128'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[concat_/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.365597184 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Radvd::Config/Concat[/etc/radvd.conf]/Exec[concat_/etc/radvd.conf]/returns: executed successfully
+Notice: /Stage[main]/Radvd::Service/Service[radvd]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/usr/local/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219621221 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Exec[concat_/etc/radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.589688665 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/usr/local/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 0.759205454 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time: 2.035631313 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments/10_radvd.conf-interface-eth1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.989928092 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/var/lib/puppet/concat/_etc_radvd.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.056205505 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/var/lib/puppet/concat/_etc_radvd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 1.983920299 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time: 2.267556166 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 1.955596624 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 2.004545445 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[radvd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.167763132 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

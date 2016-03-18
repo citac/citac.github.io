@@ -1,0 +1,236 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 53
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-cli])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[php5-fpm])
+  4. (success) exec(File[/etc/php5/fpm/php-fpm.conf])
+  5. (success) exec(File[/etc/php5/fpm/pool.d])
+  6. (success) exec(File[/etc/php5/fpm/pool.d/www.conf])
+  7. (success) exec(Service[php5-fpm])
+  8. (success) exec(File[preferences])
+  9. (success) assert(File[/etc/php5/fpm/php-fpm.conf])
+  10. (success) assert(File[/etc/php5/fpm/pool.d/www.conf])
+  11. (success) assert(File[/etc/php5/fpm/pool.d])
+  12. (success) assert(File[preferences])
+  13. (success) assert(Package[php5-cli])
+  14. (success) assert(Package[php5-common])
+  15. (success) assert(Package[php5-fpm])
+  16. (success) assert(Service[php5-fpm])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 4.156102358 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 0.25112 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 2.531822882 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm/Package[php5-fpm]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.391239245 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]/content: content changed '{md5}fa2980b7e392030b41b019ee4f22ea03' to '{md5}a5d2f807c7650c1f1cc897f683eff005'
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.291698387 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.365702499 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]/content: content changed '{md5}4e7a0aab17c868d744c5cbcc98c5547d' to '{md5}015cfedac2a22b40b2c6cd7eb232d3d1'
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Service[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.485369125 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.324784138 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 5.838820908 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(File[/etc/php5/fpm/pool.d/www.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.895022435 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/php5/fpm/pool.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.49940457 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 3.474095516 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.496817965 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.36934082 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 3.454047996 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Service[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 4.318371744 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

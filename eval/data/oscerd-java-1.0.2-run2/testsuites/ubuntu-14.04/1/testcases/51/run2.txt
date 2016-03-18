@@ -1,0 +1,99 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 51
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[tar])
+  2. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  3. (success) exec(Exec[extract_java])
+  4. (failure) exec(Package[unzip])
+  5. (skipped) assert(Exec[extract_java])
+
+=====================================================================
+1. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.072491718 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 4.190474883 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 5.217102022 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[unzip])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.753552691 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install unzip' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 39 not upgraded.
+Need to get 157 kB of archives.
+After this operation, 391 kB of additional disk space will be used.
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main unzip amd64 6.0-9ubuntu1.3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main unzip amd64 6.0-9ubuntu1.3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-9ubuntu1.3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Main/Package[unzip]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install unzip' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 39 not upgraded.
+Need to get 157 kB of archives.
+After this operation, 391 kB of additional disk space will be used.
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main unzip amd64 6.0-9ubuntu1.3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main unzip amd64 6.0-9ubuntu1.3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-9ubuntu1.3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::18). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::18 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 18:40:10.165 [citac-puppet]: Failed to apply 'Package[unzip]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

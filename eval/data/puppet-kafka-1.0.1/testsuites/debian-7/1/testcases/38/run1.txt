@@ -1,0 +1,145 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 38
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[wget])
+  2. (success) exec(Group[kafka])
+  3. (success) exec(User[kafka])
+  4. (success) exec(File[/var/lib/kafka])
+  5. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  6. (success) exec(Exec[download-kafka-package])
+  7. (success) exec(Package[java-common])
+  8. (success) exec(Package[java])
+  9. (success) exec(Exec[untar-kafka-package])
+  10. (success) exec(Exec[update-java-alternatives])
+  11. (success) assert(Exec[untar-kafka-package])
+
+=====================================================================
+1. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.096350652 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.149934888 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.186977957 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.157489692 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.159557736 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.390836 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Package[java-common])
+=====================================================================
+
+Step result:    success
+Execution time: 1.961773129 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[java])
+=====================================================================
+
+Step result:    success
+Execution time: 76.30517388 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Java/Package[java]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.511542015 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[untar-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[update-java-alternatives])
+=====================================================================
+
+Step result:    success
+Execution time: 0.198406777 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 40.406942688 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,62 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 21
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[amavisd-new])
+  2. (success) exec(Package[clamav-daemon])
+  3. (success) exec(User[clamav])
+  4. (success) assert(User[clamav])
+
+=====================================================================
+1. exec(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 11.526857245 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[amavisd-new]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 6.789723518 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Package[clamav-daemon]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 0.415906443 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/User[clamav]/groups: groups changed '' to 'amavis'
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 7.035909796 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

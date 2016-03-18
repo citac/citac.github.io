@@ -1,0 +1,99 @@
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python-django' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libjs-jquery
+Suggested packages:
+  javascript-common python-psycopg2 python-psycopg python-mysqldb python-flup
+  python-sqlite python-yaml geoip-database-contrib gettext python-django-doc
+  ipython bpython libgdal1
+The following NEW packages will be installed:
+  libjs-jquery python-django
+0 upgraded, 2 newly installed, 0 to remove and 9 not upgraded.
+Need to get 2292 kB of archives.
+After this operation, 27.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 [78.8 kB]
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.92.200 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.92.200 80]
+Fetched 78.8 kB in 0s (250 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-django/python-django_1.6.1-2ubuntu0.8_all.deb  404  Not Found [IP: 91.189.92.200 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Graphite::Install/Package[python-django]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python-django' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libjs-jquery
+Suggested packages:
+  javascript-common python-psycopg2 python-psycopg python-mysqldb python-flup
+  python-sqlite python-yaml geoip-database-contrib gettext python-django-doc
+  ipython bpython libgdal1
+The following NEW packages will be installed:
+  libjs-jquery python-django
+0 upgraded, 2 newly installed, 0 to remove and 9 not upgraded.
+Need to get 2292 kB of archives.
+After this operation, 27.7 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 [78.8 kB]
+Err http://archive.ubuntu.com/ubuntu/ trusty-updates/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.92.200 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python-django all 1.6.1-2ubuntu0.8
+  404  Not Found [IP: 91.189.92.200 80]
+Fetched 78.8 kB in 0s (250 kB/s)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-django/python-django_1.6.1-2ubuntu0.8_all.deb  404  Not Found [IP: 91.189.92.200 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 21:04:41.050 [citac-puppet]: Failed to apply 'Package[python-django]'.
+Notice: /Package[django-tagging]: Dependency Package[python-django] has failures: true
+Warning: /Package[django-tagging]: Skipping because of failed dependencies
+Notice: /Package[twisted]: Dependency Package[python-django] has failures: true
+Warning: /Package[twisted]: Skipping because of failed dependencies
+Notice: /Package[txamqp]: Dependency Package[python-django] has failures: true
+Warning: /Package[txamqp]: Skipping because of failed dependencies
+Notice: /Package[graphite-web]: Dependency Package[python-django] has failures: true
+Warning: /Package[graphite-web]: Skipping because of failed dependencies
+Notice: /Package[carbon]: Dependency Package[python-django] has failures: true
+Warning: /Package[carbon]: Skipping because of failed dependencies
+Notice: /Package[whisper]: Dependency Package[python-django] has failures: true
+Warning: /Package[whisper]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/carbon-0.9.12-py2.7.egg-info]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Install/File[/usr/lib/python2.7/dist-packages/graphite_web-0.9.12-py2.7.egg-info]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-schemas.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-schemas.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/carbon.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/carbon.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-aggregation.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/storage-aggregation.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/webapp/graphite/local_settings.py]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/webapp/graphite/local_settings.py]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/whitelist.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/whitelist.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/bin/carbon-logrotate.sh]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/bin/carbon-logrotate.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Cron[Rotate carbon logs]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Cron[Rotate carbon logs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/etc/init.d/carbon-cache]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/etc/init.d/carbon-cache]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Service[carbon-cache]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Service[carbon-cache]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/graphite.wsgi]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/graphite.wsgi]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/ports.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/ports.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-available/graphite.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-available/graphite.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-enabled/graphite.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/File[/etc/apache2/sites-enabled/graphite.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config_apache/Service[apache2]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config_apache/Service[apache2]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/blacklist.conf]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite::Config/File[/opt/graphite/conf/blacklist.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Graphite/Anchor[graphite::end]: Dependency Package[python-django] has failures: true
+Warning: /Stage[main]/Graphite/Anchor[graphite::end]: Skipping because of failed dependencies

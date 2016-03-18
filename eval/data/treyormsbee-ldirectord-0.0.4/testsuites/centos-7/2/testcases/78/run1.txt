@@ -1,0 +1,123 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 78
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/_etc_ldirectord.cf])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_ldirectord.cf/fragments.concat.out])
+  4. (success) exec(Exec[get_ldirectord])
+  5. (success) assert(Exec[get_ldirectord])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_ldirectord.cf/fragments.concat.out])
+  7. (success) assert(File[/var/lib/puppet/concat/_etc_ldirectord.cf])
+  8. (success) assert(File[/var/lib/puppet/concat])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.373444427 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/_etc_ldirectord.cf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.353682171 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldirectord::Config/Concat[/etc/ldirectord.cf]/File[/var/lib/puppet/concat/_etc_ldirectord.cf]/ensure: created
+Error: /Stage[main]/Ldirectord::Config/Concat[/etc/ldirectord.cf]/Exec[concat_/etc/ldirectord.cf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Ldirectord::Config/Concat[/etc/ldirectord.cf]/Exec[concat_/etc/ldirectord.cf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_ldirectord.cf/fragments.concat.out])
+=====================================================================
+
+Step result:    success
+Execution time: 0.359748268 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldirectord::Config/Concat[/etc/ldirectord.cf]/File[/var/lib/puppet/concat/_etc_ldirectord.cf/fragments.concat.out]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[get_ldirectord])
+=====================================================================
+
+Step result:    success
+Execution time: 0.540434748 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[get_ldirectord])
+=====================================================================
+
+Step result:    success
+Execution time: 6.068752003 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_ldirectord.cf/fragments.concat.out])
+=====================================================================
+
+Step result:    success
+Execution time: 2.804405697 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat/_etc_ldirectord.cf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.537382938 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.279732468 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

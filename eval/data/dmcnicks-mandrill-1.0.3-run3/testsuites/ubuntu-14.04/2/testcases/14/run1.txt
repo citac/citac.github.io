@@ -1,0 +1,328 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 14
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[postfix])
+  2. (success) exec(Exec[inet_interfaces])
+  3. (success) exec(Exec[myhostname])
+  4. (success) exec(Exec[mydestination])
+  5. (success) exec(Exec[relayhost])
+  6. (success) exec(Exec[smtp_sasl_auth_enable])
+  7. (success) exec(Exec[smtp_sasl_password_maps])
+  8. (success) exec(Exec[smtp_sasl_security_options])
+  9. (success) exec(Exec[smtp_use_tls])
+  10. (success) exec(Exec[smtp_tls_CAfile])
+  11. (success) exec(Package[sasl2-bin])
+  12. (failure) assert(Exec[inet_interfaces])
+  13. (failure) assert(Exec[mydestination])
+  14. (failure) assert(Exec[myhostname])
+  15. (failure) assert(Exec[relayhost])
+  16. (failure) assert(Exec[smtp_sasl_auth_enable])
+  17. (failure) assert(Exec[smtp_sasl_password_maps])
+  18. (failure) assert(Exec[smtp_sasl_security_options])
+  19. (failure) assert(Exec[smtp_tls_CAfile])
+  20. (failure) assert(Exec[smtp_use_tls])
+  21. (success) assert(Package[postfix])
+  22. (success) assert(Package[sasl2-bin])
+
+=====================================================================
+1. exec(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 17.423902205 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Package[postfix]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    success
+Execution time: 0.124649287 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[myhostname])
+=====================================================================
+
+Step result:    success
+Execution time: 0.129199715 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[myhostname]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[mydestination])
+=====================================================================
+
+Step result:    success
+Execution time: 0.137818649 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[mydestination]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[relayhost])
+=====================================================================
+
+Step result:    success
+Execution time: 0.1427604 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[relayhost]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[smtp_sasl_auth_enable])
+=====================================================================
+
+Step result:    success
+Execution time: 0.181075062 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_auth_enable]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[smtp_sasl_password_maps])
+=====================================================================
+
+Step result:    success
+Execution time: 0.218037522 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_password_maps]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[smtp_sasl_security_options])
+=====================================================================
+
+Step result:    success
+Execution time: 0.170315583 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_security_options]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[smtp_use_tls])
+=====================================================================
+
+Step result:    success
+Execution time: 0.204537778 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_use_tls]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[smtp_tls_CAfile])
+=====================================================================
+
+Step result:    success
+Execution time: 1.730214996 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_tls_CAfile]/returns: executed successfully
+Notice: /Stage[main]/Mandrill::Config::Postfix/Service[postfix]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Package[sasl2-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 6.069056454 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill/Package[sasl2-bin]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.286904369 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Exec[mydestination])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.791020308 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[mydestination]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Exec[myhostname])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.754152394 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[myhostname]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Exec[relayhost])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.589204744 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[relayhost]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Exec[smtp_sasl_auth_enable])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.869067253 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_auth_enable]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Exec[smtp_sasl_password_maps])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.59951545 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_password_maps]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Exec[smtp_sasl_security_options])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.414336299 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_sasl_security_options]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Exec[smtp_tls_CAfile])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.122091528 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_tls_CAfile]/returns: executed successfully
+Notice: /Stage[main]/Mandrill::Config::Postfix/Service[postfix]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Exec[smtp_use_tls])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.814202173 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[smtp_use_tls]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 1.484979302 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[sasl2-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 1.698370166 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

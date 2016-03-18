@@ -1,0 +1,554 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 116
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Group[bareos])
+  2. (success) exec(File[/etc/apt/sources.list.d/bareos.list])
+  3. (success) exec(Exec[bareos-key])
+  4. (success) exec(User[bareos])
+  5. (success) assert(Exec[bareos-key])
+  6. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  7. (success) assert(Group[bareos])
+  8. (success) assert(User[bareos])
+  9. (success) exec(File[/var/run/bareos])
+  10. (success) assert(Exec[bareos-key])
+  11. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  12. (success) assert(File[/var/run/bareos])
+  13. (success) assert(Group[bareos])
+  14. (success) assert(User[bareos])
+  15. (success) exec(Exec[update-apt])
+  16. (success) assert(Exec[bareos-key])
+  17. (success) assert(Exec[update-apt])
+  18. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  19. (success) assert(File[/var/run/bareos])
+  20. (success) assert(Group[bareos])
+  21. (success) assert(User[bareos])
+  22. (failure) exec(Package[bareos-bconsole])
+  23. (skipped) assert(Exec[bareos-key])
+  24. (skipped) assert(Exec[update-apt])
+  25. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  26. (skipped) assert(File[/var/run/bareos])
+  27. (skipped) assert(Group[bareos])
+  28. (skipped) assert(Package[bareos-bconsole])
+  29. (skipped) assert(User[bareos])
+  30. (skipped) exec(File[bareos.dir])
+  31. (skipped) assert(Exec[bareos-key])
+  32. (skipped) assert(Exec[update-apt])
+  33. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  34. (skipped) assert(File[/var/run/bareos])
+  35. (skipped) assert(File[bareos.dir])
+  36. (skipped) assert(Group[bareos])
+  37. (skipped) assert(Package[bareos-bconsole])
+  38. (skipped) assert(User[bareos])
+  39. (skipped) exec(File[bconsole.conf])
+  40. (skipped) assert(Exec[bareos-key])
+  41. (skipped) assert(Exec[update-apt])
+  42. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  43. (skipped) assert(File[/var/run/bareos])
+  44. (skipped) assert(File[bareos.dir])
+  45. (skipped) assert(File[bconsole.conf])
+  46. (skipped) assert(Group[bareos])
+  47. (skipped) assert(Package[bareos-bconsole])
+  48. (skipped) assert(User[bareos])
+
+=====================================================================
+1. exec(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.175761592 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/Group[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.20548498 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Repository/File[/etc/apt/sources.list.d/bareos.list]/ensure: defined content as '{md5}05a78b17c3a94760f65d7058ba9772d8'
+Notice: /Stage[main]/Bareos::Repository/Exec[bareos-key]/returns: gpg: no valid OpenPGP data found.
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: Failed to call refresh: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.1514639 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.297202934 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/User[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.786571615 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.445776421 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.687649364 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.697800808 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. exec(File[/var/run/bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.223538936 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/File[/var/run/bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.363934731 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.386011383 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/var/run/bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.584022385 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.394162549 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.085309735 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.223248341 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 3.843519336 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.541435404 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.499248058 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/var/run/bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.45584941 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.452199696 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.495897488 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. exec(Package[bareos-bconsole])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.819405372 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-bconsole' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-bconsole
+Error: /Stage[main]/Bareos::Console/Package[bareos-bconsole]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-bconsole' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-bconsole
+ERROR 09:59:08.838 [citac-puppet]: Failed to apply 'Package[bareos-bconsole]'.
+Notice: /Stage[main]/Bareos::Console/File[bconsole.conf]: Dependency Package[bareos-bconsole] has failures: true
+Warning: /Stage[main]/Bareos::Console/File[bconsole.conf]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+23. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(File[/var/run/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. assert(Package[bareos-bconsole])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+30. exec(File[bareos.dir])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+31. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+32. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+33. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+34. assert(File[/var/run/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+35. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+36. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+37. assert(Package[bareos-bconsole])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+38. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+39. exec(File[bconsole.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+40. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+41. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+42. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+43. assert(File[/var/run/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+44. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+45. assert(File[bconsole.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+46. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+47. assert(Package[bareos-bconsole])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+48. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

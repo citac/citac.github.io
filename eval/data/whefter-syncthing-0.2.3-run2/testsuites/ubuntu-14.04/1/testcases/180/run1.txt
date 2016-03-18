@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 180
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Apt_key[00654A3E])
+  3. (success) exec(File[01proxy])
+  4. (success) exec(File[syncthing.list])
+  5. (success) assert(File[01proxy])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.944804491 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.705822245 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.359410365 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 7.771166932 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 5.608502305 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

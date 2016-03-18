@@ -1,0 +1,126 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[unattended-upgrades])
+  2. (success) exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  3. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  4. (success) assert(Package[unattended-upgrades])
+  5. (success) exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  6. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  7. (success) assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  8. (success) assert(Package[unattended-upgrades])
+
+=====================================================================
+1. exec(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Package[unattended-upgrades]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[unattended-upgrades]/Apt::Setting[conf-unattended-upgrades]/File[/etc/apt/apt.conf.d/50unattended-upgrades]/content: content changed '{md5}0428073601d9609c42a8746ffed25437' to '{md5}407e29c5e54df5b4a0b94db792b9f97a'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,16 @@
+# https://forge.puppetlabs.com/foolean/tftp
+
+class { 'tftp::client': }
+
+class { 'tftp::server':
+    ensure     => 'present',
+    address    => '0.0.0.0:69',
+    create     => true,
+    listen     => true,
+    permissive => true,
+    secure     => true,
+    umask      => '007',
+    verbosity  => 3,
+    tftproot   => '/srv/tftp',
+}
+

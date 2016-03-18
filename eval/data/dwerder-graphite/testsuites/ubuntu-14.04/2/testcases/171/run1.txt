@@ -1,0 +1,85 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 171
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[apache2])
+  2. (success) exec(Package[libapache2-mod-wsgi])
+  3. (success) exec(Package[python-psycopg2])
+  4. (success) assert(Package[apache2])
+  5. (skipped) assert(Package[libapache2-mod-wsgi])
+  6. (skipped) assert(Package[python-psycopg2])
+
+=====================================================================
+1. exec(Package[apache2])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Config_apache/Package[apache2]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Config_apache/Package[libapache2-mod-wsgi]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[python-psycopg2])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Graphite::Install/Package[python-psycopg2]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Failed to call refresh: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Initial django db creation]: Working directory '/opt/graphite/webapp/graphite' does not exist
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Failed to call refresh: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Service[carbon-cache]: Could not find init script or upstart conf file for 'carbon-cache'
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Failed to call refresh: Working directory '/opt/graphite/' does not exist
+Error: /Stage[main]/Graphite::Config/Exec[Chown graphite for web user]: Working directory '/opt/graphite/' does not exist
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[apache2])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[libapache2-mod-wsgi])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Package[python-psycopg2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

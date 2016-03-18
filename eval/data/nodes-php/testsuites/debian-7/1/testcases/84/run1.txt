@@ -1,0 +1,109 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 84
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-common])
+  2. (success) exec(Package[php5-fpm])
+  3. (success) exec(File[/usr/share/augeas/lenses/contrib])
+  4. (success) exec(File[/usr/share/augeas/lenses/contrib/php.aug])
+  5. (success) exec(Augeas[php-fpm-php-fpm-config])
+  6. (success) exec(Package[php5-cli])
+  7. (success) exec(Service[php5-fpm])
+  8. (success) assert(Package[php5-cli])
+
+=====================================================================
+1. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Cli/Php::Contrib::Base_package[cli]/Package[php5-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Package/Package[php5-fpm]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/share/augeas/lenses/contrib])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Augeas/File[/usr/share/augeas/lenses/contrib]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/usr/share/augeas/lenses/contrib/php.aug])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Augeas/File[/usr/share/augeas/lenses/contrib/php.aug]/ensure: defined content as '{md5}3ee52fcce112525fd7b5297d361ab7ad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Augeas[php-fpm-php-fpm-config])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Cli/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Service[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

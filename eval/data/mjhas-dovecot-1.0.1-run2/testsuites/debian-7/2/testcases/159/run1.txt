@@ -1,0 +1,379 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 159
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/dovecot])
+  2. (success) exec(Package[dovecot-imapd])
+  3. (success) exec(Package[dovecot-sieve])
+  4. (success) exec(Group[vmail])
+  5. (success) assert(File[/var/lib/dovecot])
+  6. (success) assert(Group[vmail])
+  7. (success) assert(Package[dovecot-imapd])
+  8. (success) assert(Package[dovecot-sieve])
+  9. (success) exec(User[vmail])
+  10. (success) assert(File[/var/lib/dovecot])
+  11. (success) assert(Group[vmail])
+  12. (success) assert(Package[dovecot-imapd])
+  13. (success) assert(Package[dovecot-sieve])
+  14. (success) assert(User[vmail])
+  15. (success) exec(Package[dovecot-pgsql])
+  16. (success) exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+  17. (success) exec(File[/var/lib/dovecot/sieve])
+  18. (success) assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+  19. (success) assert(File[/var/lib/dovecot/sieve])
+  20. (success) assert(File[/var/lib/dovecot])
+  21. (success) assert(Group[vmail])
+  22. (success) assert(Package[dovecot-imapd])
+  23. (success) assert(Package[dovecot-pgsql])
+  24. (success) assert(Package[dovecot-sieve])
+  25. (success) assert(User[vmail])
+
+=====================================================================
+1. exec(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 0.118654473 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/var/lib/dovecot]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 11.246733365 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot/Package[dovecot-imapd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 2.242643524 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Sieve/Package[dovecot-sieve]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.204493168 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/Group[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 5.256598507 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.609534773 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.337521432 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 3.544757846 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. exec(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.247483732 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/User[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 4.806572132 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.35530487 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.253111999 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 3.240491672 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.483781806 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 2.023971212 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/Package[dovecot-pgsql]/ensure: ensure changed 'purged' to 'present'
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. exec(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 0.24619191 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/content: content changed '{md5}aee3a57c9c18a3b9a27fd0c4f8ce7f17' to '{md5}1bac2daadef8e82eea87cf2bf3463791'
+Notice: /Stage[main]/Dovecot::Postgres/File[/etc/dovecot/dovecot-sql.conf.ext]/mode: mode changed '0640' to '0600'
+##############  OUTPUT END  ##############
+
+=====================================================================
+17. exec(File[/var/lib/dovecot/sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 0.191258062 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Sieve/File[/var/lib/dovecot/sieve]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+18. assert(File[/etc/dovecot/dovecot-sql.conf.ext])
+=====================================================================
+
+Step result:    success
+Execution time: 5.345823423 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/var/lib/dovecot/sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 3.304350611 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/var/lib/dovecot])
+=====================================================================
+
+Step result:    success
+Execution time: 2.893908576 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.390802389 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[dovecot-imapd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.123620691 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.415757353 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(Package[dovecot-sieve])
+=====================================================================
+
+Step result:    success
+Execution time: 3.079855821 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.445706467 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

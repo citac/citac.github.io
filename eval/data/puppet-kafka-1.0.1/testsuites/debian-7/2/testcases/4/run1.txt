@@ -1,0 +1,1623 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Group[kafka])
+  2. (success) assert(Group[kafka])
+  3. (success) exec(User[kafka])
+  4. (success) assert(Group[kafka])
+  5. (success) assert(User[kafka])
+  6. (success) exec(File[/var/lib/kafka])
+  7. (success) assert(File[/var/lib/kafka])
+  8. (success) assert(Group[kafka])
+  9. (success) assert(User[kafka])
+  10. (success) exec(File[/opt/kafka-2.8.0-0.8.1.1])
+  11. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  12. (success) assert(File[/var/lib/kafka])
+  13. (success) assert(Group[kafka])
+  14. (success) assert(User[kafka])
+  15. (success) exec(Package[wget])
+  16. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  17. (success) assert(File[/var/lib/kafka])
+  18. (success) assert(Group[kafka])
+  19. (success) assert(Package[wget])
+  20. (success) assert(User[kafka])
+  21. (success) exec(File[/opt/kafka])
+  22. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  23. (success) assert(File[/opt/kafka])
+  24. (success) assert(File[/var/lib/kafka])
+  25. (success) assert(Group[kafka])
+  26. (success) assert(Package[wget])
+  27. (success) assert(User[kafka])
+  28. (success) exec(File[/opt/kafka/config])
+  29. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  30. (success) assert(File[/opt/kafka/config])
+  31. (success) assert(File[/opt/kafka])
+  32. (success) assert(File[/var/lib/kafka])
+  33. (success) assert(Group[kafka])
+  34. (success) assert(Package[wget])
+  35. (success) assert(User[kafka])
+  36. (success) exec(Exec[download-kafka-package])
+  37. (success) assert(Exec[download-kafka-package])
+  38. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  39. (success) assert(File[/opt/kafka/config])
+  40. (success) assert(File[/opt/kafka])
+  41. (success) assert(File[/var/lib/kafka])
+  42. (success) assert(Group[kafka])
+  43. (success) assert(Package[wget])
+  44. (success) assert(User[kafka])
+  45. (success) exec(Exec[untar-kafka-package])
+  46. (success) assert(Exec[download-kafka-package])
+  47. (success) assert(Exec[untar-kafka-package])
+  48. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  49. (success) assert(File[/opt/kafka/config])
+  50. (success) assert(File[/opt/kafka])
+  51. (success) assert(File[/var/lib/kafka])
+  52. (success) assert(Group[kafka])
+  53. (success) assert(Package[wget])
+  54. (success) assert(User[kafka])
+  55. (success) exec(File[/var/log/kafka])
+  56. (success) assert(Exec[download-kafka-package])
+  57. (success) assert(Exec[untar-kafka-package])
+  58. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  59. (success) assert(File[/opt/kafka/config])
+  60. (success) assert(File[/opt/kafka])
+  61. (success) assert(File[/var/lib/kafka])
+  62. (success) assert(File[/var/log/kafka])
+  63. (success) assert(Group[kafka])
+  64. (success) assert(Package[wget])
+  65. (success) assert(User[kafka])
+  66. (success) exec(File[/opt/kafka/config/server.properties])
+  67. (success) assert(Exec[download-kafka-package])
+  68. (success) assert(Exec[untar-kafka-package])
+  69. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  70. (success) assert(File[/opt/kafka/config/server.properties])
+  71. (success) assert(File[/opt/kafka/config])
+  72. (success) assert(File[/opt/kafka])
+  73. (success) assert(File[/var/lib/kafka])
+  74. (success) assert(File[/var/log/kafka])
+  75. (success) assert(Group[kafka])
+  76. (success) assert(Package[wget])
+  77. (success) assert(User[kafka])
+  78. (success) exec(File[/etc/init.d/kafka])
+  79. (success) assert(Exec[download-kafka-package])
+  80. (success) assert(Exec[untar-kafka-package])
+  81. (success) assert(File[/etc/init.d/kafka])
+  82. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  83. (success) assert(File[/opt/kafka/config/server.properties])
+  84. (success) assert(File[/opt/kafka/config])
+  85. (success) assert(File[/opt/kafka])
+  86. (success) assert(File[/var/lib/kafka])
+  87. (success) assert(File[/var/log/kafka])
+  88. (success) assert(Group[kafka])
+  89. (success) assert(Package[wget])
+  90. (success) assert(User[kafka])
+  91. (success) exec(Service[kafka])
+  92. (success) assert(Exec[download-kafka-package])
+  93. (success) assert(Exec[untar-kafka-package])
+  94. (success) assert(File[/etc/init.d/kafka])
+  95. (success) assert(File[/opt/kafka-2.8.0-0.8.1.1])
+  96. (success) assert(File[/opt/kafka/config/server.properties])
+  97. (success) assert(File[/opt/kafka/config])
+  98. (success) assert(File[/opt/kafka])
+  99. (success) assert(File[/var/lib/kafka])
+  100. (success) assert(File[/var/log/kafka])
+  101. (success) assert(Group[kafka])
+  102. (success) assert(Package[wget])
+  103. (success) assert(Service[kafka])
+  104. (success) assert(User[kafka])
+
+=====================================================================
+1. exec(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.122265026 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Group[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.792287258 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.136908342 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/User[kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.912801804 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.723799017 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.135555413 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/lib/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.931285577 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.584082268 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.865406024 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 0.150252285 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka-2.8.0-0.8.1.1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.707128931 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.462294507 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.682026326 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.885945574 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.159025325 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.975941065 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.687528494 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.618986644 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.639709627 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.737620157 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.154359913 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 2.104206078 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.225223455 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.673066797 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.691712229 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.745724337 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.733166645 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. exec(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.174793414 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/opt/kafka/config]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.941525153 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.677451415 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.160703206 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.596562659 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.624136218 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 2.046099071 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.686464168 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. exec(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.754512664 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[download-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+37. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.302202102 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.698049052 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.627241643 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.008011782 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.338405925 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.691303918 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.72398691 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.863796993 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. exec(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 0.456181417 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/Exec[untar-kafka-package]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+46. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.338260743 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.665274125 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.635865878 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.702829036 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.197052168 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+51. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.652349963 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+52. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.752474751 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+53. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.674076216 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+54. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.780853383 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+55. exec(File[/var/log/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.173613429 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka/File[/var/log/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+56. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.253033777 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+57. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.704299709 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+58. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.598707364 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+59. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.62863326 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+60. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.139970996 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+61. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.679972519 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+62. assert(File[/var/log/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.720495919 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+63. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.699792572 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+64. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.695377331 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+65. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.861836402 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+66. exec(File[/opt/kafka/config/server.properties])
+=====================================================================
+
+Step result:    success
+Execution time: 0.21464164 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka::Broker::Config/File[/opt/kafka/config/server.properties]/content: content changed '{md5}6ff0212962a67389eb825b5995dbf2b8' to '{md5}1e5c6d1550984ea945c840c1faafeb2b'
+Error: /Stage[main]/Kafka::Broker::Service/Service[kafka]: Failed to call refresh: Could not find init script for 'kafka'
+Error: /Stage[main]/Kafka::Broker::Service/Service[kafka]: Could not find init script for 'kafka'
+##############  OUTPUT END  ##############
+
+=====================================================================
+67. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.400647709 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+68. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.698133367 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+69. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.743116304 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+70. assert(File[/opt/kafka/config/server.properties])
+=====================================================================
+
+Step result:    success
+Execution time: 1.589433982 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+71. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.778564332 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+72. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.186646854 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+73. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.920647594 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+74. assert(File[/var/log/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.803634102 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+75. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.763998238 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+76. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.56067912 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+77. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.899360933 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+78. exec(File[/etc/init.d/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 0.15675554 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka::Broker::Service/File[/etc/init.d/kafka]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+79. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.445450587 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+80. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.809754197 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+81. assert(File[/etc/init.d/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.622970591 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+82. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.634700413 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+83. assert(File[/opt/kafka/config/server.properties])
+=====================================================================
+
+Step result:    success
+Execution time: 1.659647798 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+84. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.669445382 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+85. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.20208314 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+86. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.695564039 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+87. assert(File[/var/log/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.645680014 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+88. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.555577914 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+89. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.759654114 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+90. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.803263323 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+91. exec(Service[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 2.412712967 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka::Broker::Service/Service[kafka]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+92. assert(Exec[download-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 2.182848223 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+93. assert(Exec[untar-kafka-package])
+=====================================================================
+
+Step result:    success
+Execution time: 1.671039786 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+94. assert(File[/etc/init.d/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.696169947 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+95. assert(File[/opt/kafka-2.8.0-0.8.1.1])
+=====================================================================
+
+Step result:    success
+Execution time: 1.689428004 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+96. assert(File[/opt/kafka/config/server.properties])
+=====================================================================
+
+Step result:    success
+Execution time: 1.635720195 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+97. assert(File[/opt/kafka/config])
+=====================================================================
+
+Step result:    success
+Execution time: 1.641930253 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+98. assert(File[/opt/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.246281631 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+99. assert(File[/var/lib/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.758071109 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+100. assert(File[/var/log/kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.670976194 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+101. assert(Group[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.659132986 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+102. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 1.56939767 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+103. assert(Service[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 2.364542481 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kafka::Broker::Service/Service[kafka]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+104. assert(User[kafka])
+=====================================================================
+
+Step result:    success
+Execution time: 1.752391638 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

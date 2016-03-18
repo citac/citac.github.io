@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 176
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Apt_key[00654A3E])
+  3. (success) exec(Apt_key[00654A3E])
+  4. (success) exec(File[syncthing.list])
+  5. (success) assert(Apt_key[00654A3E])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.89475329 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.189558888 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 0.975615039 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 6.092074524 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.970527769 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

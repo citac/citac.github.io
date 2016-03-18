@@ -1,0 +1,1355 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 8
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[01proxy])
+  3. (success) assert(File[01proxy])
+  4. (success) assert(Package[openjdk-7-jre])
+  5. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  6. (success) exec(File[sources.list.d])
+  7. (success) exec(File[elasticsearch.list])
+  8. (success) exec(File[old-proxy-file])
+  9. (success) exec(File[sources.list])
+  10. (success) exec(Exec[apt_update])
+  11. (success) exec(Package[elasticsearch])
+  12. (success) exec(File[/etc/default/elasticsearch])
+  13. (success) exec(Exec[mkdir_templates_elasticsearch])
+  14. (success) exec(File[/etc/elasticsearch])
+  15. (success) exec(File[/etc/elasticsearch/templates_import])
+  16. (success) exec(File[/etc/elasticsearch/elasticsearch.yml])
+  17. (success) exec(File[/etc/elasticsearch/logging.yml])
+  18. (success) exec(File[/etc/init.d/elasticsearch])
+  19. (success) exec(File[/usr/lib/systemd/system/elasticsearch.service])
+  20. (success) exec(File[/usr/share/elasticsearch])
+  21. (success) exec(File[/usr/share/elasticsearch/bin])
+  22. (success) exec(File[/usr/share/elasticsearch/data])
+  23. (success) exec(File[/usr/share/elasticsearch/plugins])
+  24. (success) exec(File[/var/log/elasticsearch])
+  25. (success) exec(Exec[mkdir_configdir_elasticsearch_es-01])
+  26. (success) exec(File[/etc/elasticsearch/es-01])
+  27. (success) exec(Exec[mkdir_datadir_elasticsearch_es-01])
+  28. (success) exec(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+  29. (success) exec(File[/etc/elasticsearch/es-01/logging.yml])
+  30. (success) exec(File[/usr/share/elasticsearch/data/es-01])
+  31. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  32. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  33. (success) assert(Exec[apt_update])
+  34. (success) assert(Exec[mkdir_configdir_elasticsearch_es-01])
+  35. (success) assert(Exec[mkdir_datadir_elasticsearch_es-01])
+  36. (success) assert(Exec[mkdir_templates_elasticsearch])
+  37. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  38. (success) assert(File[/etc/default/elasticsearch])
+  39. (success) assert(File[/etc/elasticsearch/elasticsearch.yml])
+  40. (success) assert(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+  41. (success) assert(File[/etc/elasticsearch/es-01/logging.yml])
+  42. (success) assert(File[/etc/elasticsearch/es-01])
+  43. (success) assert(File[/etc/elasticsearch/logging.yml])
+  44. (success) assert(File[/etc/elasticsearch/templates_import])
+  45. (success) assert(File[/etc/elasticsearch])
+  46. (success) assert(File[/etc/init.d/elasticsearch])
+  47. (success) assert(File[/usr/lib/systemd/system/elasticsearch.service])
+  48. (success) assert(File[/usr/share/elasticsearch/bin])
+  49. (success) assert(File[/usr/share/elasticsearch/data/es-01])
+  50. (success) assert(File[/usr/share/elasticsearch/data])
+  51. (success) assert(File[/usr/share/elasticsearch/plugins])
+  52. (success) assert(File[/usr/share/elasticsearch])
+  53. (success) assert(File[/var/log/elasticsearch])
+  54. (success) assert(File[01proxy])
+  55. (success) assert(File[elasticsearch.list])
+  56. (success) assert(File[old-proxy-file])
+  57. (success) assert(File[sources.list.d])
+  58. (success) assert(File[sources.list])
+  59. (success) assert(Package[elasticsearch])
+  60. (success) assert(Package[openjdk-7-jre])
+  61. (success) exec(File[/etc/init.d/elasticsearch-es-01])
+  62. (success) assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  63. (success) assert(Exec[apt_update])
+  64. (success) assert(Exec[mkdir_configdir_elasticsearch_es-01])
+  65. (success) assert(Exec[mkdir_datadir_elasticsearch_es-01])
+  66. (success) assert(Exec[mkdir_templates_elasticsearch])
+  67. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  68. (success) assert(File[/etc/default/elasticsearch])
+  69. (success) assert(File[/etc/elasticsearch/elasticsearch.yml])
+  70. (success) assert(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+  71. (success) assert(File[/etc/elasticsearch/es-01/logging.yml])
+  72. (success) assert(File[/etc/elasticsearch/es-01])
+  73. (success) assert(File[/etc/elasticsearch/logging.yml])
+  74. (success) assert(File[/etc/elasticsearch/templates_import])
+  75. (success) assert(File[/etc/elasticsearch])
+  76. (success) assert(File[/etc/init.d/elasticsearch-es-01])
+  77. (success) assert(File[/etc/init.d/elasticsearch])
+  78. (success) assert(File[/usr/lib/systemd/system/elasticsearch.service])
+  79. (success) assert(File[/usr/share/elasticsearch/bin])
+  80. (success) assert(File[/usr/share/elasticsearch/data/es-01])
+  81. (success) assert(File[/usr/share/elasticsearch/data])
+  82. (success) assert(File[/usr/share/elasticsearch/plugins])
+  83. (success) assert(File[/usr/share/elasticsearch])
+  84. (success) assert(File[/var/log/elasticsearch])
+  85. (success) assert(File[01proxy])
+  86. (success) assert(File[elasticsearch.list])
+  87. (success) assert(File[old-proxy-file])
+  88. (success) assert(File[sources.list.d])
+  89. (success) assert(File[sources.list])
+  90. (success) assert(Package[elasticsearch])
+  91. (success) assert(Package[openjdk-7-jre])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 100.217991046 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.095129674 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 17.728129489 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 3.349592245 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.836868429 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.102334056 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 7.001590118 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.876547233 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.878185975 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.880767522 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 8.684131013 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Package/Package[elasticsearch]/ensure: ensure changed 'purged' to '1.4.2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/etc/default/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.066226967 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/default/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.997911434 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/Exec[mkdir_templates_elasticsearch]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. exec(File[/etc/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.986409745 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+15. exec(File[/etc/elasticsearch/templates_import])
+=====================================================================
+
+Step result:    success
+Execution time: 0.964472115 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. exec(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.970952763 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/elasticsearch.yml]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+17. exec(File[/etc/elasticsearch/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.982184248 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/logging.yml]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+18. exec(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.175901304 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+19. exec(File[/usr/lib/systemd/system/elasticsearch.service])
+=====================================================================
+
+Step result:    success
+Execution time: 0.954242796 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+20. exec(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.956810104 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+21. exec(File[/usr/share/elasticsearch/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.953636176 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. exec(File[/usr/share/elasticsearch/data])
+=====================================================================
+
+Step result:    success
+Execution time: 1.169113388 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/data]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+23. exec(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 0.951446342 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/plugins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+24. exec(File[/var/log/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.953078337 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+25. exec(Exec[mkdir_configdir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.951113364 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+26. exec(File[/etc/elasticsearch/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.978748739 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+27. exec(Exec[mkdir_datadir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.981704011 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_datadir_elasticsearch_es-01]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+28. exec(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.96407192 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/elasticsearch.yml]/ensure: defined content as '{md5}f803680a466f0800773ccd7139c2529b'
+Error: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Failed to call refresh: Could not find init script or upstart conf file for 'elasticsearch-es-01'
+Error: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Could not find init script or upstart conf file for 'elasticsearch-es-01'
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. exec(File[/etc/elasticsearch/es-01/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.967925547 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/logging.yml]/ensure: defined content as '{md5}2ea66d5ac462a32e1bafabd4082b8c3b'
+Error: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Failed to call refresh: Could not find init script or upstart conf file for 'elasticsearch-es-01'
+Error: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Could not find init script or upstart conf file for 'elasticsearch-es-01'
+##############  OUTPUT END  ##############
+
+=====================================================================
+30. exec(File[/usr/share/elasticsearch/data/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 0.977328032 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/usr/share/elasticsearch/data/es-01]/owner: owner changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+31. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 1.106083647 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+##############  OUTPUT END  ##############
+
+=====================================================================
+32. assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 20.662974829 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.111160502 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(Exec[mkdir_configdir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.142491011 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(Exec[mkdir_datadir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.215282204 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. assert(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.073174237 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+37. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.572296594 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(File[/etc/default/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.814716384 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 1.569211007 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 2.580759549 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(File[/etc/elasticsearch/es-01/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 2.579076486 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(File[/etc/elasticsearch/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.607637038 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(File[/etc/elasticsearch/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 1.746274168 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(File[/etc/elasticsearch/templates_import])
+=====================================================================
+
+Step result:    success
+Execution time: 4.062023004 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. assert(File[/etc/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.602121419 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+46. assert(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.534383007 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(File[/usr/lib/systemd/system/elasticsearch.service])
+=====================================================================
+
+Step result:    success
+Execution time: 1.585178399 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[/usr/share/elasticsearch/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 2.892993373 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(File[/usr/share/elasticsearch/data/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.916066148 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(File[/usr/share/elasticsearch/data])
+=====================================================================
+
+Step result:    success
+Execution time: 2.786749296 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+51. assert(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 2.729269293 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+52. assert(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.71087763 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+53. assert(File[/var/log/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.694442459 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+54. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.560908877 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+55. assert(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.643782504 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+56. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 1.84018992 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+57. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.583259001 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+58. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.937859088 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+59. assert(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.5577074 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+60. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 3.82118867 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+61. exec(File[/etc/init.d/elasticsearch-es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 1.324683518 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/File[/etc/init.d/elasticsearch-es-01]/ensure: created
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+62. assert(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 46.11563239 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+63. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 1.683506649 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+64. assert(Exec[mkdir_configdir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.053410474 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+65. assert(Exec[mkdir_datadir_elasticsearch_es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.053027625 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+66. assert(Exec[mkdir_templates_elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.692972068 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+67. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.783892741 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+68. assert(File[/etc/default/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.796905846 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+69. assert(File[/etc/elasticsearch/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 1.526264089 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+70. assert(File[/etc/elasticsearch/es-01/elasticsearch.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 2.60159011 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+71. assert(File[/etc/elasticsearch/es-01/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 3.214424726 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+72. assert(File[/etc/elasticsearch/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 5.242257644 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+73. assert(File[/etc/elasticsearch/logging.yml])
+=====================================================================
+
+Step result:    success
+Execution time: 1.69009138 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+74. assert(File[/etc/elasticsearch/templates_import])
+=====================================================================
+
+Step result:    success
+Execution time: 2.703193953 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+75. assert(File[/etc/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.705958848 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+76. assert(File[/etc/init.d/elasticsearch-es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.908550681 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+77. assert(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 1.584499922 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+78. assert(File[/usr/lib/systemd/system/elasticsearch.service])
+=====================================================================
+
+Step result:    success
+Execution time: 1.581700748 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+79. assert(File[/usr/share/elasticsearch/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 2.739226267 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+80. assert(File[/usr/share/elasticsearch/data/es-01])
+=====================================================================
+
+Step result:    success
+Execution time: 2.713882699 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+81. assert(File[/usr/share/elasticsearch/data])
+=====================================================================
+
+Step result:    success
+Execution time: 2.739003251 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+82. assert(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 2.819470883 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+83. assert(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.932049734 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+84. assert(File[/var/log/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 3.057728519 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+85. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.820235754 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+86. assert(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.766515592 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+87. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 1.787953235 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+88. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.687138186 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+89. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.717077778 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+90. assert(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 2.620145928 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+91. assert(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 3.117210996 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

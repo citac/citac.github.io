@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 14
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[curl])
+  2. (success) assert(Package[curl])
+  3. (success) exec(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+  4. (failure) assert(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+  5. (skipped) assert(Package[curl])
+
+=====================================================================
+1. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Exec[/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/hosts
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

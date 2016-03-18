@@ -1,0 +1,65 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 29
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Package[unzip])
+  2. (skipped) exec(File[/usr/lib/jvm])
+  3. (skipped) assert(Package[unzip])
+
+=====================================================================
+1. exec(Package[unzip])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.792716439 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install unzip' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 195 kB of archives.
+After this operation, 386 kB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main unzip amd64 6.0-8+deb7u3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/u/unzip/unzip_6.0-8+deb7u3_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Main/Package[unzip]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install unzip' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  zip
+The following NEW packages will be installed:
+  unzip
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 195 kB of archives.
+After this operation, 386 kB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main unzip amd64 6.0-8+deb7u3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/u/unzip/unzip_6.0-8+deb7u3_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 15:40:45.506 [citac-puppet]: Failed to apply 'Package[unzip]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. assert(Package[unzip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

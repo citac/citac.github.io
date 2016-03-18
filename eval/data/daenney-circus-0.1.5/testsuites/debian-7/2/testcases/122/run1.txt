@@ -1,0 +1,270 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 122
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[python-dev])
+  2. (success) exec(Package[build-essential])
+  3. (success) exec(Package[python-pip])
+  4. (success) exec(Package[circus])
+  5. (success) exec(File[/usr/bin/circusd])
+  6. (success) exec(File[/etc/circus])
+  7. (success) exec(File[/etc/init.d/circus])
+  8. (success) exec(File[/etc/circus/circusd.ini])
+  9. (success) exec(Ini_setting[pubsub_endpoint in /etc/circus/circusd.ini])
+  10. (success) assert(File[/etc/circus/circusd.ini])
+  11. (success) assert(File[/etc/circus])
+  12. (success) assert(File[/etc/init.d/circus])
+  13. (success) assert(File[/usr/bin/circusd])
+  14. (success) assert(Ini_setting[pubsub_endpoint in /etc/circus/circusd.ini])
+  15. (success) assert(Package[build-essential])
+  16. (success) assert(Package[circus])
+  17. (success) assert(Package[python-dev])
+  18. (success) assert(Package[python-pip])
+
+=====================================================================
+1. exec(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 3.693117162 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[python-dev]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 0.164251482 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time: 6.339288322 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[python-pip]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[circus])
+=====================================================================
+
+Step result:    success
+Execution time: 80.667058059 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[circus]/ensure: created
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/usr/bin/circusd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.260166202 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/File[/usr/bin/circusd]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 0.228800782 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/File[/etc/circus]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/init.d/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 0.344619513 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/File[/etc/init.d/circus]/ensure: defined content as '{md5}3b921bb9f1a813703a046c5ae4775359'
+Notice: /Stage[main]/Circus::Services/Service[circus]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 0.244464971 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/File[/etc/circus/circusd.ini]/ensure: created
+Notice: /Stage[main]/Circus::Services/Service[circus]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Ini_setting[pubsub_endpoint in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 0.244877351 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/Circus::Setting[pubsub_endpoint]/Ini_setting[pubsub_endpoint in /etc/circus/circusd.ini]/ensure: created
+Notice: /Stage[main]/Circus::Services/Service[circus]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(File[/etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 5.651466491 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/etc/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 3.616284963 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/etc/init.d/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 3.505693122 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/usr/bin/circusd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.94173723 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Ini_setting[pubsub_endpoint in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 2.559046251 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 2.710418194 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Package[circus])
+=====================================================================
+
+Step result:    success
+Execution time: 2.567263103 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 3.417148719 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time: 3.720716127 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

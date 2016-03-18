@@ -1,0 +1,570 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 133
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (failure) exec(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  3. (skipped) exec(File[sources.list.d])
+  4. (skipped) exec(File[nginx.list])
+  5. (skipped) exec(File[old-proxy-file])
+  6. (skipped) exec(File[sources.list])
+  7. (skipped) exec(Exec[apt_update])
+  8. (skipped) exec(File[preferences.d])
+  9. (skipped) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  10. (skipped) assert(Exec[apt_update])
+  11. (skipped) assert(File[01proxy])
+  12. (skipped) assert(File[nginx.list])
+  13. (skipped) assert(File[old-proxy-file])
+  14. (skipped) assert(File[preferences.d])
+  15. (skipped) assert(File[sources.list.d])
+  16. (skipped) assert(File[sources.list])
+  17. (skipped) exec(Package[nginx])
+  18. (skipped) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  19. (skipped) assert(Exec[apt_update])
+  20. (skipped) assert(File[01proxy])
+  21. (skipped) assert(File[nginx.list])
+  22. (skipped) assert(File[old-proxy-file])
+  23. (skipped) assert(File[preferences.d])
+  24. (skipped) assert(File[sources.list.d])
+  25. (skipped) assert(File[sources.list])
+  26. (skipped) assert(Package[nginx])
+  27. (skipped) exec(File[/etc/nginx])
+  28. (skipped) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  29. (skipped) assert(Exec[apt_update])
+  30. (skipped) assert(File[/etc/nginx])
+  31. (skipped) assert(File[01proxy])
+  32. (skipped) assert(File[nginx.list])
+  33. (skipped) assert(File[old-proxy-file])
+  34. (skipped) assert(File[preferences.d])
+  35. (skipped) assert(File[sources.list.d])
+  36. (skipped) assert(File[sources.list])
+  37. (skipped) assert(Package[nginx])
+  38. (skipped) exec(File[/etc/nginx/sites-enabled])
+  39. (skipped) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  40. (skipped) assert(Exec[apt_update])
+  41. (skipped) assert(File[/etc/nginx/sites-enabled])
+  42. (skipped) assert(File[/etc/nginx])
+  43. (skipped) assert(File[01proxy])
+  44. (skipped) assert(File[nginx.list])
+  45. (skipped) assert(File[old-proxy-file])
+  46. (skipped) assert(File[preferences.d])
+  47. (skipped) assert(File[sources.list.d])
+  48. (skipped) assert(File[sources.list])
+  49. (skipped) assert(Package[nginx])
+  50. (skipped) exec(File[/etc/nginx/sites-enabled/default])
+  51. (skipped) assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+  52. (skipped) assert(Exec[apt_update])
+  53. (skipped) assert(File[/etc/nginx/sites-enabled/default])
+  54. (skipped) assert(File[/etc/nginx/sites-enabled])
+  55. (skipped) assert(File[/etc/nginx])
+  56. (skipped) assert(File[01proxy])
+  57. (skipped) assert(File[nginx.list])
+  58. (skipped) assert(File[old-proxy-file])
+  59. (skipped) assert(File[preferences.d])
+  60. (skipped) assert(File[sources.list.d])
+  61. (skipped) assert(File[sources.list])
+  62. (skipped) assert(Package[nginx])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.853307549 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.111029661 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Network is unreachable - connect(2) for "nginx.org" port 80
+Error: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Apt_key[Add key: 7BD9BF62 from Apt::Source nginx]/ensure: change from absent to present failed: Could not set 'present' on ensure: Network is unreachable - connect(2) for "nginx.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 12:17:14.253 [citac-puppet]: Failed to apply 'Apt_key[Add key: 7BD9BF62 from Apt::Source nginx]'.
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Anchor[apt_key 7BD9BF62 present]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Apt::Key[Add key: 7BD9BF62 from Apt::Source nginx]/Anchor[apt_key 7BD9BF62 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/File[nginx.list]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/File[nginx.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Package[nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Package[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt::update]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt::update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Anchor[apt::source::nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package::Debian/Apt::Source[nginx]/Anchor[apt::source::nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Package/Anchor[nginx::package::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/client_body_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/tmp/nginx.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/var/nginx/proxy_temp]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/nginx.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.mail.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-enabled/default]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/sites-available]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/proxy.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/example_ssl.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/vhost_autogen.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Config/File[/etc/nginx/conf.d/default.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx::Service/Service[nginx]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx::Service/Service[nginx]: Skipping because of failed dependencies
+Notice: /Stage[main]/Nginx/Anchor[nginx::end]: Dependency Apt_key[Add key: 7BD9BF62 from Apt::Source nginx] has failures: true
+Warning: /Stage[main]/Nginx/Anchor[nginx::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. exec(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. exec(Package[nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Package[nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. exec(File[/etc/nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+30. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+31. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+32. assert(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+33. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+34. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+35. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+36. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+37. assert(Package[nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+38. exec(File[/etc/nginx/sites-enabled])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+39. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+40. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+41. assert(File[/etc/nginx/sites-enabled])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+42. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+43. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+44. assert(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+45. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+46. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+47. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+48. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+49. assert(Package[nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+50. exec(File[/etc/nginx/sites-enabled/default])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+51. assert(Apt_key[Add key: 7BD9BF62 from Apt::Source nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+52. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+53. assert(File[/etc/nginx/sites-enabled/default])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+54. assert(File[/etc/nginx/sites-enabled])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+55. assert(File[/etc/nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+56. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+57. assert(File[nginx.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+58. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+59. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+60. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+61. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+62. assert(Package[nginx])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

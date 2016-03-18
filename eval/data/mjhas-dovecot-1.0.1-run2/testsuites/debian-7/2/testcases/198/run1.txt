@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 198
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Group[vmail])
+  2. (success) exec(User[vmail])
+  3. (success) exec(File[/srv/vmail])
+  4. (success) exec(Package[dovecot-pgsql])
+  5. (success) assert(File[/srv/vmail])
+  6. (success) assert(Group[vmail])
+  7. (success) assert(Package[dovecot-pgsql])
+  8. (success) assert(User[vmail])
+
+=====================================================================
+1. exec(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.150163694 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/Group[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.163146195 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/User[vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/srv/vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 0.136380726 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Mail/File[/srv/vmail]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 10.658111174 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Dovecot::Postgres/Package[dovecot-pgsql]/ensure: ensure changed 'purged' to 'present'
+Notice: /Stage[main]/Dovecot/Service[dovecot]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/srv/vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 5.242365628 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Group[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.460254723 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(Package[dovecot-pgsql])
+=====================================================================
+
+Step result:    success
+Execution time: 3.375280003 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(User[vmail])
+=====================================================================
+
+Step result:    success
+Execution time: 3.038107639 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

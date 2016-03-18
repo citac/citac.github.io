@@ -1,0 +1,150 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 140
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-cli])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[php-pear])
+  4. (success) exec(Exec[::php::pear::auto_discover])
+  5. (success) exec(File[preferences])
+  6. (success) assert(Exec[::php::pear::auto_discover])
+  7. (success) assert(File[preferences])
+  8. (success) assert(Package[php-pear])
+  9. (success) assert(Package[php5-cli])
+  10. (success) assert(Package[php5-common])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.819371837 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 0.277620365 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[php-pear])
+=====================================================================
+
+Step result:    success
+Execution time: 2.218580592 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Pear/Package[php-pear]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[::php::pear::auto_discover])
+=====================================================================
+
+Step result:    success
+Execution time: 0.450399251 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.334372546 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[::php::pear::auto_discover])
+=====================================================================
+
+Step result:    success
+Execution time: 5.720998295 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 3.308315404 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[php-pear])
+=====================================================================
+
+Step result:    success
+Execution time: 3.551695545 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.453644405 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.595235997 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

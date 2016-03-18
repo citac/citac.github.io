@@ -1,0 +1,257 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 16
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  3. (success) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  4. (success) assert(File[/var/lib/puppet/concat])
+  5. (success) exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  6. (failure) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  7. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  8. (skipped) assert(File[/var/lib/puppet/concat])
+  9. (skipped) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  10. (skipped) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  11. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  12. (skipped) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  13. (skipped) assert(File[/var/lib/puppet/concat])
+  14. (skipped) exec(Yumrepo[perunv3])
+  15. (skipped) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  16. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  17. (skipped) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  18. (skipped) assert(File[/var/lib/puppet/concat])
+  19. (skipped) assert(Yumrepo[perunv3])
+  20. (skipped) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out])
+  21. (skipped) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  22. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  23. (skipped) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out])
+  24. (skipped) assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  25. (skipped) assert(File[/var/lib/puppet/concat])
+  26. (skipped) assert(Yumrepo[perunv3])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/ensure: defined content as '{md5}828c6b3ec538e4dc713c8521989cf443'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+4 changes:
+  file/changed: /etc/hosts
+  file/changed: /var/lib/rpm/__db.001
+  file/changed: /var/lib/rpm/__db.002
+  file/changed: /var/lib/rpm/__db.003
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. exec(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Yumrepo[perunv3])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

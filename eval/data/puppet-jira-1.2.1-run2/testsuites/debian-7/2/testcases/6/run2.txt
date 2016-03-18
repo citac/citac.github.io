@@ -1,0 +1,251 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[/opt/staging])
+  2. (success) exec(Group[jira])
+  3. (success) exec(File[/opt/staging/jira])
+  4. (success) assert(File[/opt/staging/jira])
+  5. (success) assert(File[/opt/staging])
+  6. (success) assert(Group[jira])
+  7. (success) exec(User[jira])
+  8. (success) assert(File[/opt/staging/jira])
+  9. (success) assert(File[/opt/staging])
+  10. (success) assert(Group[jira])
+  11. (success) assert(User[jira])
+  12. (failure) exec(Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz])
+  13. (skipped) assert(Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz])
+  14. (skipped) assert(File[/opt/staging/jira])
+  15. (skipped) assert(File[/opt/staging])
+  16. (skipped) assert(Group[jira])
+  17. (skipped) assert(User[jira])
+
+=====================================================================
+1. exec(File[/opt/staging])
+=====================================================================
+
+Step result:    success
+Execution time: 0.098870548 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Staging/File[/opt/staging]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[jira])
+=====================================================================
+
+Step result:    success
+Execution time: 0.164446688 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jira::Install/Group[jira]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/opt/staging/jira])
+=====================================================================
+
+Step result:    success
+Execution time: 0.151164497 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/File[/opt/staging/jira]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/opt/staging/jira])
+=====================================================================
+
+Step result:    success
+Execution time: 4.751018094 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[/opt/staging])
+=====================================================================
+
+Step result:    success
+Execution time: 2.518146009 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Group[jira])
+=====================================================================
+
+Step result:    success
+Execution time: 2.949675707 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. exec(User[jira])
+=====================================================================
+
+Step result:    success
+Execution time: 0.167671672 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jira::Install/User[jira]/ensure: created
+Notice: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]/returns: /bin/chown: cannot access `/opt/jira/atlassian-jira-6.4.1-standalone': No such file or directory
+Error: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: Failed to call refresh: /bin/chown -R jira:jira /opt/jira/atlassian-jira-6.4.1-standalone returned 1 instead of one of [0]
+Error: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: /bin/chown -R jira:jira /opt/jira/atlassian-jira-6.4.1-standalone returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(File[/opt/staging/jira])
+=====================================================================
+
+Step result:    success
+Execution time: 4.096573085 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/opt/staging])
+=====================================================================
+
+Step result:    success
+Execution time: 2.693458796 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Group[jira])
+=====================================================================
+
+Step result:    success
+Execution time: 3.234987489 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(User[jira])
+=====================================================================
+
+Step result:    success
+Execution time: 3.450483595 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. exec(Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.236618104 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:                                  Dload  Upload   Total   Spent    Left  Speed
+Notice: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) couldn't connect to host
+Error: curl  -f -L -o /opt/staging/jira/atlassian-jira-6.4.1.tar.gz http://www.atlassian.com/software/jira/downloads/binary//atlassian-jira-6.4.1.tar.gz returned 7 instead of one of [0]
+Error: /Stage[main]/Jira::Install/Staging::File[atlassian-jira-6.4.1.tar.gz]/Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]/returns: change from notrun to 0 failed: curl  -f -L -o /opt/staging/jira/atlassian-jira-6.4.1.tar.gz http://www.atlassian.com/software/jira/downloads/binary//atlassian-jira-6.4.1.tar.gz returned 7 instead of one of [0]
+ERROR 10:31:51.861 [citac-puppet]: Failed to apply 'Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz]'.
+Notice: /Stage[main]/Jira::Install/Staging::Extract[atlassian-jira-6.4.1.tar.gz]/Exec[extract atlassian-jira-6.4.1.tar.gz]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/Staging::Extract[atlassian-jira-6.4.1.tar.gz]/Exec[extract atlassian-jira-6.4.1.tar.gz]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Install/File[/home/jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/File[/home/jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Install/Exec[chown_/opt/jira/atlassian-jira-6.4.1-standalone]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/user.sh]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/user.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/setenv.sh]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/bin/setenv.sh]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/home/jira/dbconfig.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/home/jira/dbconfig.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/server.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/server.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/context.xml]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Config/File[/opt/jira/atlassian-jira-6.4.1-standalone/conf/context.xml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Service/File[/etc/init.d/jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Service/File[/etc/init.d/jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira::Service/Service[jira]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira::Service/Service[jira]: Skipping because of failed dependencies
+Notice: /Stage[main]/Jira/Anchor[jira::end]: Dependency Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz] has failures: true
+Warning: /Stage[main]/Jira/Anchor[jira::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(Exec[/opt/staging/jira/atlassian-jira-6.4.1.tar.gz])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(File[/opt/staging/jira])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[/opt/staging])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(Group[jira])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(User[jira])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

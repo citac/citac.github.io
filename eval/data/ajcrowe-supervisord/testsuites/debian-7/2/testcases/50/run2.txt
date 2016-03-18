@@ -1,0 +1,273 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 50
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[python])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(Package[curl])
+  4. (success) exec(Exec[install_setuptools])
+  5. (failure) exec(Exec[install_pip])
+  6. (skipped) exec(Package[supervisor])
+  7. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  8. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+  9. (skipped) assert(Exec[install_pip])
+  10. (skipped) assert(Exec[install_setuptools])
+  11. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+  12. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  13. (skipped) assert(File[/var/lib/puppet/concat])
+  14. (skipped) assert(Package[curl])
+  15. (skipped) assert(Package[python])
+  16. (skipped) assert(Package[supervisor])
+  17. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat])
+  18. (skipped) assert(Exec[install_pip])
+  19. (skipped) assert(Exec[install_setuptools])
+  20. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+  21. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat])
+  22. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  23. (skipped) assert(File[/var/lib/puppet/concat])
+  24. (skipped) assert(Package[curl])
+  25. (skipped) assert(Package[python])
+  26. (skipped) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 0.270092256 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.234831149 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 0.224213081 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 255.140749514 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[install_pip])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.409314101 seconds
+
+############## OUTPUT START ##############
+Error: Could not find command 'easy_install'
+Error: /Stage[main]/Supervisord::Pip/Exec[install_pip]/returns: change from notrun to 0 failed: Could not find command 'easy_install'
+ERROR 05:59:05.116 [citac-puppet]: Failed to apply 'Exec[install_pip]'.
+Notice: /Package[supervisor]: Dependency Exec[install_pip] has failures: true
+Warning: /Package[supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/var/log/supervisor]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/var/log/supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/init.d/supervisord]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/init.d/supervisord]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/supervisor.d]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/supervisor.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_main]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_main]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_unix]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/01_supervisord_unix]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_unix]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/01_supervisord_unix]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/etc/supervisord.conf]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/etc/supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Service/Service[supervisord]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Service/Service[supervisord]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord/Anchor[supervisord::end]: Dependency Exec[install_pip] has failures: true
+Warning: /Stage[main]/Supervisord/Anchor[supervisord::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

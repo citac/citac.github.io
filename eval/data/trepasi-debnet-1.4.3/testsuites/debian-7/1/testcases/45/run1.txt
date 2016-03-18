@@ -1,0 +1,91 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 45
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/20_eth0_stanza])
+  5. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/20_eth0_stanza])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/_etc_network_interfaces])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces]/ensure: created
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments]/ensure: created
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/20_eth0_stanza])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Debnet::Iface::Static[eth0]/Debnet::Iface[eth0]/Concat::Fragment[eth0_stanza]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/20_eth0_stanza]/ensure: defined content as '{md5}0517bfb67ee8c863f84611cde6731320'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/20_eth0_stanza])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

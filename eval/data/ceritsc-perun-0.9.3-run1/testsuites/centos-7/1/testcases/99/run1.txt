@@ -1,0 +1,90 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 99
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/bin])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+  4. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+  5. (success) exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments])
+  6. (success) assert(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/File[/var/lib/puppet/concat/_etc_perunv3.conf]/ensure: created
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.sh'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.sh]/ensure: defined content as '{md5}7bbe7c5fce25a5ddd20415d909ba44fc'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/File[/var/lib/puppet/concat/_etc_perunv3.conf/fragments]/ensure: created
+Notice: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]/returns: The fragments directory is empty, cowardly refusing to make empty config files
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: Failed to call refresh: /var/lib/puppet/concat/bin/concatfragments.sh -o "/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_perunv3.conf" returned 1 instead of one of [0]
+Error: /Stage[main]/Perun::Config/Concat[/etc/perunv3.conf]/Exec[concat_/etc/perunv3.conf]: /var/lib/puppet/concat/bin/concatfragments.sh -o "/var/lib/puppet/concat/_etc_perunv3.conf/fragments.concat.out" -d "/var/lib/puppet/concat/_etc_perunv3.conf" returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,322 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 23
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (success) exec(Apt_key[00654A3E])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[syncthing.list])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(File[sources.list])
+  7. (success) exec(Exec[apt_update])
+  8. (success) exec(Package[syncthing])
+  9. (success) exec(Exec[create syncthing instance example home])
+  10. (success) exec(Augeas[syncthing example basic config])
+  11. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  12. (success) assert(Apt_key[00654A3E])
+  13. (success) assert(Augeas[syncthing example basic config])
+  14. (success) assert(Exec[apt_update])
+  15. (success) assert(Exec[create syncthing instance example home])
+  16. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  17. (success) assert(File[01proxy])
+  18. (success) assert(File[old-proxy-file])
+  19. (success) assert(File[sources.list.d])
+  20. (success) assert(File[sources.list])
+  21. (success) assert(File[syncthing.list])
+  22. (success) assert(Package[syncthing])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.717048175 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.355347635 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.781151108 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 7.370561189 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.783126246 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.790609322 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.803561183 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 8.909448975 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[create syncthing instance example home])
+=====================================================================
+
+Step result:    success
+Execution time: 8.991502626 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]/returns: executed successfully
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Failed to call refresh: Could not find init script or upstart conf file for 'syncthing'
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Could not find init script or upstart conf file for 'syncthing'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Augeas[syncthing example basic config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.880239224 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]/returns: executed successfully
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Failed to call refresh: Could not find init script or upstart conf file for 'syncthing'
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Could not find init script or upstart conf file for 'syncthing'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 0.889313055 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 3.489442 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Augeas[syncthing example basic config])
+=====================================================================
+
+Step result:    success
+Execution time: 2.92947967 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 1.6936052 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Exec[create syncthing instance example home])
+=====================================================================
+
+Step result:    success
+Execution time: 2.55843845 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.341410055 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.588256809 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 1.410540736 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 2.287365315 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.299599248 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.531577023 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 31.506993173 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

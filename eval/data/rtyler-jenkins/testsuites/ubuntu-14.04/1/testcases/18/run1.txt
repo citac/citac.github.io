@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 18
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[01proxy])
+  4. (success) exec(File[old-proxy-file])
+  5. (success) exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+  6. (success) exec(File[jenkins.list])
+  7. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  8. (success) exec(Exec[apt_update])
+  9. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+
+=====================================================================
+1. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Apt_key[Add key: D50582E6 from Apt::Source jenkins])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jenkins::Repo::Debian/Apt::Source[jenkins]/Apt::Key[Add key: D50582E6 from Apt::Source jenkins]/Apt_key[Add key: D50582E6 from Apt::Source jenkins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[jenkins.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Jenkins::Repo::Debian/Apt::Source[jenkins]/File[jenkins.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}92afc1e969a04f0764e9ae8343aa9f2f'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

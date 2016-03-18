@@ -1,0 +1,99 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 39
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[tar])
+  2. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  3. (success) exec(File[/usr/lib/jvm])
+  4. (success) exec(Exec[extract_java])
+  5. (success) exec(Exec[move_java])
+  6. (success) exec(Notify[Temp folder not specified, setting default install folder /tmp/])
+  7. (failure) assert(Exec[move_java])
+
+=====================================================================
+1. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.111832752 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 8.119665519 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.128994987 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/usr/lib/jvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 11.206350192 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[move_java])
+=====================================================================
+
+Step result:    success
+Execution time: 1.920238296 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[move_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Notify[Temp folder not specified, setting default install folder /tmp/])
+=====================================================================
+
+Step result:    success
+Execution time: 0.134581908 seconds
+
+############## OUTPUT START ##############
+Notice: Temp folder not specified, setting default install folder /tmp/
+Notice: /Stage[main]/Main/Java::Setup[java]/Notify[Temp folder not specified, setting default install folder /tmp/]/message: defined 'message' as 'Temp folder not specified, setting default install folder /tmp/'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[move_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 43.037716131 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+

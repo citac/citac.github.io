@@ -1,0 +1,509 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 67
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[python])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(Package[curl])
+  4. (success) exec(Exec[install_setuptools])
+  5. (success) exec(Exec[install_pip])
+  6. (success) exec(Package[supervisor])
+  7. (success) exec(File[/etc/default/supervisor])
+  8. (success) assert(Exec[install_pip])
+  9. (success) assert(Exec[install_setuptools])
+  10. (success) assert(File[/etc/default/supervisor])
+  11. (success) assert(File[/var/lib/puppet/concat])
+  12. (success) assert(Package[curl])
+  13. (success) assert(Package[python])
+  14. (success) assert(Package[supervisor])
+  15. (success) exec(File[/var/lib/puppet/concat/bin])
+  16. (success) assert(Exec[install_pip])
+  17. (success) assert(Exec[install_setuptools])
+  18. (success) assert(File[/etc/default/supervisor])
+  19. (success) assert(File[/var/lib/puppet/concat/bin])
+  20. (success) assert(File[/var/lib/puppet/concat])
+  21. (success) assert(Package[curl])
+  22. (success) assert(Package[python])
+  23. (success) assert(Package[supervisor])
+  24. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  25. (success) assert(Exec[install_pip])
+  26. (success) assert(Exec[install_setuptools])
+  27. (success) assert(File[/etc/default/supervisor])
+  28. (success) assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  29. (success) assert(File[/var/lib/puppet/concat/bin])
+  30. (success) assert(File[/var/lib/puppet/concat])
+  31. (success) assert(Package[curl])
+  32. (success) assert(Package[python])
+  33. (success) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 0.214453659 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.205693969 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 0.222462332 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 1.735731972 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 4.660511401 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_pip]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.686743771 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Install/Package[supervisor]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 0.942174964 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]/ensure: created
+Error: /Stage[main]/Supervisord::Service/Service[supervisord]: Failed to call refresh: Could not find init script for 'supervisord'
+Error: /Stage[main]/Supervisord::Service/Service[supervisord]: Could not find init script for 'supervisord'
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 6.041688731 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.919462558 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.921720765 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.778139695 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.775683875 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 4.262627593 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.753856639 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.86306006 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.697239781 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.528347806 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.403898407 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.087595861 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.095284624 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.198931018 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.973840485 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.993243181 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.915969148 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.rb]/ensure: defined content as '{md5}b684db0eac243553a6a79365119a363d'
+##############  OUTPUT END  ##############
+
+=====================================================================
+25. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.050851003 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.242394933 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.257825747 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 3.385422511 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 3.037715661 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.447335278 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.299657254 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.780181626 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.989471765 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,11 @@
+# https://forge.puppetlabs.com/rlenglet/openssl
+
+openssl::self_signed_certificate { apache:
+  key_bits => 2048,
+  cert_days => 1095,
+  cert_country => US,
+  cert_state => California,
+  cert_organization => Foobar,
+  cert_common_names => ["www.foobar.com", "webmail.foobar.com"],
+  cert_email_address => "admin@foobar.com",
+}

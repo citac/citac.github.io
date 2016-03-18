@@ -1,0 +1,67 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Exec[Download Kibana4])
+  2. (skipped) exec(File[/opt/kibana4])
+  3. (skipped) exec(File[/opt/kibana4/config/kibana.yml])
+  4. (skipped) exec(File[/etc/init.d/kibana4])
+  5. (skipped) assert(File[/etc/init.d/kibana4])
+
+=====================================================================
+1. exec(Exec[Download Kibana4])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.353116979 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: 
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: gzip: stdin: unexpected end of file
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: tar: Child returned status 1
+Notice: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: tar: Error is not recoverable: exiting now
+Error: curl -s -L http://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-linux-x64.tar.gz | tar xz returned 2 instead of one of [0]
+Error: /Stage[main]/Kibana4/Exec[Download Kibana4]/returns: change from notrun to 0 failed: curl -s -L http://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-linux-x64.tar.gz | tar xz returned 2 instead of one of [0]
+ERROR 13:14:55.333 [citac-puppet]: Failed to apply 'Exec[Download Kibana4]'.
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4]: Dependency Exec[Download Kibana4] has failures: true
+Warning: /Stage[main]/Kibana4/File[/opt/kibana4]: Skipping because of failed dependencies
+Notice: /Stage[main]/Kibana4/File[/opt/kibana4/config/kibana.yml]: Dependency Exec[Download Kibana4] has failures: true
+Warning: /Stage[main]/Kibana4/File[/opt/kibana4/config/kibana.yml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Kibana4/File[/etc/init.d/kibana4]: Dependency Exec[Download Kibana4] has failures: true
+Warning: /Stage[main]/Kibana4/File[/etc/init.d/kibana4]: Skipping because of failed dependencies
+Notice: /Stage[main]/Kibana4/Service[kibana4]: Dependency Exec[Download Kibana4] has failures: true
+Warning: /Stage[main]/Kibana4/Service[kibana4]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/opt/kibana4])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. exec(File[/opt/kibana4/config/kibana.yml])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[/etc/init.d/kibana4])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(File[/etc/init.d/kibana4])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

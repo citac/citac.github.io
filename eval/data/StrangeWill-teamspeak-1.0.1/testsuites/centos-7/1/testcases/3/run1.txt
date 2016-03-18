@@ -1,0 +1,111 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 3
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[wget])
+  2. (success) exec(Group[teamspeak])
+  3. (success) exec(User[teamspeak])
+  4. (success) exec(File[/opt/teamspeak])
+  5. (success) exec(File[/opt/teamspeak/downloads])
+  6. (success) exec(Group[teamspeak])
+  7. (success) exec(Exec[download_teamspeak])
+  8. (success) assert(Group[teamspeak])
+
+=====================================================================
+1. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.482721989 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 0.488758151 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Teamspeak/Group[teamspeak]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 0.845522109 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Teamspeak/User[teamspeak]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/opt/teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 0.333179315 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Teamspeak/File[/opt/teamspeak]/mode: mode changed '0700' to '0750'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/opt/teamspeak/downloads])
+=====================================================================
+
+Step result:    success
+Execution time: 0.309935012 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Teamspeak/File[/opt/teamspeak/downloads]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Group[teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 0.281026355 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[download_teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 0.706062067 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Teamspeak/Exec[download_teamspeak]/returns: executed successfully
+Notice: /Stage[main]/Teamspeak/Exec[unpack_teamspeak]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Teamspeak/Exec[move_teamspeak]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Group[teamspeak])
+=====================================================================
+
+Step result:    success
+Execution time: 2.42224135 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

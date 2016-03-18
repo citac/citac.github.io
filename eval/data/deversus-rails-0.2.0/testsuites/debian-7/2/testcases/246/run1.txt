@@ -1,0 +1,66 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 246
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/www])
+  2. (success) exec(File[preferences])
+  3. (success) assert(File[/var/www])
+  4. (success) assert(File[preferences])
+
+=====================================================================
+1. exec(File[/var/www])
+=====================================================================
+
+Step result:    success
+Execution time: 0.262081325 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Capistrano/File[/var/www]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.1216424 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/var/www])
+=====================================================================
+
+Step result:    success
+Execution time: 5.385739307 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 3.64290073 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

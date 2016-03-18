@@ -1,0 +1,171 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 170
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Package[php5-cli])
+  2. (skipped) exec(Package[php5-common])
+  3. (skipped) exec(Package[php5-dev])
+  4. (skipped) exec(File[preferences.d])
+  5. (skipped) assert(File[preferences.d])
+  6. (skipped) assert(Package[php5-cli])
+  7. (skipped) assert(Package[php5-common])
+  8. (skipped) assert(Package[php5-dev])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.855243287 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-cli' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libonig2 libqdbm14 lsof php5-common psmisc ucf
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libonig2 libqdbm14 lsof php5-cli php5-common psmisc ucf
+0 upgraded, 7 newly installed, 0 to remove and 5 not upgraded.
+Need to get 4044 kB of archives.
+After this operation, 11.4 MB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main psmisc amd64 22.19-1+deb7u1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main lsof amd64 4.86+dfsg-1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main ucf all 3.0025+nmu3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main libonig2 amd64 5.9.1-1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main libqdbm14 amd64 1.8.78-2
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://security.debian.org/ wheezy/updates/main php5-common amd64 5.4.45-0+deb7u1
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Err http://security.debian.org/ wheezy/updates/main php5-cli amd64 5.4.45-0+deb7u1
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/p/psmisc/psmisc_22.19-1+deb7u1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/l/lsof/lsof_4.86+dfsg-1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/u/ucf/ucf_3.0025+nmu3_all.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://security.debian.org/pool/updates/main/p/php5/php5-common_5.4.45-0+deb7u1_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/libo/libonig/libonig2_5.9.1-1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/q/qdbm/libqdbm14_1.8.78-2_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://security.debian.org/pool/updates/main/p/php5/php5-cli_5.4.45-0+deb7u1_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-cli' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libonig2 libqdbm14 lsof php5-common psmisc ucf
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  libonig2 libqdbm14 lsof php5-cli php5-common psmisc ucf
+0 upgraded, 7 newly installed, 0 to remove and 5 not upgraded.
+Need to get 4044 kB of archives.
+After this operation, 11.4 MB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main psmisc amd64 22.19-1+deb7u1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main lsof amd64 4.86+dfsg-1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main ucf all 3.0025+nmu3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main libonig2 amd64 5.9.1-1
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://debian.mur.at/debian/ wheezy/main libqdbm14 amd64 1.8.78-2
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://security.debian.org/ wheezy/updates/main php5-common amd64 5.4.45-0+deb7u1
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Err http://security.debian.org/ wheezy/updates/main php5-cli amd64 5.4.45-0+deb7u1
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/p/psmisc/psmisc_22.19-1+deb7u1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/l/lsof/lsof_4.86+dfsg-1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/u/ucf/ucf_3.0025+nmu3_all.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://security.debian.org/pool/updates/main/p/php5/php5-common_5.4.45-0+deb7u1_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/libo/libonig/libonig2_5.9.1-1_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://debian.mur.at/debian/pool/main/q/qdbm/libqdbm14_1.8.78-2_amd64.deb  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Failed to fetch http://security.debian.org/pool/updates/main/p/php5/php5-cli_5.4.45-0+deb7u1_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 02:35:02.788 [citac-puppet]: Failed to apply 'Package[php5-cli]'.
+Notice: /Stage[main]/Php::Composer/Exec[download composer]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Composer/Exec[download composer]: Skipping because of failed dependencies
+Notice: /Package[php5-fpm]: Dependency Package[php5-cli] has failures: true
+Warning: /Package[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Skipping because of failed dependencies
+Notice: /Package[php-pear]: Dependency Package[php5-cli] has failures: true
+Warning: /Package[php-pear]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Skipping because of failed dependencies
+Notice: /Package[php5-dev]: Dependency Package[php5-cli] has failures: true
+Warning: /Package[php5-dev]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php/Anchor[php::end]: Dependency Package[php5-cli] has failures: true
+Warning: /Stage[main]/Php/Anchor[php::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. exec(Package[php5-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[php5-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

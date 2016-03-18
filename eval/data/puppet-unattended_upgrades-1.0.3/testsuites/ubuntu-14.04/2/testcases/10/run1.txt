@@ -1,0 +1,90 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 10
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[unattended-upgrades])
+  2. (success) exec(File[/etc/apt/apt.conf.d/10periodic])
+  3. (success) assert(File[/etc/apt/apt.conf.d/10periodic])
+  4. (skipped) assert(Package[unattended-upgrades])
+  5. (skipped) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  6. (skipped) assert(File[/etc/apt/apt.conf.d/10periodic])
+  7. (skipped) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  8. (skipped) assert(Package[unattended-upgrades])
+
+=====================================================================
+1. exec(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Package[unattended-upgrades]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[periodic]/Apt::Setting[conf-periodic]/File[/etc/apt/apt.conf.d/10periodic]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

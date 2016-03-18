@@ -1,0 +1,8 @@
+# https://forge.puppetlabs.com/fatmcgav/glassfish
+
+package { 'unzip':
+    ensure => present,
+    before => Exec['download_glassfish-3.1.2.2.zip']
+}
+
+include glassfish

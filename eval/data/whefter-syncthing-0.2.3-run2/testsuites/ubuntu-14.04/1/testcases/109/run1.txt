@@ -1,0 +1,160 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 109
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[sources.list])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[01proxy])
+  4. (success) exec(File[old-proxy-file])
+  5. (success) exec(Apt_key[00654A3E])
+  6. (success) exec(File[syncthing.list])
+  7. (success) exec(Exec[apt_update])
+  8. (failure) exec(Package[syncthing])
+  9. (skipped) exec(File[/etc/syncthing])
+  10. (skipped) exec(Exec[create syncthing instance example home])
+  11. (skipped) exec(File[/etc/syncthing/example.conf])
+  12. (skipped) assert(Exec[create syncthing instance example home])
+
+=====================================================================
+1. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.828256644 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.819537896 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.805928946 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.820949431 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 1.877012953 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.906279894 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.795260594 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[syncthing])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.769691929 seconds
+
+############## OUTPUT START ##############
+Error: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install syncthing' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package syncthing
+Error: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: change from purged to latest failed: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install syncthing' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package syncthing
+ERROR 15:05:54.208 [citac-puppet]: Failed to apply 'Package[syncthing]'.
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/Service[syncthing]: Dependency Package[syncthing] has failures: true
+Warning: /Stage[main]/Syncthing::Service/Service[syncthing]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(Exec[create syncthing instance example home])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. exec(File[/etc/syncthing/example.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(Exec[create syncthing instance example home])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

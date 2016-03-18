@@ -1,0 +1,552 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[tar])
+  2. (success) assert(Package[tar])
+  3. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  4. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  5. (success) assert(Package[tar])
+  6. (success) exec(Exec[extract_java])
+  7. (success) assert(Exec[extract_java])
+  8. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  9. (success) assert(Package[tar])
+  10. (success) exec(File[/usr/lib/jvm])
+  11. (success) assert(Exec[extract_java])
+  12. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  13. (success) assert(File[/usr/lib/jvm])
+  14. (success) assert(Package[tar])
+  15. (success) exec(Exec[move_java])
+  16. (failure) assert(Exec[extract_java])
+  17. (failure) assert(Exec[move_java])
+  18. (success) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  19. (success) assert(File[/usr/lib/jvm])
+  20. (success) assert(Package[tar])
+  21. (success) exec(Exec[clean_java])
+  22. (success) assert(Exec[clean_java])
+  23. (failure) assert(Exec[extract_java])
+  24. (failure) assert(Exec[move_java])
+  25. (failure) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  26. (success) assert(File[/usr/lib/jvm])
+  27. (success) assert(Package[tar])
+  28. (success) exec(Notify[Temp folder not specified, setting default install folder /tmp/])
+  29. (failure) assert(Exec[clean_java])
+  30. (failure) assert(Exec[extract_java])
+  31. (failure) assert(Exec[move_java])
+  32. (failure) assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  33. (success) assert(File[/usr/lib/jvm])
+  34. (success) assert(Notify[Temp folder not specified, setting default install folder /tmp/])
+  35. (success) assert(Package[tar])
+
+=====================================================================
+1. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.199027754 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.389817401 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 8.489181979 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 9.506337979 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.289622442 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 6.455848526 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 61.978340165 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 7.181169783 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.104771664 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.072596027 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/usr/lib/jvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 30.435901881 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 7.705532757 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 1.70070605 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.267613508 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(Exec[move_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.156837954 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[move_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 26.267101872 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Exec[move_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.030860047 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 15.697291329 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 2.045014745 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 3.550833855 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(Exec[clean_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.171212843 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[clean_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Exec[clean_java])
+=====================================================================
+
+Step result:    success
+Execution time: 12.206187321 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[clean_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.822670154 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(Exec[move_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.368954687 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    failure
+Execution time: 8.499390854 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/new: /tmp/jdk-7u79-linux-x64.tar.gz
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 1.781763976 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.212495304 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. exec(Notify[Temp folder not specified, setting default install folder /tmp/])
+=====================================================================
+
+Step result:    success
+Execution time: 0.115385266 seconds
+
+############## OUTPUT START ##############
+Notice: Temp folder not specified, setting default install folder /tmp/
+Notice: /Stage[main]/Main/Java::Setup[java]/Notify[Temp folder not specified, setting default install folder /tmp/]/message: defined 'message' as 'Temp folder not specified, setting default install folder /tmp/'
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. assert(Exec[clean_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 14.91158033 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[clean_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/deleted: /tmp/jdk-7u79-linux-x64.tar.gz
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.784099199 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(Exec[move_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.312781467 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    failure
+Execution time: 8.018981371 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /tmp/jdk-7u79-linux-x64.tar.gz
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 1.738888892 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(Notify[Temp folder not specified, setting default install folder /tmp/])
+=====================================================================
+
+Step result:    success
+Execution time: 0.645219039 seconds
+
+############## OUTPUT START ##############
+Notice: Temp folder not specified, setting default install folder /tmp/
+Notice: /Stage[main]/Main/Java::Setup[java]/Notify[Temp folder not specified, setting default install folder /tmp/]/message: defined 'message' as 'Temp folder not specified, setting default install folder /tmp/'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 2.379469052 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

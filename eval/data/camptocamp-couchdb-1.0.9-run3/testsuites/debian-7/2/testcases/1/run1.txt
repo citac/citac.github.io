@@ -1,0 +1,147 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[couchdb])
+  2. (success) assert(Package[couchdb])
+  3. (success) exec(Package[libjs-jquery])
+  4. (success) assert(Package[couchdb])
+  5. (success) assert(Package[libjs-jquery])
+  6. (success) exec(Service[couchdb])
+  7. (failure) assert(Package[couchdb])
+  8. (failure) assert(Package[libjs-jquery])
+  9. (failure) assert(Service[couchdb])
+
+=====================================================================
+1. exec(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 16.216946768 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Package[couchdb]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 4.540740906 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Package[libjs-jquery])
+=====================================================================
+
+Step result:    success
+Execution time: 0.135523864 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 3.39749048 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[libjs-jquery])
+=====================================================================
+
+Step result:    success
+Execution time: 2.081928334 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Service[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.713166228 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Package[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 5.688049266 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>1029, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[libjs-jquery])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.082854283 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>1029, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Service[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.278442337 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>1029, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+

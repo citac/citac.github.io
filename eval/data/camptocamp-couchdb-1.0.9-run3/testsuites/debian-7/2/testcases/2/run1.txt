@@ -1,0 +1,145 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[couchdb])
+  2. (success) assert(Package[couchdb])
+  3. (success) exec(Service[couchdb])
+  4. (failure) assert(Package[couchdb])
+  5. (failure) assert(Service[couchdb])
+  6. (success) exec(Package[libjs-jquery])
+  7. (success) assert(Package[couchdb])
+  8. (success) assert(Package[libjs-jquery])
+  9. (success) assert(Service[couchdb])
+
+=====================================================================
+1. exec(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 18.210949909 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Package[couchdb]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 4.851370456 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Service[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.615824503 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.448937175 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>817, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Service[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.761297248 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/added: processes.running[7]: '{:pid=>817, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Package[libjs-jquery])
+=====================================================================
+
+Step result:    success
+Execution time: 0.10884192 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 3.026499217 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[libjs-jquery])
+=====================================================================
+
+Step result:    success
+Execution time: 1.729431766 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Service[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 2.64841825 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

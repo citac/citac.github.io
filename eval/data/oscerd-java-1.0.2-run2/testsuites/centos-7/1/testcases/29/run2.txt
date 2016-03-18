@@ -1,0 +1,41 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 29
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Package[unzip])
+  2. (skipped) exec(File[/usr/lib/jvm])
+  3. (skipped) assert(Package[unzip])
+
+=====================================================================
+1. exec(Package[unzip])
+=====================================================================
+
+Step result:    failure
+Execution time: 7.899097746 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/yum -d 0 -e 0 -y install unzip' returned 1: Error downloading packages:
+  unzip-6.0-15.el7.x86_64: [Errno 256] No more mirrors to try.
+Error: /Stage[main]/Main/Package[unzip]/ensure: change from absent to present failed: Execution of '/usr/bin/yum -d 0 -e 0 -y install unzip' returned 1: Error downloading packages:
+  unzip-6.0-15.el7.x86_64: [Errno 256] No more mirrors to try.
+ERROR 19:29:20.643 [citac-puppet]: Failed to apply 'Package[unzip]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. assert(Package[unzip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

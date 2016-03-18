@@ -1,0 +1,172 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 40
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+  3. (success) exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+  4. (success) exec(File[/etc/apt/sources.list.d/btsync.list])
+  5. (success) exec(Package[btsync])
+  6. (success) exec(File[/etc/btsync])
+  7. (success) exec(File[sources.list])
+  8. (success) exec(File[preferences])
+  9. (success) exec(File[preferences.d])
+  10. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  11. (success) exec(Service[btsync])
+  12. (success) exec(Exec[apt_update])
+  13. (success) assert(Service[btsync])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.169568917 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[Required packages: 'debian-keyring debian-archive-keyring' for btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.184900097 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: 6BF18B15 from Apt::Source btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 1.144202002 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Apt_key[Add key: 6BF18B15 from Apt::Source btsync]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/sources.list.d/btsync.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.414931845 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Setting[list-btsync]/File[/etc/apt/sources.list.d/btsync.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 3.509403779 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Install/Package[btsync]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.296178543 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.280723817 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.205790348 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.211031473 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.273407172 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Service[btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 0.314316565 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Service/Service[btsync]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.204235175 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(Service[btsync])
+=====================================================================
+
+Step result:    success
+Execution time: 2.732118569 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Btsync::Service/Service[btsync]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

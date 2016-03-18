@@ -1,0 +1,50 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[nscd])
+  2. (success) exec(File[nscd_config])
+  3. (success) assert(File[nscd_config])
+
+=====================================================================
+1. exec(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.073590703 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/Package[nscd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.205749733 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/File[nscd_config]/content: content changed '{md5}67f4a346d27ce75415e337f069715215' to '{md5}99d8530b2eeeab57e2c1ea5fc01a5b73'
+Notice: /Stage[main]/Nscd/Service[nscd_service]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 2.274112579 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

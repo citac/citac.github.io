@@ -1,0 +1,104 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 44
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[libsasl2-modules])
+  2. (success) assert(Package[libsasl2-modules])
+  3. (failure) exec(File[sasl_passwd])
+  4. (skipped) assert(File[sasl_passwd])
+  5. (skipped) assert(Package[libsasl2-modules])
+  6. (skipped) exec(Exec[sasl_passwd.db])
+  7. (skipped) assert(Exec[sasl_passwd.db])
+  8. (skipped) assert(File[sasl_passwd])
+  9. (skipped) assert(Package[libsasl2-modules])
+
+=====================================================================
+1. exec(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    success
+Execution time: 0.075017213 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    success
+Execution time: 1.94892258 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[sasl_passwd])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.115570069 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-234-plqz8p.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-234-plqz8p.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+Wrapped exception:
+No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-234-plqz8p.lock
+Error: /Stage[main]/Mandrill::Config::Postfix/File[sasl_passwd]/ensure: change from absent to present failed: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-234-plqz8p.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+ERROR 17:01:51.188 [citac-puppet]: Failed to apply 'File[sasl_passwd]'.
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]: Dependency File[sasl_passwd] has failures: true
+Warning: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. exec(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Package[libsasl2-modules])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

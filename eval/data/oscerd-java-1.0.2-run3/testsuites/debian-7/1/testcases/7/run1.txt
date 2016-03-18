@@ -1,0 +1,109 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 7
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[tar])
+  2. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  3. (success) exec(File[/usr/lib/jvm])
+  4. (success) exec(Exec[extract_java])
+  5. (success) exec(Exec[move_java])
+  6. (success) exec(Package[unzip])
+  7. (success) exec(Exec[clean_java])
+  8. (success) assert(Package[unzip])
+
+=====================================================================
+1. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.068271979 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 8.177484 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.11371797 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/usr/lib/jvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 5.155075702 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[move_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.636918616 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[move_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[unzip])
+=====================================================================
+
+Step result:    success
+Execution time: 3.568782119 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[unzip]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[clean_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.17876728 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[clean_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Package[unzip])
+=====================================================================
+
+Step result:    success
+Execution time: 15.770223377 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

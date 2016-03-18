@@ -1,0 +1,242 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 127
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Group[bareos])
+  2. (success) exec(File[/etc/apt/sources.list.d/bareos.list])
+  3. (success) exec(Exec[bareos-key])
+  4. (success) exec(Exec[update-apt])
+  5. (failure) exec(Package[bareos-database])
+  6. (skipped) exec(User[bareos])
+  7. (skipped) exec(File[/var/lib/bareos])
+  8. (skipped) assert(Exec[bareos-key])
+  9. (skipped) assert(Exec[update-apt])
+  10. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  11. (skipped) assert(File[/var/lib/bareos])
+  12. (skipped) assert(Group[bareos])
+  13. (skipped) assert(Package[bareos-database])
+  14. (skipped) assert(User[bareos])
+  15. (skipped) exec(Package[bareos-storage])
+  16. (skipped) assert(Exec[bareos-key])
+  17. (skipped) assert(Exec[update-apt])
+  18. (skipped) assert(File[/etc/apt/sources.list.d/bareos.list])
+  19. (skipped) assert(File[/var/lib/bareos])
+  20. (skipped) assert(Group[bareos])
+  21. (skipped) assert(Package[bareos-database])
+  22. (skipped) assert(Package[bareos-storage])
+  23. (skipped) assert(User[bareos])
+
+=====================================================================
+1. exec(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.180044467 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/Group[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.210094141 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Repository/File[/etc/apt/sources.list.d/bareos.list]/ensure: defined content as '{md5}05a78b17c3a94760f65d7058ba9772d8'
+Notice: /Stage[main]/Bareos::Repository/Exec[bareos-key]/returns: gpg: no valid OpenPGP data found.
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: Failed to call refresh: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+Error: /Stage[main]/Bareos::Repository/Exec[bareos-key]: /usr/bin/wget -q http://download.bareos.org/bareos/release/latest/Debian_7.0/Release.key -O- | /usr/bin/apt-key add - returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.153505317 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.150583841 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[bareos-database])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.354511628 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-database-mysql' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-database-mysql
+Error: /Stage[main]/Bareos::Database/Package[bareos-database]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install bareos-database-mysql' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bareos-database-mysql
+ERROR 10:46:02.942 [citac-puppet]: Failed to apply 'Package[bareos-database]'.
+Notice: /Package[bareos-director]: Dependency Package[bareos-database] has failures: true
+Warning: /Package[bareos-director]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-dir.conf]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-dir.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-director_clients_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-director_clients_dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/Service[bareos-dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/Service[bareos-dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Director/File[bareos-director_configs_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Director/File[bareos-director_configs_dir]: Skipping because of failed dependencies
+Notice: /Package[bareos-storage]: Dependency Package[bareos-database] has failures: true
+Warning: /Package[bareos-storage]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/File[bareos-sd.conf]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/File[bareos-sd.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/File[bareos-storage_configs_dir]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/File[bareos-storage_configs_dir]: Skipping because of failed dependencies
+Notice: /Stage[main]/Bareos::Storage/Service[bareos-sd]: Dependency Package[bareos-database] has failures: true
+Warning: /Stage[main]/Bareos::Storage/Service[bareos-sd]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(File[/var/lib/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[/var/lib/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. exec(Package[bareos-storage])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(File[/var/lib/bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(Group[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(Package[bareos-storage])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(User[bareos])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

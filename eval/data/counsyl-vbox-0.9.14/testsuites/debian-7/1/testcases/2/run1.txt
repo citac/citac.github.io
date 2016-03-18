@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+  2. (success) exec(File[/etc/apt/sources.list.d/oracle_vbox.list])
+  3. (success) exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+  4. (success) exec(Exec[apt-update])
+  5. (success) assert(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+
+=====================================================================
+1. exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Vbox/Sys::Apt::Key[puppet:///modules/vbox/oracle_vbox.gpg]/File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg]/ensure: defined content as '{md5}edfc3719a3e38268c595d17a87f1bfc6'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/sources.list.d/oracle_vbox.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Vbox/Sys::Apt::Sources[/etc/apt/sources.list.d/oracle_vbox.list]/File[/etc/apt/sources.list.d/oracle_vbox.list]/ensure: defined content as '{md5}ca613af0d3c50386358fae13b17f5a62'
+Notice: /Stage[main]/Sys::Apt::Update/Exec[apt-update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[apt-update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

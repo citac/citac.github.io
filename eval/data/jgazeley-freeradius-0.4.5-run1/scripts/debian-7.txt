@@ -1,0 +1,8 @@
+# https://forge.puppetlabs.com/jgazeley/freeradius
+
+package { 'procps':
+    ensure => present,
+    before => Service['freeradius']
+}
+
+include freeradius

@@ -1,0 +1,149 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 305
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/opt/staging])
+  2. (success) exec(Group[stash])
+  3. (success) exec(File[/opt/staging/stash])
+  4. (success) exec(User[stash])
+  5. (success) exec(Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz])
+  6. (success) exec(File[/opt/stash])
+  7. (success) exec(File[/opt/stash/atlassian-stash-3.7.0])
+  8. (success) exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+  9. (success) exec(File[/home/stash])
+  10. (success) exec(Package[git])
+  11. (success) assert(File[/home/stash])
+
+=====================================================================
+1. exec(File[/opt/staging])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Staging/File[/opt/staging]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Group[stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/opt/staging/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::File[atlassian-stash-3.7.0.tar.gz]/File[/opt/staging/stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(User[stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/User[stash]/ensure: created
+Notice: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]/returns: /bin/chown: cannot access '/opt/stash/atlassian-stash-3.7.0': No such file or directory
+Error: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: Failed to call refresh: /bin/chown -R stash:stash /opt/stash/atlassian-stash-3.7.0 returned 1 instead of one of [0]
+Error: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: /bin/chown -R stash:stash /opt/stash/atlassian-stash-3.7.0 returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::File[atlassian-stash-3.7.0.tar.gz]/Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/opt/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/File[/opt/stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/opt/stash/atlassian-stash-3.7.0])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/File[/opt/stash/atlassian-stash-3.7.0]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::Extract[atlassian-stash-3.7.0.tar.gz]/Exec[extract atlassian-stash-3.7.0.tar.gz]/returns: executed successfully
+Notice: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/home/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Package[git])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Package[git]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/home/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

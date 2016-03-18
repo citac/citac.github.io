@@ -1,0 +1,480 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 21
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (success) exec(Apt_key[00654A3E])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[syncthing.list])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(File[sources.list])
+  7. (success) exec(Exec[apt_update])
+  8. (success) exec(Package[syncthing])
+  9. (success) exec(File[/etc/syncthing])
+  10. (success) exec(File[/etc/syncthing/example.conf])
+  11. (success) assert(Apt_key[00654A3E])
+  12. (success) assert(Exec[apt_update])
+  13. (success) assert(File[/etc/syncthing/example.conf])
+  14. (success) assert(File[/etc/syncthing])
+  15. (success) assert(File[01proxy])
+  16. (success) assert(File[old-proxy-file])
+  17. (success) assert(File[sources.list.d])
+  18. (success) assert(File[sources.list])
+  19. (success) assert(File[syncthing.list])
+  20. (success) assert(Package[syncthing])
+  21. (success) exec(File[preferences.d])
+  22. (success) assert(Apt_key[00654A3E])
+  23. (success) assert(Exec[apt_update])
+  24. (success) assert(File[/etc/syncthing/example.conf])
+  25. (success) assert(File[/etc/syncthing])
+  26. (success) assert(File[01proxy])
+  27. (success) assert(File[old-proxy-file])
+  28. (success) assert(File[preferences.d])
+  29. (success) assert(File[sources.list.d])
+  30. (success) assert(File[sources.list])
+  31. (success) assert(File[syncthing.list])
+  32. (success) assert(Package[syncthing])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.268687242 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.054466222 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.795799127 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 8.872787086 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.81444285 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.833652343 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.825178165 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 7.824266707 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 1.18573122 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Service/File[/etc/syncthing]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/syncthing/example.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.861958601 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]/ensure: defined content as '{md5}a2ddb330a01f3d4250888692ff34c498'
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Failed to call refresh: Could not find init script or upstart conf file for 'syncthing'
+Error: /Stage[main]/Syncthing::Service/Service[syncthing]: Could not find init script or upstart conf file for 'syncthing'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 5.680388182 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 3.201781758 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/etc/syncthing/example.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.886008387 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/etc/syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 3.96149812 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 3.177427023 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.908136442 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 4.014802925 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.201233638 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.089014174 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 31.931562484 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 1.104886063 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 5.707274389 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.96502389 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/etc/syncthing/example.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.891765904 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[/etc/syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 3.994873148 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 2.872725523 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.805285069 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.918012416 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.8670856 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.166536723 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.081476203 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 31.627888419 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

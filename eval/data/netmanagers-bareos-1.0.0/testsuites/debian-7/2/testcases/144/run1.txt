@@ -1,0 +1,179 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 144
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/apt/sources.list.d/bareos.list])
+  2. (success) exec(Exec[bareos-key])
+  3. (success) exec(Exec[update-apt])
+  4. (success) exec(Package[bareos-database])
+  5. (success) exec(Package[bareos-director])
+  6. (success) exec(Package[bareos-filedaemon])
+  7. (success) assert(Exec[bareos-key])
+  8. (success) assert(Exec[update-apt])
+  9. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  10. (success) assert(Package[bareos-database])
+  11. (success) assert(Package[bareos-director])
+  12. (success) assert(Package[bareos-filedaemon])
+
+=====================================================================
+1. exec(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.389674026 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Repository/File[/etc/apt/sources.list.d/bareos.list]/ensure: defined content as '{md5}05a78b17c3a94760f65d7058ba9772d8'
+Notice: /Stage[main]/Bareos::Repository/Exec[bareos-key]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Bareos::Repository/Exec[update-apt]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.211416265 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.200925139 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 5.697452844 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Database/Package[bareos-database]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 6.084892907 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Director/Package[bareos-director]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 1.967194957 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/Package[bareos-filedaemon]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.037948123 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.49108478 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.412972828 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.60977736 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 3.500085636 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.582715436 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

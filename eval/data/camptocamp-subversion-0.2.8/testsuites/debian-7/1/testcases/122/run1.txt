@@ -1,0 +1,122 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 122
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[augeas-lenses])
+  2. (success) exec(Package[libaugeas0])
+  3. (success) exec(Package[augeas-tools])
+  4. (success) exec(Package[ruby-augeas])
+  5. (success) exec(File[/usr/share/augeas/lenses])
+  6. (success) exec(File[/usr/share/augeas/lenses/subversion.aug])
+  7. (success) exec(Exec[Typecheck lens subversion])
+  8. (success) exec(Package[subversion-tools])
+  9. (success) assert(Exec[Typecheck lens subversion])
+
+=====================================================================
+1. exec(Package[augeas-lenses])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219026259 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[libaugeas0])
+=====================================================================
+
+Step result:    success
+Execution time: 0.202994069 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[augeas-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.086150967 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[augeas-tools]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[ruby-augeas])
+=====================================================================
+
+Step result:    success
+Execution time: 3.457403279 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[ruby-augeas]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/usr/share/augeas/lenses])
+=====================================================================
+
+Step result:    success
+Execution time: 0.199454048 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/usr/share/augeas/lenses/subversion.aug])
+=====================================================================
+
+Step result:    success
+Execution time: 0.336869677 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Augeas::Lens[subversion]/File[/usr/share/augeas/lenses/subversion.aug]/ensure: created
+Notice: /Stage[main]/Subversion::Base/Augeas::Lens[subversion]/Exec[Typecheck lens subversion]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[Typecheck lens subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 0.188857858 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[subversion-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 9.583859271 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Debian/Package[subversion-tools]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Exec[Typecheck lens subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 2.699912931 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

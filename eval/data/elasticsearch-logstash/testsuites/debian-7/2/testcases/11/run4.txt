@@ -1,0 +1,500 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 11
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[logstash.list])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(File[sources.list])
+  7. (success) exec(Exec[apt_update])
+  8. (failure) exec(Package[logstash])
+  9. (skipped) exec(File[/etc/logstash])
+  10. (skipped) exec(File[/etc/logstash/plugins])
+  11. (skipped) exec(File[/etc/logstash/plugins/logstash])
+  12. (skipped) exec(File[/etc/logstash/plugins/logstash/outputs])
+  13. (skipped) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  14. (skipped) assert(Exec[apt_update])
+  15. (skipped) assert(File[/etc/logstash/plugins/logstash/outputs])
+  16. (skipped) assert(File[/etc/logstash/plugins/logstash])
+  17. (skipped) assert(File[/etc/logstash/plugins])
+  18. (skipped) assert(File[/etc/logstash])
+  19. (skipped) assert(File[01proxy])
+  20. (skipped) assert(File[logstash.list])
+  21. (skipped) assert(File[old-proxy-file])
+  22. (skipped) assert(File[sources.list.d])
+  23. (skipped) assert(File[sources.list])
+  24. (skipped) assert(Package[logstash])
+  25. (skipped) exec(File[/etc/logstash/conf.d])
+  26. (skipped) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  27. (skipped) assert(Exec[apt_update])
+  28. (skipped) assert(File[/etc/logstash/conf.d])
+  29. (skipped) assert(File[/etc/logstash/plugins/logstash/outputs])
+  30. (skipped) assert(File[/etc/logstash/plugins/logstash])
+  31. (skipped) assert(File[/etc/logstash/plugins])
+  32. (skipped) assert(File[/etc/logstash])
+  33. (skipped) assert(File[01proxy])
+  34. (skipped) assert(File[logstash.list])
+  35. (skipped) assert(File[old-proxy-file])
+  36. (skipped) assert(File[sources.list.d])
+  37. (skipped) assert(File[sources.list])
+  38. (skipped) assert(Package[logstash])
+  39. (skipped) exec(File_concat[ls-config])
+  40. (skipped) assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+  41. (skipped) assert(Exec[apt_update])
+  42. (skipped) assert(File[/etc/logstash/conf.d])
+  43. (skipped) assert(File[/etc/logstash/plugins/logstash/outputs])
+  44. (skipped) assert(File[/etc/logstash/plugins/logstash])
+  45. (skipped) assert(File[/etc/logstash/plugins])
+  46. (skipped) assert(File[/etc/logstash])
+  47. (skipped) assert(File[01proxy])
+  48. (skipped) assert(File[logstash.list])
+  49. (skipped) assert(File[old-proxy-file])
+  50. (skipped) assert(File[sources.list.d])
+  51. (skipped) assert(File[sources.list])
+  52. (skipped) assert(File_concat[ls-config])
+  53. (skipped) assert(Package[logstash])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.196900942 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    success
+Execution time: 0.617594294 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/Apt::Key[Add key: D88E42B4 from Apt::Source logstash]/Apt_key[Add key: D88E42B4 from Apt::Source logstash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.207041968 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[logstash.list])
+=====================================================================
+
+Step result:    success
+Execution time: 1.309123997 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Logstash::Repo/Apt::Source[logstash]/File[logstash.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.212392932 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.227276219 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.224576368 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[logstash])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.373482587 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install logstash' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package logstash
+Error: /Stage[main]/Logstash::Package/Logstash::Package::Install[logstash]/Package[logstash]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install logstash' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package logstash
+ERROR 02:14:37.623 [citac-puppet]: Failed to apply 'Package[logstash]'.
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/patterns]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/patterns]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/filters]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/filters]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/codecs]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/codecs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/inputs]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/inputs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/outputs]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/plugins/logstash/outputs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File[/etc/logstash/conf.d]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File[/etc/logstash/conf.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Config/File_concat[ls-config]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Config/File_concat[ls-config]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Service/Logstash::Service::Init[logstash]/File[/etc/init/logstash.conf]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Service/Logstash::Service::Init[logstash]/File[/etc/init/logstash.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash::Service/Logstash::Service::Init[logstash]/Service[logstash]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash::Service/Logstash::Service::Init[logstash]/Service[logstash]: Skipping because of failed dependencies
+Notice: /Stage[main]/Logstash/Anchor[logstash::end]: Dependency Package[logstash] has failures: true
+Warning: /Stage[main]/Logstash/Anchor[logstash::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. exec(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. exec(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(File[/etc/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(File[logstash.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(Package[logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. exec(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. assert(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+30. assert(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+31. assert(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+32. assert(File[/etc/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+33. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+34. assert(File[logstash.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+35. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+36. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+37. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+38. assert(Package[logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+39. exec(File_concat[ls-config])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+40. assert(Apt_key[Add key: D88E42B4 from Apt::Source logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+41. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+42. assert(File[/etc/logstash/conf.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+43. assert(File[/etc/logstash/plugins/logstash/outputs])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+44. assert(File[/etc/logstash/plugins/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+45. assert(File[/etc/logstash/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+46. assert(File[/etc/logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+47. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+48. assert(File[logstash.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+49. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+50. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+51. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+52. assert(File_concat[ls-config])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+53. assert(Package[logstash])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

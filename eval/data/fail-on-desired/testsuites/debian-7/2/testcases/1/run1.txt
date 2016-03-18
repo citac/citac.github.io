@@ -1,0 +1,84 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Exec[create source file])
+  2. (success) assert(Exec[create source file])
+  3. (success) exec(Exec[move file])
+  4. (success) assert(Exec[create source file])
+  5. (success) assert(Exec[move file])
+
+=====================================================================
+1. exec(Exec[create source file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.075575918 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[create source file]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Exec[create source file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.495636113 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Exec[move file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.108876366 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[move file]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Exec[create source file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.511264121 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Exec[move file])
+=====================================================================
+
+Step result:    success
+Execution time: 2.102488115 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[move file]/returns: mv: cannot stat `/tmp/source': No such file or directory
+Error: mv /tmp/source /tmp/target returned 1 instead of one of [0]
+Error: /Stage[main]/Main/Exec[move file]/returns: change from notrun to 0 failed: mv /tmp/source /tmp/target returned 1 instead of one of [0]
+ERROR 00:26:37.350 [citac-puppet]: Failed to apply 'Exec[move file]'.
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

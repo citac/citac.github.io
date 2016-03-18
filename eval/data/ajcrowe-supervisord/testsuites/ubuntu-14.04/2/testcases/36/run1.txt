@@ -1,0 +1,799 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 36
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[curl])
+  2. (success) exec(Package[python])
+  3. (success) exec(Exec[install_setuptools])
+  4. (success) exec(Exec[install_pip])
+  5. (success) exec(Package[supervisor])
+  6. (success) exec(File[/var/log/supervisor])
+  7. (success) assert(Exec[install_pip])
+  8. (success) assert(Exec[install_setuptools])
+  9. (success) assert(File[/var/log/supervisor])
+  10. (success) assert(Package[curl])
+  11. (success) assert(Package[python])
+  12. (success) assert(Package[supervisor])
+  13. (success) exec(File[/var/lib/puppet/concat])
+  14. (success) assert(Exec[install_pip])
+  15. (success) assert(Exec[install_setuptools])
+  16. (success) assert(File[/var/lib/puppet/concat])
+  17. (success) assert(File[/var/log/supervisor])
+  18. (success) assert(Package[curl])
+  19. (success) assert(Package[python])
+  20. (success) assert(Package[supervisor])
+  21. (success) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  22. (success) assert(Exec[install_pip])
+  23. (success) assert(Exec[install_setuptools])
+  24. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  25. (success) assert(File[/var/lib/puppet/concat])
+  26. (success) assert(File[/var/log/supervisor])
+  27. (success) assert(Package[curl])
+  28. (success) assert(Package[python])
+  29. (success) assert(Package[supervisor])
+  30. (success) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  31. (success) assert(Exec[install_pip])
+  32. (success) assert(Exec[install_setuptools])
+  33. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  34. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  35. (success) assert(File[/var/lib/puppet/concat])
+  36. (success) assert(File[/var/log/supervisor])
+  37. (success) assert(Package[curl])
+  38. (success) assert(Package[python])
+  39. (success) assert(Package[supervisor])
+  40. (success) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+  41. (success) assert(Exec[install_pip])
+  42. (success) assert(Exec[install_setuptools])
+  43. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+  44. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  45. (success) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  46. (success) assert(File[/var/lib/puppet/concat])
+  47. (success) assert(File[/var/log/supervisor])
+  48. (success) assert(Package[curl])
+  49. (success) assert(Package[python])
+  50. (success) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 0.151696078 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 8.707095017 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[python]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 1.855280996 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 4.614253142 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_pip]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.568824332 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Install/Package[supervisor]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 0.993445795 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/File[/var/log/supervisor]/ensure: created
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.733151021 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 4.919360275 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.974872845 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.798004561 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.715698502 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.977179843 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.705729533 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.882901981 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.640666006 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.416207977 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.841131384 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.727065606 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.939822745 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 2.857745896 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 1.079061037 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf]/ensure: created
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 5.789230671 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.199180956 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.833805439 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.345688396 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.860799768 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.608093758 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.699265978 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.137897258 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 1.054404014 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments]/ensure: created
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+31. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 6.164578463 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.617110409 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 3.004369109 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.074126767 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.499911889 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. assert(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.89805121 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+37. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.266033311 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 3.852606355 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.075371457 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+=====================================================================
+
+Step result:    success
+Execution time: 1.046267122 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_main]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main]/ensure: defined content as '{md5}55c74a2fcacbea30c7d397a40dc0110d'
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Failed to call refresh: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: /usr/local/bin/supervisorctl reread returned 2 instead of one of [0]
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]/returns: error: <class 'socket.error'>, [Errno 111] Connection refused: file: /usr/lib/python2.7/socket.py line: 571
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Failed to call refresh: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+Error: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: /usr/local/bin/supervisorctl update returned 2 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+41. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    success
+Execution time: 6.158108999 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    success
+Execution time: 3.721692727 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+=====================================================================
+
+Step result:    success
+Execution time: 3.838306476 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    success
+Execution time: 2.996313492 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 2.816738897 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+46. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 3.572932442 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(File[/var/log/supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.953370088 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 3.437213809 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(Package[python])
+=====================================================================
+
+Step result:    success
+Execution time: 4.197881907 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(Package[supervisor])
+=====================================================================
+
+Step result:    success
+Execution time: 3.202989113 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,83 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/tmp/test.txt])
+  2. (success) assert(File[/tmp/test.txt])
+  3. (success) exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+  4. (failure) assert(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+  5. (failure) assert(File[/tmp/test.txt])
+
+=====================================================================
+1. exec(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.046453794 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/tmp/test.txt]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.241413682 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+=====================================================================
+
+Step result:    success
+Execution time: 0.061407577 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.918615351 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[/bin/sh -c "echo Test 2 >> /tmp/test.txt"]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /tmp/test.txt
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[/tmp/test.txt])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.074533073 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/tmp/test.txt]/content: content changed '{md5}bc1729a22af81f463ad43a8ea10c9a1c' to '{md5}206a9b642b3e16c89a61696ab28f3d5c'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /tmp/test.txt
+##########  CHANGE SUMMARY END  ##########
+

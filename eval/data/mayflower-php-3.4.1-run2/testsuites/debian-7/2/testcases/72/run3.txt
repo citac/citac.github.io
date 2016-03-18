@@ -1,0 +1,206 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 72
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-cli])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[wget])
+  4. (success) exec(Exec[download composer])
+  5. (success) exec(File[/usr/local/bin/composer])
+  6. (success) exec(Exec[update composer])
+  7. (success) exec(Apt_key[php::repo::debian])
+  8. (success) assert(Apt_key[php::repo::debian])
+  9. (success) assert(Exec[download composer])
+  10. (success) assert(Exec[update composer])
+  11. (success) assert(File[/usr/local/bin/composer])
+  12. (success) assert(Package[php5-cli])
+  13. (success) assert(Package[php5-common])
+  14. (success) assert(Package[wget])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.62797843 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 0.250286671 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.241264924 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 1.999719301 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Composer/Exec[download composer]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/usr/local/bin/composer])
+=====================================================================
+
+Step result:    success
+Execution time: 0.274737514 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]/group: group changed 'staff' to 'root'
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]/mode: mode changed '0644' to '0555'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[update composer])
+=====================================================================
+
+Step result:    success
+Execution time: 0.274807565 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 0.37348217 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Apt_key[php::repo::debian]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 4.704408592 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 2.884691301 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Exec[update composer])
+=====================================================================
+
+Step result:    success
+Execution time: 4.078159523 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(File[/usr/local/bin/composer])
+=====================================================================
+
+Step result:    success
+Execution time: 2.861032289 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.517818317 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 4.242943878 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 3.494749572 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

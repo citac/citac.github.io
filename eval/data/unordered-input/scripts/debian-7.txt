@@ -1,0 +1,11 @@
+exec { 'write target':
+    command => 'echo "# my custom header" | cat - /tmp/source > /tmp/target',
+    onlyif  => 'test -e /tmp/source',
+    creates => '/tmp/target',
+    path    => '/bin:/usr/bin'
+}
+
+file { 'write source':
+    path    => '/tmp/source',
+    content => 'the content'
+}

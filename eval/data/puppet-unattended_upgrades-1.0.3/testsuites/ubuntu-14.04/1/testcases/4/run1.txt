@@ -1,0 +1,161 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[preferences])
+  4. (success) exec(File[preferences.d])
+  5. (success) exec(Package[unattended-upgrades])
+  6. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  7. (success) exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  8. (success) exec(File[/etc/apt/apt.conf.d/10periodic])
+  9. (success) exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  10. (success) exec(File[preferences])
+  11. (success) exec(Exec[apt_update])
+  12. (success) assert(File[preferences])
+
+=====================================================================
+1. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Package[unattended-upgrades]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}4355b3e7824866a503fc221621fc65ba'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[unattended-upgrades]/Apt::Setting[conf-unattended-upgrades]/File[/etc/apt/apt.conf.d/50unattended-upgrades]/content: content changed '{md5}4c4d0203d3db42331c1517ea26d064da' to '{md5}fb3f5ad6572b8f7f04363970a2de0b99'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/etc/apt/apt.conf.d/10periodic])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[periodic]/Apt::Setting[conf-periodic]/File[/etc/apt/apt.conf.d/10periodic]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

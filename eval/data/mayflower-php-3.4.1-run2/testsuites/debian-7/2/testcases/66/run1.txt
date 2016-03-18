@@ -1,0 +1,303 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 66
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[php5-cli])
+  4. (success) exec(Package[php5-fpm])
+  5. (success) exec(Apt_key[php::repo::debian])
+  6. (success) exec(File[/etc/php5/fpm/php-fpm.conf])
+  7. (success) assert(Apt_key[php::repo::debian])
+  8. (success) assert(File[/etc/php5/fpm/php-fpm.conf])
+  9. (success) assert(File[sources.list.d])
+  10. (success) assert(Package[php5-cli])
+  11. (success) assert(Package[php5-common])
+  12. (success) assert(Package[php5-fpm])
+  13. (success) exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  14. (success) assert(Apt_key[php::repo::debian])
+  15. (success) assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  16. (success) assert(File[/etc/php5/fpm/php-fpm.conf])
+  17. (success) assert(File[sources.list.d])
+  18. (success) assert(Package[php5-cli])
+  19. (success) assert(Package[php5-common])
+  20. (success) assert(Package[php5-fpm])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.17882349 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 2.651169148 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 2.409508277 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 2.383810105 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm/Package[php5-fpm]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 0.311259695 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Apt_key[php::repo::debian]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.26518911 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]/content: content changed '{md5}fa2980b7e392030b41b019ee4f22ea03' to '{md5}a5d2f807c7650c1f1cc897f683eff005'
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 5.249159778 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.964723715 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.431908642 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 2.67008425 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.823202445 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 3.490477588 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.381700311 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[source_php_wheezy-php55]/Apt::Setting[list-source_php_wheezy-php55]/File[/etc/apt/sources.list.d/source_php_wheezy-php55.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 5.00796607 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.102634179 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[/etc/php5/fpm/php-fpm.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.553974175 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.372562582 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.366928013 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.392047882 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(Package[php5-fpm])
+=====================================================================
+
+Step result:    success
+Execution time: 3.355102302 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

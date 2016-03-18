@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 23
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[amavisd-new])
+  2. (success) exec(Package[clamav-daemon])
+  3. (success) exec(Package[clamav-daemon])
+  4. (success) exec(User[clamav])
+  5. (success) assert(Package[clamav-daemon])
+
+=====================================================================
+1. exec(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 10.064648847 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[amavisd-new]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 6.452146061 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Package[clamav-daemon]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 1.493802613 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 0.399976337 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/User[clamav]/groups: groups changed '' to 'amavis'
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 9.180652204 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,647 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 28
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[curl])
+  2. (success) assert(Package[curl])
+  3. (failure) exec(Package[python])
+  4. (skipped) assert(Package[curl])
+  5. (skipped) assert(Package[python])
+  6. (skipped) exec(Exec[install_setuptools])
+  7. (skipped) exec(Exec[install_pip])
+  8. (skipped) assert(Exec[install_pip])
+  9. (skipped) assert(Exec[install_setuptools])
+  10. (skipped) assert(Package[curl])
+  11. (skipped) assert(Package[python])
+  12. (skipped) exec(Package[supervisor])
+  13. (skipped) assert(Exec[install_pip])
+  14. (skipped) assert(Exec[install_setuptools])
+  15. (skipped) assert(Package[curl])
+  16. (skipped) assert(Package[python])
+  17. (skipped) assert(Package[supervisor])
+  18. (skipped) exec(File[/etc/default/supervisor])
+  19. (skipped) assert(Exec[install_pip])
+  20. (skipped) assert(Exec[install_setuptools])
+  21. (skipped) assert(File[/etc/default/supervisor])
+  22. (skipped) assert(Package[curl])
+  23. (skipped) assert(Package[python])
+  24. (skipped) assert(Package[supervisor])
+  25. (skipped) exec(File[/var/lib/puppet/concat])
+  26. (skipped) assert(Exec[install_pip])
+  27. (skipped) assert(Exec[install_setuptools])
+  28. (skipped) assert(File[/etc/default/supervisor])
+  29. (skipped) assert(File[/var/lib/puppet/concat])
+  30. (skipped) assert(Package[curl])
+  31. (skipped) assert(Package[python])
+  32. (skipped) assert(Package[supervisor])
+  33. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  34. (skipped) assert(Exec[install_pip])
+  35. (skipped) assert(Exec[install_setuptools])
+  36. (skipped) assert(File[/etc/default/supervisor])
+  37. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  38. (skipped) assert(File[/var/lib/puppet/concat])
+  39. (skipped) assert(Package[curl])
+  40. (skipped) assert(Package[python])
+  41. (skipped) assert(Package[supervisor])
+  42. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  43. (skipped) assert(Exec[install_pip])
+  44. (skipped) assert(Exec[install_setuptools])
+  45. (skipped) assert(File[/etc/default/supervisor])
+  46. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  47. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  48. (skipped) assert(File[/var/lib/puppet/concat])
+  49. (skipped) assert(Package[curl])
+  50. (skipped) assert(Package[python])
+  51. (skipped) assert(Package[supervisor])
+  52. (skipped) exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+  53. (skipped) assert(Exec[install_pip])
+  54. (skipped) assert(Exec[install_setuptools])
+  55. (skipped) assert(File[/etc/default/supervisor])
+  56. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+  57. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+  58. (skipped) assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+  59. (skipped) assert(File[/var/lib/puppet/concat])
+  60. (skipped) assert(Package[curl])
+  61. (skipped) assert(Package[python])
+  62. (skipped) assert(Package[supervisor])
+
+=====================================================================
+1. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 0.157731436 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time: 5.792412234 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Package[python])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.066679631 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python-minimal
+  python2.7 python2.7-minimal
+Suggested packages:
+  python-doc python-tk python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python
+  python-minimal python2.7 python2.7-minimal
+0 upgraded, 7 newly installed, 0 to remove and 39 not upgraded.
+Need to get 3726 kB of archives.
+After this operation, 16.0 MB of additional disk space will be used.
+Err http://archive.ubuntu.com/ubuntu/ trusty/main libpython-stdlib amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty/main python-minimal amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty/main python amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main libpython2.7-minimal amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python2.7-minimal amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main libpython2.7-stdlib amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python2.7 amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-minimal_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7-minimal_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-stdlib_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/libpython-stdlib_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-minimal_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Prerequisites/Package[python]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install python' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python-minimal
+  python2.7 python2.7-minimal
+Suggested packages:
+  python-doc python-tk python2.7-doc binfmt-support
+The following NEW packages will be installed:
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python
+  python-minimal python2.7 python2.7-minimal
+0 upgraded, 7 newly installed, 0 to remove and 39 not upgraded.
+Need to get 3726 kB of archives.
+After this operation, 16.0 MB of additional disk space will be used.
+Err http://archive.ubuntu.com/ubuntu/ trusty/main libpython-stdlib amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty/main python-minimal amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty/main python amd64 2.7.5-5ubuntu3
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main libpython2.7-minimal amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python2.7-minimal amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main libpython2.7-stdlib amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+Err http://archive.ubuntu.com/ubuntu/ trusty-security/main python2.7 amd64 2.7.6-8ubuntu0.2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-minimal_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7-minimal_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-stdlib_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/libpython-stdlib_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.6-8ubuntu0.2_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python-minimal_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python_2.7.5-5ubuntu3_amd64.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8c01::19). - connect (101: Network is unreachable) [IP: 2001:67c:1360:8c01::19 80]
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 01:01:48.260 [citac-puppet]: Failed to apply 'Package[python]'.
+Notice: /Stage[main]/Supervisord/Anchor[supervisord::begin]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord/Anchor[supervisord::begin]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Pip/Exec[install_setuptools]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Pip/Exec[install_pip]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Pip/Exec[install_pip]: Skipping because of failed dependencies
+Notice: /Package[supervisor]: Dependency Package[python] has failures: true
+Warning: /Package[supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/var/log/supervisor]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/var/log/supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/default/supervisor]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/init.d/supervisord]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/init.d/supervisord]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/File[/etc/supervisor.d]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/File[/etc/supervisor.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_main]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_main]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat.out]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments.concat]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_unix]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/01_supervisord_unix]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat::Fragment[supervisord_unix]/File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/01_supervisord_unix]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/Exec[concat_/etc/supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/etc/supervisord.conf]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Config/Concat[/etc/supervisord.conf]/File[/etc/supervisord.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Service/Service[supervisord]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Service/Service[supervisord]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_reread]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord::Reload/Exec[supervisorctl_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Supervisord/Anchor[supervisord::end]: Dependency Package[python] has failures: true
+Warning: /Stage[main]/Supervisord/Anchor[supervisord::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. exec(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. exec(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. exec(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+30. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+31. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+32. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+33. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+34. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+35. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+36. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+37. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+38. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+39. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+40. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+41. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+42. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+43. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+44. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+45. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+46. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+47. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+48. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+49. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+50. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+51. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+52. exec(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+53. assert(Exec[install_pip])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+54. assert(Exec[install_setuptools])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+55. assert(File[/etc/default/supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+56. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments/02_supervisord_main])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+57. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf/fragments])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+58. assert(File[/var/lib/puppet/concat/_etc_supervisord.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+59. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+60. assert(Package[curl])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+61. assert(Package[python])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+62. assert(Package[supervisor])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

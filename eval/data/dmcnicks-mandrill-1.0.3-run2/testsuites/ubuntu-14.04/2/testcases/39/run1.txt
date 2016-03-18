@@ -1,0 +1,173 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 39
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[postfix])
+  2. (success) exec(Exec[inet_interfaces])
+  3. (success) exec(File[sasl_passwd])
+  4. (failure) assert(Exec[inet_interfaces])
+  5. (success) assert(File[sasl_passwd])
+  6. (success) assert(Package[postfix])
+  7. (success) exec(Exec[sasl_passwd.db])
+  8. (failure) assert(Exec[inet_interfaces])
+  9. (failure) assert(Exec[sasl_passwd.db])
+  10. (success) assert(File[sasl_passwd])
+  11. (success) assert(Package[postfix])
+
+=====================================================================
+1. exec(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 15.977503298 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Package[postfix]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    success
+Execution time: 0.180301352 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.1602092 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/File[sasl_passwd]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    failure
+Execution time: 5.417408746 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.909643676 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 3.123708431 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. exec(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    success
+Execution time: 0.175061614 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Exec[inet_interfaces])
+=====================================================================
+
+Step result:    failure
+Execution time: 5.287316147 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[inet_interfaces]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /etc/postfix/main.cf
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    failure
+Execution time: 3.258368473 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+2 changes:
+  file/changed: /etc/postfix/main.cf
+  file/changed: /etc/postfix/sasl_passwd.db
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.251103036 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[postfix])
+=====================================================================
+
+Step result:    success
+Execution time: 4.042411377 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

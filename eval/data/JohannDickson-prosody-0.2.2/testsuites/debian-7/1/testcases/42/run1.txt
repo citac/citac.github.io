@@ -1,0 +1,136 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 42
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[apt-source])
+  2. (success) exec(Exec[apt-key])
+  3. (success) exec(Package[prosody])
+  4. (success) exec(File[prosody.cfg.lua])
+  5. (success) exec(File[certs])
+  6. (success) exec(File[conf.avail])
+  7. (success) exec(File[conf.d])
+  8. (success) exec(File[conf.d])
+  9. (success) exec(Service[prosody])
+  10. (success) assert(File[conf.d])
+
+=====================================================================
+1. exec(File[apt-source])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Package/File[apt-source]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[apt-key])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Package/Exec[apt-key]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[prosody])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Package/Package[prosody]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[prosody.cfg.lua])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Config/File[prosody.cfg.lua]/content: content changed '{md5}dca29c331d46a12624c69485b99cdf61' to '{md5}c3304adeadc4413ac7348954a1de6b1d'
+Notice: /Stage[main]/Prosody::Service/Service[prosody]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[certs])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[conf.avail])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Config/File[conf.avail]/mode: mode changed '0754' to '0755'
+Notice: /Stage[main]/Prosody::Service/Service[prosody]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[conf.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Config/File[conf.d]/mode: mode changed '0754' to '0755'
+Notice: /Stage[main]/Prosody::Service/Service[prosody]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[conf.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Service[prosody])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prosody::Service/Service[prosody]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(File[conf.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

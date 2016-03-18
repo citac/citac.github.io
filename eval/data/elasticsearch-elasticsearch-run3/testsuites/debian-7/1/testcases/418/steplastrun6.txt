@@ -1,0 +1,62 @@
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "packages.elasticsearch.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Network is unreachable - connect(2) for "packages.elasticsearch.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Network is unreachable - connect(2) for "packages.elasticsearch.org" port 80
+Error: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: change from absent to present failed: Could not set 'present' on ensure: Network is unreachable - connect(2) for "packages.elasticsearch.org" port 80 at 93:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 17:51:14.592 [citac-puppet]: Failed to apply 'Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]'.
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Anchor[apt_key D88E42B4 present]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Anchor[apt_key D88E42B4 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Anchor[apt::source::elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Anchor[apt::source::elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt::update]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt::update]: Skipping because of failed dependencies
+Notice: /Package[elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Package[elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/lib/systemd/system/elasticsearch.service]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/usr/lib/systemd/system/elasticsearch.service]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/var/log/elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/var/log/elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/data]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/data]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/bin]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/plugins]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/plugins]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/default/elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/default/elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/Exec[mkdir_templates_elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/Exec[mkdir_templates_elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/templates_import]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/elasticsearch.yml]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/elasticsearch.yml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/logging.yml]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Elasticsearch::Config/File[/etc/elasticsearch/logging.yml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_configdir_elasticsearch_es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_configdir_elasticsearch_es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/logging.yml]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/logging.yml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/elasticsearch.yml]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/etc/elasticsearch/es-01/elasticsearch.yml]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_datadir_elasticsearch_es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Exec[mkdir_datadir_elasticsearch_es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/usr/share/elasticsearch/data/es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/File[/usr/share/elasticsearch/data/es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/File[/etc/init.d/elasticsearch-es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/File[/etc/init.d/elasticsearch-es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Augeas[defaults_es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Augeas[defaults_es-01]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Dependency Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch] has failures: true
+Warning: /Stage[main]/Main/Elasticsearch::Instance[es-01]/Elasticsearch::Service[es-01]/Elasticsearch::Service::Init[es-01]/Service[elasticsearch-instance-es-01]: Skipping because of failed dependencies

@@ -1,0 +1,265 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 37
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Package[gnutls-bin])
+  2. (skipped) exec(File[/etc/ssl/private])
+  3. (skipped) exec(Exec[certtool-key-TestCA])
+  4. (skipped) assert(Exec[certtool-key-TestCA])
+  5. (skipped) assert(File[/etc/ssl/private])
+  6. (skipped) assert(Package[gnutls-bin])
+  7. (skipped) exec(Exec[certtool-key-mail.puppet-certtool.test])
+  8. (skipped) assert(Exec[certtool-key-TestCA])
+  9. (skipped) assert(Exec[certtool-key-mail.puppet-certtool.test])
+  10. (skipped) assert(File[/etc/ssl/private])
+  11. (skipped) assert(Package[gnutls-bin])
+  12. (skipped) exec(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+  13. (skipped) assert(Exec[certtool-key-TestCA])
+  14. (skipped) assert(Exec[certtool-key-mail.puppet-certtool.test])
+  15. (skipped) assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+  16. (skipped) assert(File[/etc/ssl/private])
+  17. (skipped) assert(Package[gnutls-bin])
+  18. (skipped) exec(File[/etc/ssl/private/TestCA.key])
+  19. (skipped) assert(Exec[certtool-key-TestCA])
+  20. (skipped) assert(Exec[certtool-key-mail.puppet-certtool.test])
+  21. (skipped) assert(File[/etc/ssl/private/TestCA.key])
+  22. (skipped) assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+  23. (skipped) assert(File[/etc/ssl/private])
+  24. (skipped) assert(Package[gnutls-bin])
+
+=====================================================================
+1. exec(Package[gnutls-bin])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.357954507 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install gnutls-bin' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  gnutls-bin
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 395 kB of archives.
+After this operation, 771 kB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main gnutls-bin amd64 3.0.22-3+really2.12.20-8+deb7u3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://security.debian.org/ wheezy/updates/main gnutls-bin amd64 3.0.22-3+really2.12.20-8+deb7u3
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://security.debian.org/pool/updates/main/g/gnutls26/gnutls-bin_3.0.22-3+really2.12.20-8+deb7u3_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Error: /Stage[main]/Certtool/Package[gnutls-bin]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install gnutls-bin' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  gnutls-bin
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 395 kB of archives.
+After this operation, 771 kB of additional disk space will be used.
+Err http://debian.mur.at/debian/ wheezy/main gnutls-bin amd64 3.0.22-3+really2.12.20-8+deb7u3
+  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable) [IP: 2a02:3e0::14:80 80]
+Err http://security.debian.org/ wheezy/updates/main gnutls-bin amd64 3.0.22-3+really2.12.20-8+deb7u3
+  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+Failed to fetch http://security.debian.org/pool/updates/main/g/gnutls26/gnutls-bin_3.0.22-3+really2.12.20-8+deb7u3_amd64.deb  Cannot initiate the connection to security.debian.org:80 (2001:a78:5:0:216:35ff:fe7f:be4f). - connect (101: Network is unreachable) [IP: 2001:a78:5:0:216:35ff:fe7f:be4f 80]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+ERROR 10:21:54.536 [citac-puppet]: Failed to apply 'Package[gnutls-bin]'.
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/private]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/private]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/Exec[certtool-key-TestCA]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/Exec[certtool-key-TestCA]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-key-www.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-key-www.puppet-certtool.test]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/File[/etc/ssl/private/www.puppet-certtool.test.key]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/File[/etc/ssl/private/www.puppet-certtool.test.key]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-key-mail.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-key-mail.puppet-certtool.test]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/File[/etc/ssl/private/mail.puppet-certtool.test.key]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/File[/etc/ssl/private/mail.puppet-certtool.test.key]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/certs]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/certs]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/File[/etc/ssl/certs/certtool-www.puppet-certtool.test.cfg]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/File[/etc/ssl/certs/certtool-www.puppet-certtool.test.cfg]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-csr-www.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-csr-www.puppet-certtool.test]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/certs/certtool-TestCA.cfg]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/certs/certtool-TestCA.cfg]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/File[/etc/ssl/certs/certtool-mail.puppet-certtool.test.cfg]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-csr-mail.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-csr-mail.puppet-certtool.test]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/private/TestCA.key]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/File[/etc/ssl/private/TestCA.key]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[TestCA]/Exec[certtool-ca-TestCA]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[TestCA]/Exec[certtool-ca-TestCA]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-cert-www.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[www.puppet-certtool.test]/Exec[certtool-cert-www.puppet-certtool.test]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-cert-mail.puppet-certtool.test]: Dependency Package[gnutls-bin] has failures: true
+Warning: /Stage[main]/Main/Certtool::Cert[mail.puppet-certtool.test]/Exec[certtool-cert-mail.puppet-certtool.test]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. exec(Exec[certtool-key-TestCA])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(Exec[certtool-key-TestCA])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Package[gnutls-bin])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Exec[certtool-key-TestCA])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(Package[gnutls-bin])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. exec(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Exec[certtool-key-TestCA])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(Package[gnutls-bin])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. exec(File[/etc/ssl/private/TestCA.key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(Exec[certtool-key-TestCA])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(Exec[certtool-key-mail.puppet-certtool.test])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[/etc/ssl/private/TestCA.key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[/etc/ssl/private/mail.puppet-certtool.test.key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[/etc/ssl/private])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(Package[gnutls-bin])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

@@ -1,0 +1,63 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 14
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openssh-server])
+  2. (success) exec(Package[openssh-server])
+  3. (success) exec(File[/etc/ssh/sshd_config])
+  4. (success) assert(Package[openssh-server])
+
+=====================================================================
+1. exec(Package[openssh-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ssh::Server::Install/Package[openssh-server]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[openssh-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/ssh/sshd_config])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Ssh::Server::Config/File[/etc/ssh/sshd_config]/content: content changed '{md5}8caefdd9e251b7cc1baa37874149a870' to '{md5}f7518d50a21dd6a851505f19b5a3eeb2'
+Notice: /Stage[main]/Ssh::Server::Config/File[/etc/ssh/sshd_config]/mode: mode changed '0644' to '0600'
+Notice: /Stage[main]/Ssh::Server::Service/Service[ssh]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[openssh-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

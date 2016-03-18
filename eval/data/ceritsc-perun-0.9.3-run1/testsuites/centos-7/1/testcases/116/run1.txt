@@ -1,0 +1,89 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 116
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  2. (success) exec(File[/var/lib/puppet/concat])
+  3. (success) exec(File[/var/lib/puppet/concat/bin])
+  4. (success) exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+  5. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+  6. (failure) assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+
+=====================================================================
+1. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/ensure: defined content as '{md5}828c6b3ec538e4dc713c8521989cf443'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Perun::Repo::Yum/Yum::Gpgkey[/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/bin/concatfragments.sh])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.sh]/ensure: defined content as '{md5}7bbe7c5fce25a5ddd20415d909ba44fc'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Exec[rpm-import-/etc/pki/rpm-gpg/RPM-GPG-KEY-perunv3])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+4 changes:
+  file/changed: /etc/hosts
+  file/changed: /var/lib/rpm/__db.001
+  file/changed: /var/lib/rpm/__db.002
+  file/changed: /var/lib/rpm/__db.003
+##########  CHANGE SUMMARY END  ##########
+

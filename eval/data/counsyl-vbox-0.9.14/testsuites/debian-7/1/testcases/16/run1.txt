@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 16
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[dkms])
+  2. (success) exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+  3. (success) exec(File[/etc/apt/sources.list.d/oracle_vbox.list])
+  4. (success) exec(Exec[apt-update])
+  5. (success) exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+  6. (success) exec(Package[virtualbox-4.3])
+  7. (success) assert(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+
+=====================================================================
+1. exec(Package[dkms])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sys::Dkms/Package[dkms]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Vbox/Sys::Apt::Key[puppet:///modules/vbox/oracle_vbox.gpg]/File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg]/ensure: defined content as '{md5}edfc3719a3e38268c595d17a87f1bfc6'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/sources.list.d/oracle_vbox.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Vbox/Sys::Apt::Sources[/etc/apt/sources.list.d/oracle_vbox.list]/File[/etc/apt/sources.list.d/oracle_vbox.list]/ensure: defined content as '{md5}ca613af0d3c50386358fae13b17f5a62'
+Notice: /Stage[main]/Sys::Apt::Update/Exec[apt-update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[apt-update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Package[virtualbox-4.3])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Vbox/Package[virtualbox-4.3]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/apt/trusted.gpg.d/oracle_vbox.gpg])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

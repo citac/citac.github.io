@@ -1,0 +1,58 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 3
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(File[/etc/ssh/ssh_known_hosts])
+  2. (skipped) assert(File[/etc/ssh/ssh_known_hosts])
+  3. (skipped) exec(Package[ssh])
+  4. (skipped) assert(File[/etc/ssh/ssh_known_hosts])
+  5. (skipped) assert(Package[ssh])
+
+=====================================================================
+1. exec(File[/etc/ssh/ssh_known_hosts])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'file' on ensure: No such file or directory @ rb_sysopen - /etc/ssh/ssh_known_hosts at 31:/tmp/citac/modules/ssh/manifests/init.pp
+Error: Could not set 'file' on ensure: No such file or directory @ rb_sysopen - /etc/ssh/ssh_known_hosts at 31:/tmp/citac/modules/ssh/manifests/init.pp
+Wrapped exception:
+No such file or directory @ rb_sysopen - /etc/ssh/ssh_known_hosts
+Error: /Stage[main]/Ssh/File[/etc/ssh/ssh_known_hosts]/ensure: change from absent to file failed: Could not set 'file' on ensure: No such file or directory @ rb_sysopen - /etc/ssh/ssh_known_hosts at 31:/tmp/citac/modules/ssh/manifests/init.pp
+ERROR 20:56:44.148 [citac-puppet]: Failed to apply 'File[/etc/ssh/ssh_known_hosts]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(File[/etc/ssh/ssh_known_hosts])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. exec(Package[ssh])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(File[/etc/ssh/ssh_known_hosts])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(Package[ssh])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

@@ -1,0 +1,121 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 8
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[augeas-lenses])
+  2. (success) exec(Package[libaugeas0])
+  3. (success) exec(Package[augeas-tools])
+  4. (success) exec(Package[ruby-augeas])
+  5. (success) exec(Package[subversion])
+  6. (success) exec(File[/etc/subversion])
+  7. (success) exec(Package[subversion-tools])
+  8. (success) exec(Augeas[avoid svn password saving])
+  9. (success) assert(Package[subversion-tools])
+
+=====================================================================
+1. exec(Package[augeas-lenses])
+=====================================================================
+
+Step result:    success
+Execution time: 0.142150727 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[libaugeas0])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179140257 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[augeas-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 6.260685719 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[augeas-tools]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[ruby-augeas])
+=====================================================================
+
+Step result:    success
+Execution time: 9.326717289 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Augeas::Packages/Package[ruby-augeas]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 7.84783426 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Package[subversion]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/subversion])
+=====================================================================
+
+Step result:    success
+Execution time: 0.209168718 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Package[subversion-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 21.783427133 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Debian/Package[subversion-tools]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Augeas[avoid svn password saving])
+=====================================================================
+
+Step result:    success
+Execution time: 0.363063347 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Subversion::Base/Augeas[avoid svn password saving]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Package[subversion-tools])
+=====================================================================
+
+Step result:    success
+Execution time: 4.319348842 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

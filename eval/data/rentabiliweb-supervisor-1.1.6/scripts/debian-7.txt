@@ -1,0 +1,14 @@
+# https://forge.puppetlabs.com/rentabiliweb/supervisor
+
+class { 'supervisor':
+  package                   => true,
+  service                   => true,
+  # daemon configuration
+  supervisord_logfile       => '/var/log/supervisor/supervisord.log',
+  supervisord_user          => 'root',
+  # http server configuration
+  inet_http_server          => '127.0.0.1',
+  inet_http_server_port     => '8080',
+  inet_http_server_username => 'login',
+  inet_http_server_passowrd => 'p4ssw0rd',
+}

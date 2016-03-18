@@ -1,0 +1,84 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 48
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(File[sasl_passwd])
+  2. (skipped) exec(Exec[sasl_passwd.db])
+  3. (skipped) assert(Exec[sasl_passwd.db])
+  4. (skipped) assert(File[sasl_passwd])
+  5. (skipped) exec(Package[libsasl2-2])
+  6. (skipped) assert(Exec[sasl_passwd.db])
+  7. (skipped) assert(File[sasl_passwd])
+  8. (skipped) assert(Package[libsasl2-2])
+
+=====================================================================
+1. exec(File[sasl_passwd])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.091254628 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-94-1ue24o2.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+Error: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-94-1ue24o2.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+Wrapped exception:
+No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-94-1ue24o2.lock
+Error: /Stage[main]/Mandrill::Config::Postfix/File[sasl_passwd]/ensure: change from absent to present failed: Could not set 'present' on ensure: No such file or directory @ dir_s_rmdir - /etc/postfix/sasl_passwd20151020-94-1ue24o2.lock at 80:/tmp/citac/modules/mandrill/manifests/config/postfix.pp
+ERROR 17:07:42.938 [citac-puppet]: Failed to apply 'File[sasl_passwd]'.
+Notice: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]: Dependency File[sasl_passwd] has failures: true
+Warning: /Stage[main]/Mandrill::Config::Postfix/Exec[sasl_passwd.db]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. assert(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(Package[libsasl2-2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Exec[sasl_passwd.db])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[sasl_passwd])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[libsasl2-2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

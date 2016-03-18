@@ -1,0 +1,8 @@
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:                                  Dload  Upload   Total   Spent    Left  Speed
+Notice: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (7) Failed to connect to 2001:470:1f0f:297::2: Network is unreachable
+Error: /usr/bin/curl -k http://horms.net/projects/ldirectord/download/ldirectord-latest  -o /var/tmp/ldirectord-latest returned 7 instead of one of [0]
+Error: /Stage[main]/Ldirectord::Install::Http/Exec[get_ldirectord]/returns: change from notrun to 0 failed: /usr/bin/curl -k http://horms.net/projects/ldirectord/download/ldirectord-latest  -o /var/tmp/ldirectord-latest returned 7 instead of one of [0]
+ERROR 11:59:00.304 [citac-puppet]: Failed to apply 'Exec[get_ldirectord]'.
+Notice: /Stage[main]/Ldirectord::Install::Http/File[/usr/sbin/ldirectord]: Dependency Exec[get_ldirectord] has failures: true
+Warning: /Stage[main]/Ldirectord::Install::Http/File[/usr/sbin/ldirectord]: Skipping because of failed dependencies

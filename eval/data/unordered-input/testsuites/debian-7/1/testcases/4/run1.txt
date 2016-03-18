@@ -1,0 +1,50 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Exec[write target])
+  2. (success) exec(File[write source])
+  3. (failure) assert(Exec[write target])
+
+=====================================================================
+1. exec(Exec[write target])
+=====================================================================
+
+Step result:    success
+Execution time: 0.141471581 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[write source])
+=====================================================================
+
+Step result:    success
+Execution time: 0.097348769 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[write source]/ensure: defined content as '{md5}da619dfbf5572fc749b1496b0fffd76a'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(Exec[write target])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.268253821 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[write target]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/new: /tmp/target
+##########  CHANGE SUMMARY END  ##########
+

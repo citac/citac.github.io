@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 11
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Yumrepo[datadog])
+  2. (success) exec(Package[datadog-agent-base])
+  3. (success) exec(Package[datadog-agent])
+  4. (success) exec(File[/etc/dd-agent])
+  5. (success) exec(File[/etc/dd-agent])
+  6. (success) exec(File[/etc/dd-agent/datadog.conf])
+  7. (success) assert(File[/etc/dd-agent])
+
+=====================================================================
+1. exec(Yumrepo[datadog])
+=====================================================================
+
+Step result:    success
+Execution time: 0.186043271 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Yumrepo[datadog]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.218630192 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[datadog-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 19.459733138 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Package[datadog-agent]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.260146362 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent]/owner: owner changed 'dd-agent' to 'root'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.254386502 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/dd-agent/datadog.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.232825395 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent/datadog.conf]/ensure: defined content as '{md5}9d456e99585b44a0310bcd92023e40e5'
+Notice: /Stage[main]/Datadog_agent::Redhat/Service[datadog-agent]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 20.21149918 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

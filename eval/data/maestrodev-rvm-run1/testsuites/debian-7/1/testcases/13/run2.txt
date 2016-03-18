@@ -1,0 +1,115 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 13
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Group[rvm])
+  2. (success) exec(Package[curl])
+  3. (success) exec(Exec[system-rvm-gpg-key])
+  4. (success) exec(File[/etc/rvmrc])
+  5. (success) exec(Group[rvm])
+  6. (failure) exec(Exec[system-rvm])
+  7. (skipped) assert(Group[rvm])
+
+=====================================================================
+1. exec(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Group/Group[rvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[curl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[system-rvm-gpg-key])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/rvmrc])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Rvmrc/File[/etc/rvmrc]/ensure: defined content as '{md5}3ec590d219afbf91a7c1a149a15e72cb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[system-rvm])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: Downloading https://github.com/rvm/rvm/archive/1.26.11.tar.gz
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: Downloading https://github.com/rvm/rvm/releases/download/1.26.11/1.26.11.tar.gz.asc
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: directory `/root/.gnupg' created
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: new configuration file `/root/.gnupg/gpg.conf' created
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: keyring `/root/.gnupg/pubring.gpg' created
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: Signature made Mon Mar 30 21:52:13 2015 UTC using RSA key ID BF04FF17
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: gpg: Can't check signature: public key not found
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: Warning, RVM 1.26.0 introduces signed releases and automated check of signatures when GPG software found.
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: Assuming you trust Michal Papis import the mpapis public key (downloading the signatures).
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: GPG signature verification failed for '/usr/local/rvm/archives/rvm-1.26.11.tgz' - 'https://github.com/rvm/rvm/releases/download/1.26.11/1.26.11.tar.gz.asc'!
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: try downloading the signatures:
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns:     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: or if it fails:
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns:     command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: the key can be compared with:
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: 
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns:     https://rvm.io/mpapis.asc
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]/returns:     https://keybase.io/mpapis
+Error: /usr/bin/curl -fsSL https://get.rvm.io | bash -s -- --version latest returned 2 instead of one of [0]
+Error: /Stage[main]/Rvm::System/Exec[system-rvm]/returns: change from notrun to 0 failed: /usr/bin/curl -fsSL https://get.rvm.io | bash -s -- --version latest returned 2 instead of one of [0]
+ERROR 01:12:19.803 [citac-puppet]: Failed to apply 'Exec[system-rvm]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Group[rvm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

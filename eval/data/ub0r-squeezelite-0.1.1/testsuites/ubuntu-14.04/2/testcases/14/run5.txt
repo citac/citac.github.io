@@ -1,0 +1,61 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 14
+Result:    ABORTED
+
+Steps:
+  1. (failure) exec(Exec[get-squeezelite])
+  2. (skipped) exec(Package[libasound2])
+  3. (skipped) assert(Exec[get-squeezelite])
+  4. (skipped) assert(Package[libasound2])
+
+=====================================================================
+1. exec(Exec[get-squeezelite])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.114325288 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Squeezelite::Install/Exec[get-squeezelite]/returns: --2015-10-18 02:44:27--  http://squeezelite-downloads.googlecode.com/git/squeezelite-x86-64
+Notice: /Stage[main]/Squeezelite::Install/Exec[get-squeezelite]/returns: Resolving squeezelite-downloads.googlecode.com (squeezelite-downloads.googlecode.com)... 64.233.184.82, 2a00:1450:400c:c0a::52
+Notice: /Stage[main]/Squeezelite::Install/Exec[get-squeezelite]/returns: Connecting to squeezelite-downloads.googlecode.com (squeezelite-downloads.googlecode.com)|64.233.184.82|:80... failed: Connection refused.
+Notice: /Stage[main]/Squeezelite::Install/Exec[get-squeezelite]/returns: Connecting to squeezelite-downloads.googlecode.com (squeezelite-downloads.googlecode.com)|2a00:1450:400c:c0a::52|:80... failed: Network is unreachable.
+Error: /usr/bin/wget 'http://squeezelite-downloads.googlecode.com/git/squeezelite-x86-64' -O '/tmp/squeezelite-x86-64' && /bin/mv '/tmp/squeezelite-x86-64' '/usr/local/bin/squeezelite' returned 4 instead of one of [0]
+Error: /Stage[main]/Squeezelite::Install/Exec[get-squeezelite]/returns: change from notrun to 0 failed: /usr/bin/wget 'http://squeezelite-downloads.googlecode.com/git/squeezelite-x86-64' -O '/tmp/squeezelite-x86-64' && /bin/mv '/tmp/squeezelite-x86-64' '/usr/local/bin/squeezelite' returned 4 instead of one of [0]
+ERROR 02:44:27.734 [citac-puppet]: Failed to apply 'Exec[get-squeezelite]'.
+Notice: /Stage[main]/Squeezelite::Install/File[/usr/local/bin/squeezelite]: Dependency Exec[get-squeezelite] has failures: true
+Warning: /Stage[main]/Squeezelite::Install/File[/usr/local/bin/squeezelite]: Skipping because of failed dependencies
+Notice: /Stage[main]/Squeezelite::Config/File[/etc/init.d/squeezelite]: Dependency Exec[get-squeezelite] has failures: true
+Warning: /Stage[main]/Squeezelite::Config/File[/etc/init.d/squeezelite]: Skipping because of failed dependencies
+Notice: /Stage[main]/Squeezelite::Config/File[/etc/default/squeezelite]: Dependency Exec[get-squeezelite] has failures: true
+Warning: /Stage[main]/Squeezelite::Config/File[/etc/default/squeezelite]: Skipping because of failed dependencies
+Notice: /Stage[main]/Squeezelite::Service/Service[squeezelite]: Dependency Exec[get-squeezelite] has failures: true
+Warning: /Stage[main]/Squeezelite::Service/Service[squeezelite]: Skipping because of failed dependencies
+Notice: /Stage[main]/Squeezelite/Anchor[squeezelite::end]: Dependency Exec[get-squeezelite] has failures: true
+Warning: /Stage[main]/Squeezelite/Anchor[squeezelite::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[libasound2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+3. assert(Exec[get-squeezelite])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. assert(Package[libasound2])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

@@ -1,0 +1,9 @@
+exec { 'write file 1':
+    command => '/bin/echo "content 1" > /tmp/file',
+    unless  => '/bin/grep "content 1" /tmp/file'
+}
+
+exec { 'write file 2':
+    command => '/bin/echo "content 2" > /tmp/file',
+    unless  => '/bin/grep "content 2" /tmp/file'
+}

@@ -1,0 +1,74 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 5
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Exec[create archive])
+  2. (success) exec(Exec[extract archive])
+  3. (success) exec(Exec[create archive])
+  4. (success) exec(File[delete archive])
+  5. (failure) assert(Exec[create archive])
+
+=====================================================================
+1. exec(Exec[create archive])
+=====================================================================
+
+Step result:    success
+Execution time: 0.066959381 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[create archive]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[extract archive])
+=====================================================================
+
+Step result:    success
+Execution time: 0.069378949 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[extract archive]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[create archive])
+=====================================================================
+
+Step result:    success
+Execution time: 0.051813918 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[delete archive])
+=====================================================================
+
+Step result:    success
+Execution time: 0.108132022 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[delete archive]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[create archive])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.304914678 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Exec[create archive]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/new: /tmp/archive.tar
+##########  CHANGE SUMMARY END  ##########
+

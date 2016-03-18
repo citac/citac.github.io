@@ -1,0 +1,123 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 23
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Yumrepo[datadog])
+  2. (success) exec(Package[datadog-agent-base])
+  3. (success) exec(Package[datadog-agent])
+  4. (success) exec(File[/etc/dd-agent])
+  5. (success) exec(File[/etc/dd-agent/datadog.conf])
+  6. (success) exec(File[/etc/dd-agent/conf.d/solr.yaml])
+  7. (success) exec(Package[datadog-agent-base])
+  8. (success) exec(Service[datadog-agent])
+  9. (success) assert(Package[datadog-agent-base])
+
+=====================================================================
+1. exec(Yumrepo[datadog])
+=====================================================================
+
+Step result:    success
+Execution time: 0.160802562 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Yumrepo[datadog]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.206470004 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[datadog-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 17.226154254 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Package[datadog-agent]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.350524751 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent]/owner: owner changed 'dd-agent' to 'root'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/dd-agent/datadog.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.357822747 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent/datadog.conf]/ensure: defined content as '{md5}9d456e99585b44a0310bcd92023e40e5'
+Notice: /Stage[main]/Datadog_agent::Redhat/Service[datadog-agent]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/dd-agent/conf.d/solr.yaml])
+=====================================================================
+
+Step result:    success
+Execution time: 0.279899628 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Integrations::Solr/File[/etc/dd-agent/conf.d/solr.yaml]/ensure: defined content as '{md5}3a425b800eeafef37961106f3ed6d8bf'
+Notice: /Stage[main]/Datadog_agent::Redhat/Service[datadog-agent]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.332035261 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Service[datadog-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.319167432 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 27.087726154 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

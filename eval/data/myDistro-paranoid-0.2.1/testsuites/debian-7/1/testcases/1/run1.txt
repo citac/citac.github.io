@@ -1,0 +1,85 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[sudo])
+  2. (success) exec(User[browser])
+  3. (success) exec(User[my_name])
+  4. (success) exec(File[sudoers])
+  5. (success) exec(File[sudoconfig-my_name-browser])
+  6. (success) assert(File[sudoconfig-my_name-browser])
+
+=====================================================================
+1. exec(Package[sudo])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[sudo]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(User[browser])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(User[my_name])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[sudoers])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Paranoid/File[sudoers]/content: content changed '{md5}45437b4e86fba2ab890ac81db2ec3606' to '{md5}f65c3e3d5626f258c79df9478b15a979'
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[sudoconfig-my_name-browser])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Paranoid::User[browsing]/File[sudoconfig-my_name-browser]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[sudoconfig-my_name-browser])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

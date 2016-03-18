@@ -1,0 +1,162 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 9
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[unzip])
+  2. (success) exec(File[/usr/local])
+  3. (success) exec(Package[openjdk-7-jdk])
+  4. (success) exec(File[/tmp])
+  5. (success) exec(Exec[download_glassfish-3.1.2.2.zip])
+  6. (success) exec(Group[glassfish])
+  7. (success) exec(User[glassfish])
+  8. (success) exec(Exec[unzip-downloaded])
+  9. (success) exec(Exec[change-ownership])
+  10. (failure) exec(Exec[unzip-downloaded])
+  11. (skipped) exec(Exec[change-mode])
+  12. (skipped) assert(Exec[unzip-downloaded])
+
+=====================================================================
+1. exec(Package[unzip])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[unzip]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/usr/local])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[openjdk-7-jdk])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Java/Package[openjdk-7-jdk]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/tmp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[download_glassfish-3.1.2.2.zip])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/Exec[download_glassfish-3.1.2.2.zip]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Group[glassfish])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/Group[glassfish]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(User[glassfish])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/User[glassfish]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[unzip-downloaded])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[change-ownership])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/Exec[change-ownership]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[unzip-downloaded])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: Archive:  /tmp/glassfish-3.1.2.2.zip
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: replace glassfish3/.org.opensolaris,pkg/catalog/stable.glassfish.org/catalog? [y]es, [n]o, [A]ll, [N]one, [r]ename:  NULL
+Notice: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: (EOF or read error, treating as "[N]one" ...)
+Error: unzip /tmp/glassfish-3.1.2.2.zip returned 1 instead of one of [0]
+Error: /Stage[main]/Glassfish::Install/Exec[unzip-downloaded]/returns: change from notrun to 0 failed: unzip /tmp/glassfish-3.1.2.2.zip returned 1 instead of one of [0]
+ERROR 09:00:14.065 [citac-puppet]: Failed to apply 'Exec[unzip-downloaded]'.
+Notice: /Stage[main]/Glassfish::Install/Exec[change-ownership]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[change-ownership]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Exec[change-mode]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[change-mode]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Exec[move-glassfish3]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Exec[move-glassfish3]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/File[remove-domain1]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/File[remove-domain1]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Install/Anchor[glassfish::install::end]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Install/Anchor[glassfish::install::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Glassfish::Path/File[/etc/profile.d/glassfish.sh]: Dependency Exec[unzip-downloaded] has failures: true
+Warning: /Stage[main]/Glassfish::Path/File[/etc/profile.d/glassfish.sh]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Exec[change-mode])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(Exec[unzip-downloaded])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

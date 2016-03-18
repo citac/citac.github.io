@@ -1,0 +1,95 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 92
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/bin])
+  3. (success) exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  4. (failure) exec(Package[ipvsadm])
+  5. (skipped) assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+  6. (skipped) assert(File[/var/lib/puppet/concat/bin])
+  7. (skipped) assert(File[/var/lib/puppet/concat])
+  8. (skipped) assert(Package[ipvsadm])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time: 0.249984878 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    success
+Execution time: 0.332988918 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.445299591 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat/bin/concatfragments.rb]/ensure: defined content as '{md5}b684db0eac243553a6a79365119a363d'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[ipvsadm])
+=====================================================================
+
+Step result:    failure
+Execution time: 7.406094974 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/yum -d 0 -e 0 -y install ipvsadm' returned 1: Error downloading packages:
+  ipvsadm-1.27-7.el7.x86_64: [Errno 256] No more mirrors to try.
+  libnl3-3.2.21-8.el7.x86_64: [Errno 256] No more mirrors to try.
+Error: /Stage[main]/Ldirectord::Install/Package[ipvsadm]/ensure: change from absent to present failed: Execution of '/usr/bin/yum -d 0 -e 0 -y install ipvsadm' returned 1: Error downloading packages:
+  ipvsadm-1.27-7.el7.x86_64: [Errno 256] No more mirrors to try.
+  libnl3-3.2.21-8.el7.x86_64: [Errno 256] No more mirrors to try.
+ERROR 12:44:22.398 [citac-puppet]: Failed to apply 'Package[ipvsadm]'.
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/var/lib/puppet/concat/bin/concatfragments.rb])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/bin])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[ipvsadm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

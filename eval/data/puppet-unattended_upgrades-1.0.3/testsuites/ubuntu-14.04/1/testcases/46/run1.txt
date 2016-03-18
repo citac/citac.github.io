@@ -1,0 +1,62 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 46
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[unattended-upgrades])
+  2. (success) exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+  3. (success) exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+  4. (success) assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+
+=====================================================================
+1. exec(Package[unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Package[unattended-upgrades]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/apt.conf.d/50unattended-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Unattended_upgrades/Apt::Conf[unattended-upgrades]/Apt::Setting[conf-unattended-upgrades]/File[/etc/apt/apt.conf.d/50unattended-upgrades]/content: content changed '{md5}4c4d0203d3db42331c1517ea26d064da' to '{md5}fb3f5ad6572b8f7f04363970a2de0b99'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/apt/apt.conf.d/20auto-upgrades])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

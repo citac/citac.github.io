@@ -1,0 +1,121 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 5
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/dirsrv])
+  2. (success) exec(Package[openssl])
+  3. (success) exec(File[ca-certificates.crt])
+  4. (success) exec(File[/etc/dirsrv/slapd-ldap1])
+  5. (success) exec(Package[nss-tools])
+  6. (success) exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+  7. (success) exec(File[/etc/dirsrv/slapd-ldap1])
+  8. (success) exec(Exec[create_nss_db_/etc/dirsrv/slapd-ldap1])
+  9. (success) assert(File[/etc/dirsrv/slapd-ldap1])
+
+=====================================================================
+1. exec(File[/etc/dirsrv])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/File[/etc/dirsrv]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[openssl])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Packages/Package[openssl]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[ca-certificates.crt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Openssl::Config/File[ca-certificates.crt]/ensure: ensure changed 'link' to 'file'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[nss-tools])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/dirsrv/slapd-ldap1/nss-password.txt])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/File[/etc/dirsrv/slapd-ldap1/nss-password.txt]/ensure: defined content as '{md5}1a79a4d60de6718e8e5b326e338ae533'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[create_nss_db_/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Nsstools::Create[/etc/dirsrv/slapd-ldap1]/Exec[create_nss_db_/etc/dirsrv/slapd-ldap1]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. assert(File[/etc/dirsrv/slapd-ldap1])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

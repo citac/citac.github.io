@@ -1,0 +1,280 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 32
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[01proxy])
+  2. (failure) exec(Apt_key[00654A3E])
+  3. (skipped) exec(File[sources.list.d])
+  4. (skipped) exec(File[syncthing.list])
+  5. (skipped) exec(File[old-proxy-file])
+  6. (skipped) exec(File[sources.list])
+  7. (skipped) exec(Exec[apt_update])
+  8. (skipped) exec(Package[syncthing])
+  9. (skipped) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  10. (skipped) assert(Apt_key[00654A3E])
+  11. (skipped) assert(Exec[apt_update])
+  12. (skipped) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  13. (skipped) assert(File[01proxy])
+  14. (skipped) assert(File[old-proxy-file])
+  15. (skipped) assert(File[sources.list.d])
+  16. (skipped) assert(File[sources.list])
+  17. (skipped) assert(File[syncthing.list])
+  18. (skipped) assert(Package[syncthing])
+  19. (skipped) exec(File[/etc/default/syncthing])
+  20. (skipped) assert(Apt_key[00654A3E])
+  21. (skipped) assert(Exec[apt_update])
+  22. (skipped) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  23. (skipped) assert(File[/etc/default/syncthing])
+  24. (skipped) assert(File[01proxy])
+  25. (skipped) assert(File[old-proxy-file])
+  26. (skipped) assert(File[sources.list.d])
+  27. (skipped) assert(File[sources.list])
+  28. (skipped) assert(File[syncthing.list])
+  29. (skipped) assert(Package[syncthing])
+
+=====================================================================
+1. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 1.388263141 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    failure
+Execution time: 128.375184937 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Connection timed out - connect(2) for "syncthing.net" port 443
+Error: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: change from absent to present failed: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 03:40:05.977 [citac-puppet]: Failed to apply 'Apt_key[00654A3E]'.
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Anchor[apt_key 00654A3E present]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Anchor[apt_key 00654A3E present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/Anchor[apt::source::syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/Anchor[apt::source::syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt::update]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt::update]: Skipping because of failed dependencies
+Notice: /Package[syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Package[syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/Service[syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/Service[syncthing]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. exec(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. exec(Package[syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(File[syncthing.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(Package[syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. exec(File[/etc/default/syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+23. assert(File[/etc/default/syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+24. assert(File[01proxy])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+25. assert(File[old-proxy-file])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+26. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+27. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+28. assert(File[syncthing.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+29. assert(Package[syncthing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

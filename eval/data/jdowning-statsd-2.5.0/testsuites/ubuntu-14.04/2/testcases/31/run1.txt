@@ -1,0 +1,240 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 31
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[apt-transport-https])
+  2. (success) exec(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+  3. (success) exec(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+  4. (success) exec(File[sources.list.d])
+  5. (success) exec(File[sources.list])
+  6. (success) exec(File[/etc/apt/sources.list.d/nodesource.list])
+  7. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  8. (success) exec(File[preferences.d])
+  9. (success) exec(File[preferences])
+  10. (success) exec(Exec[apt_update])
+  11. (success) exec(File[/etc/init/statsd.conf])
+  12. (success) assert(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+  13. (skipped) assert(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+  14. (skipped) assert(Exec[apt_update])
+  15. (skipped) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  16. (skipped) assert(File[/etc/apt/sources.list.d/nodesource.list])
+  17. (skipped) assert(File[/etc/init/statsd.conf])
+  18. (skipped) assert(File[preferences.d])
+  19. (skipped) assert(File[preferences])
+  20. (skipped) assert(File[sources.list.d])
+  21. (skipped) assert(File[sources.list])
+  22. (skipped) assert(Package[apt-transport-https])
+
+=====================================================================
+1. exec(Package[apt-transport-https])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[apt-transport-https]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nodejs::Repo::Nodesource::Apt/Apt::Source[nodesource]/Apt::Key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource]/Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/sources.list.d/nodesource.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nodejs::Repo::Nodesource::Apt/Apt::Source[nodesource]/Apt::Setting[list-nodesource]/File[/etc/apt/sources.list.d/nodesource.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}0962d70c4ec78bbfa6f3544ae0c41974'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/etc/init/statsd.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Statsd::Config/File[/etc/init/statsd.conf]/ensure: defined content as '{md5}5b6412f4296de44623292f3554ceace8'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(Apt_key[Add key: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280 from Apt::Source nodesource])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Exec[Required packages: 'apt-transport-https ca-certificates' for nodesource])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+16. assert(File[/etc/apt/sources.list.d/nodesource.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+17. assert(File[/etc/init/statsd.conf])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+18. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+19. assert(File[preferences])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+20. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+21. assert(File[sources.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+22. assert(Package[apt-transport-https])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

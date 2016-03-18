@@ -1,0 +1,98 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 16
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[irqbalance])
+  2. (success) exec(File[/etc/default/irqbalance])
+  3. (success) exec(Exec[systemd_daemon_reload])
+  4. (success) exec(Exec[noop_init_file_change])
+  5. (success) exec(File[/etc/default/irqbalance])
+  6. (success) exec(Service[irqbalance])
+  7. (success) assert(File[/etc/default/irqbalance])
+
+=====================================================================
+1. exec(Package[irqbalance])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Irqbalance::Install/Package[irqbalance]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/default/irqbalance])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Irqbalance::Config/File[/etc/default/irqbalance]/content: content changed '{md5}7e10d364b9f72b11d7bf7bd1cfaeb0ff' to '{md5}7ca6096cbe25587d4bc08fe43f4bda58'
+Notice: /Stage[main]/Irqbalance::Service/Service[irqbalance]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Exec[systemd_daemon_reload])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[noop_init_file_change])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/default/irqbalance])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Service[irqbalance])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Irqbalance::Service/Service[irqbalance]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/default/irqbalance])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

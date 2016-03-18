@@ -1,0 +1,73 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 31
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+  2. (success) exec(Exec[import-EPEL-7])
+  3. (success) exec(Yumrepo[epel-testing])
+  4. (success) exec(Yumrepo[epel-testing-source])
+  5. (success) assert(Yumrepo[epel-testing])
+
+=====================================================================
+1. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7]/ensure: defined content as '{md5}58fa8ae27c89f37b08429f04fd4a88cc'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[import-EPEL-7])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Epel::Rpm_gpg_key[EPEL-7]/Exec[import-EPEL-7]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Yumrepo[epel-testing])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Yumrepo[epel-testing]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Yumrepo[epel-testing-source])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Yumrepo[epel-testing-source]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Yumrepo[epel-testing])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

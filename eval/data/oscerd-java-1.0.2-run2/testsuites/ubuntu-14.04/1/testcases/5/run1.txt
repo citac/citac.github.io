@@ -1,0 +1,110 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 5
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[tar])
+  2. (success) exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+  3. (success) exec(File[/usr/lib/jvm])
+  4. (success) exec(Exec[extract_java])
+  5. (success) exec(Exec[move_java])
+  6. (success) exec(Exec[extract_java])
+  7. (success) exec(Exec[clean_java])
+  8. (failure) assert(Exec[extract_java])
+
+=====================================================================
+1. exec(Package[tar])
+=====================================================================
+
+Step result:    success
+Execution time: 0.102627944 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/tmp/jdk-7u79-linux-x64.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time: 3.839825822 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/tmp/jdk-7u79-linux-x64.tar.gz]/ensure: defined content as '{md5}9222e097e624800fdd9bfb568169ccad'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/lib/jvm])
+=====================================================================
+
+Step result:    success
+Execution time: 0.112643546 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/File[/usr/lib/jvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 5.063515542 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[extract_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[move_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.214796346 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[move_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Exec[extract_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.120179376 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[clean_java])
+=====================================================================
+
+Step result:    success
+Execution time: 0.167406576 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Java::Setup[java]/Exec[clean_java]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. assert(Exec[extract_java])
+=====================================================================
+
+Step result:    failure
+Execution time: 31.295944655 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  file/changed: /usr/lib/jvm/jdk1.7.0_79
+##########  CHANGE SUMMARY END  ##########
+

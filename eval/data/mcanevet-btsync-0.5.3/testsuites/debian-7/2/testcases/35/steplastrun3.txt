@@ -1,0 +1,27 @@
+Error: Execution of '/usr/bin/apt-key adv --keyserver pgp.mit.edu --recv-keys 6BF18B15' returned 2: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.gThRSkV7SG --trustdb-name /etc/apt//trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-security-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-stable.gpg --keyserver pgp.mit.edu --recv-keys 6BF18B15
+gpg: requesting key 6BF18B15 from hkp server pgp.mit.edu
+gpgkeys: key 6BF18B15 not found on keyserver
+gpg: no valid OpenPGP data found.
+gpg: Total number processed: 0
+Error: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Apt_key[Add key: 6BF18B15 from Apt::Source btsync]/ensure: change from absent to present failed: Execution of '/usr/bin/apt-key adv --keyserver pgp.mit.edu --recv-keys 6BF18B15' returned 2: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /tmp/tmp.gThRSkV7SG --trustdb-name /etc/apt//trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-security-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-jessie-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-squeeze-stable.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-automatic.gpg --keyring /etc/apt/trusted.gpg.d//debian-archive-wheezy-stable.gpg --keyserver pgp.mit.edu --recv-keys 6BF18B15
+gpg: requesting key 6BF18B15 from hkp server pgp.mit.edu
+gpgkeys: key 6BF18B15 not found on keyserver
+gpg: no valid OpenPGP data found.
+gpg: Total number processed: 0
+ERROR 07:31:08.293 [citac-puppet]: Failed to apply 'Apt_key[Add key: 6BF18B15 from Apt::Source btsync]'.
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Anchor[apt_key 6BF18B15 present]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Key[Add key: 6BF18B15 from Apt::Source btsync]/Anchor[apt_key 6BF18B15 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Setting[list-btsync]/File[/etc/apt/sources.list.d/btsync.list]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Btsync::Repo/Apt::Source[btsync]/Apt::Setting[list-btsync]/File[/etc/apt/sources.list.d/btsync.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Main/Exec[/usr/bin/apt-get update]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Main/Exec[/usr/bin/apt-get update]: Skipping because of failed dependencies
+Notice: /Package[btsync]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Package[btsync]: Skipping because of failed dependencies
+Notice: /Stage[main]/Btsync::Config/File[/etc/btsync]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Btsync::Config/File[/etc/btsync]: Skipping because of failed dependencies
+Notice: /Stage[main]/Btsync::Service/Service[btsync]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Btsync::Service/Service[btsync]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt_last]: Dependency Apt_key[Add key: 6BF18B15 from Apt::Source btsync] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt_last]: Skipping because of failed dependencies

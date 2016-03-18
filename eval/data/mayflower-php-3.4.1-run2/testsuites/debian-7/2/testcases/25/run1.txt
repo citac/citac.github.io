@@ -1,0 +1,437 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 25
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[preferences])
+  2. (success) exec(Apt_key[php::repo::debian])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  5. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  6. (success) exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  7. (success) exec(File[preferences.d])
+  8. (success) exec(File[sources.list])
+  9. (success) exec(Exec[apt_update])
+  10. (success) assert(Apt_key[php::repo::debian])
+  11. (success) assert(Exec[apt_update])
+  12. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  13. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  14. (success) assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  15. (success) assert(File[preferences.d])
+  16. (success) assert(File[preferences])
+  17. (success) assert(File[sources.list.d])
+  18. (success) assert(File[sources.list])
+  19. (success) exec(Package[php5-cli])
+  20. (success) assert(Apt_key[php::repo::debian])
+  21. (success) assert(Exec[apt_update])
+  22. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  23. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  24. (success) assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  25. (success) assert(File[preferences.d])
+  26. (success) assert(File[preferences])
+  27. (success) assert(File[sources.list.d])
+  28. (success) assert(File[sources.list])
+  29. (success) assert(Package[php5-cli])
+
+=====================================================================
+1. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 2.740334606 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 0.312427569 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Apt_key[php::repo::debian]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.235544367 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.518505374 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[source_php_wheezy-php55]/Apt::Setting[list-source_php_wheezy-php55]/File[/etc/apt/sources.list.d/source_php_wheezy-php55.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.384799333 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}0962d70c4ec78bbfa6f3544ae0c41974'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.72258868 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[dotdeb-wheezy]/Apt::Setting[list-dotdeb-wheezy]/File[/etc/apt/sources.list.d/dotdeb-wheezy.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.195274257 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.263429937 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.281898421 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 6.215727627 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.701096194 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.795742921 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.096031368 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.693666802 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.732038973 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 3.940727338 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 4.12018917 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.17855399 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 8.005821222 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+20. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    success
+Execution time: 6.595558998 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. assert(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 2.757424819 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 4.309391895 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.095739663 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.128855879 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[preferences.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.84675703 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time: 4.135729453 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.649207809 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.974800343 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 4.035204434 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

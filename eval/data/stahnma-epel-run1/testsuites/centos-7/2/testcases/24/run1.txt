@@ -1,0 +1,101 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 24
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+  2. (success) exec(Exec[import-EPEL-7])
+  3. (success) exec(Yumrepo[epel-debuginfo])
+  4. (success) exec(Yumrepo[epel-testing])
+  5. (failure) assert(Exec[import-EPEL-7])
+  6. (skipped) assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+  7. (skipped) assert(Yumrepo[epel-debuginfo])
+  8. (skipped) assert(Yumrepo[epel-testing])
+
+=====================================================================
+1. exec(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7]/ensure: defined content as '{md5}58fa8ae27c89f37b08429f04fd4a88cc'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[import-EPEL-7])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Epel::Rpm_gpg_key[EPEL-7]/Exec[import-EPEL-7]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Yumrepo[epel-debuginfo])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Yumrepo[epel-debuginfo]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Yumrepo[epel-testing])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Epel/Yumrepo[epel-testing]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(Exec[import-EPEL-7])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+4 changes:
+  file/changed: /etc/hosts
+  file/changed: /var/lib/rpm/__db.001
+  file/changed: /var/lib/rpm/__db.002
+  file/changed: /var/lib/rpm/__db.003
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. assert(File[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(Yumrepo[epel-debuginfo])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Yumrepo[epel-testing])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

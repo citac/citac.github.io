@@ -1,0 +1,134 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 183
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list])
+  2. (success) exec(File[sources.list.d])
+  3. (success) exec(File[01proxy])
+  4. (success) exec(File[old-proxy-file])
+  5. (success) exec(Apt_key[00654A3E])
+  6. (success) exec(File[syncthing.list])
+  7. (success) exec(Exec[apt_update])
+  8. (success) exec(File[sources.list])
+  9. (success) exec(Package[syncthing])
+  10. (success) assert(File[sources.list])
+
+=====================================================================
+1. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.774255745 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.793733697 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.78816267 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.783612326 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Apt_key[00654A3E])
+=====================================================================
+
+Step result:    success
+Execution time: 2.052471239 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[syncthing.list])
+=====================================================================
+
+Step result:    success
+Execution time: 6.51095415 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.774401329 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.949063744 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[syncthing])
+=====================================================================
+
+Step result:    success
+Execution time: 6.863948108 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Syncthing::Install/Package[syncthing]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. assert(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.249194922 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

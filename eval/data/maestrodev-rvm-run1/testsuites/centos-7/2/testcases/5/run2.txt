@@ -1,0 +1,127 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 5
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Group[rvm])
+  2. (success) assert(Group[rvm])
+  3. (success) exec(File[/etc/rvmrc])
+  4. (success) assert(File[/etc/rvmrc])
+  5. (success) assert(Group[rvm])
+  6. (failure) exec(Exec[system-rvm-gpg-key])
+  7. (skipped) assert(Exec[system-rvm-gpg-key])
+  8. (skipped) assert(File[/etc/rvmrc])
+  9. (skipped) assert(Group[rvm])
+
+=====================================================================
+1. exec(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Group/Group[rvm]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[/etc/rvmrc])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::Rvmrc/File[/etc/rvmrc]/ensure: defined content as '{md5}3ec590d219afbf91a7c1a149a15e72cb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[/etc/rvmrc])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Group[rvm])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Exec[system-rvm-gpg-key])
+=====================================================================
+
+Step result:    failure
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: /usr/bin/gpg2
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: gpg: keyring `/root/.gnupg/secring.gpg' created
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: gpg: requesting key D39DC0E3 from hkp server keys.gnupg.net
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: gpgkeys: key D39DC0E3 can't be retrieved
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: gpg: no valid OpenPGP data found.
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: gpg: Total number processed: 0
+Error: which gpg2 && gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 returned 2 instead of one of [0]
+Error: /Stage[main]/Rvm::System/Exec[system-rvm-gpg-key]/returns: change from notrun to 0 failed: which gpg2 && gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 returned 2 instead of one of [0]
+ERROR 15:12:44.253 [citac-puppet]: Failed to apply 'Exec[system-rvm-gpg-key]'.
+Notice: /Stage[main]/Rvm::System/Exec[system-rvm]: Dependency Exec[system-rvm-gpg-key] has failures: true
+Warning: /Stage[main]/Rvm::System/Exec[system-rvm]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[system-rvm-gpg-key])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[/etc/rvmrc])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Group[rvm])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

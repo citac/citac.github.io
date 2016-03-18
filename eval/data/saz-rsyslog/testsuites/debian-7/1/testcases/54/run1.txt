@@ -1,0 +1,148 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 54
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[rsyslog])
+  2. (success) exec(Package[rsyslog-relp])
+  3. (success) exec(Package[rsyslog-gnutls])
+  4. (success) exec(File[/etc/rsyslog.d/])
+  5. (success) exec(File[/etc/rsyslog.conf])
+  6. (success) exec(File[/etc/default/rsyslog])
+  7. (success) exec(File[/var/spool/rsyslog])
+  8. (success) exec(File[/etc/rsyslog.d/client.conf])
+  9. (success) exec(File[/etc/rsyslog.d/client.conf])
+  10. (success) exec(Service[rsyslog])
+  11. (success) assert(File[/etc/rsyslog.d/client.conf])
+
+=====================================================================
+1. exec(Package[rsyslog])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Install/Package[rsyslog]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[rsyslog-relp])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Install/Package[rsyslog-relp]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[rsyslog-gnutls])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Install/Package[rsyslog-gnutls]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/etc/rsyslog.d/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/rsyslog.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Config/File[/etc/rsyslog.conf]/content: content changed '{md5}169baf73fd49d20d142d088e663a9a63' to '{md5}7c1bda2ac50705b386600aab539d2a68'
+Notice: /Stage[main]/Rsyslog::Service/Service[rsyslog]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/default/rsyslog])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Config/File[/etc/default/rsyslog]/content: content changed '{md5}4e261348985ab81709d38359ea8f5c7d' to '{md5}315e804ddbf8adcc9693310a2fa19f62'
+Notice: /Stage[main]/Rsyslog::Service/Service[rsyslog]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/var/spool/rsyslog])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/etc/rsyslog.d/client.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Client/Rsyslog::Snippet[client]/File[/etc/rsyslog.d/client.conf]/ensure: created
+Notice: /Stage[main]/Rsyslog::Service/Service[rsyslog]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/rsyslog.d/client.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(Service[rsyslog])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rsyslog::Service/Service[rsyslog]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/etc/rsyslog.d/client.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,99 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 18
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[sec])
+  2. (success) exec(File[/etc/sec.conf])
+  3. (success) exec(File[/etc/sec/])
+  4. (success) exec(Augeas[sec])
+  5. (success) exec(Augeas[sec])
+  6. (success) exec(Service[sec])
+  7. (success) assert(Augeas[sec])
+
+=====================================================================
+1. exec(Package[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Install/Package[sec]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/sec.conf])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/sec/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Config/File[/etc/sec/]/ensure: created
+Notice: /Stage[main]/Sec::Service/Service[sec]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Augeas[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Config/Augeas[sec]/returns: executed successfully
+Notice: /Stage[main]/Sec::Service/Service[sec]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Augeas[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Service[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Sec::Service/Service[sec]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Augeas[sec])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

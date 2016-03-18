@@ -1,0 +1,99 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 54
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[apt-transport-https])
+  2. (success) exec(Package[ca-certificates])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(Apt_key[Add key: 16378A33A6EF16762922526E561F9B9CAC40B2F7 from Apt::Source phusion_passenger])
+  5. (success) exec(File[/etc/apt/sources.list.d/phusion_passenger.list])
+  6. (success) exec(File[preferences])
+  7. (success) assert(File[/etc/apt/sources.list.d/phusion_passenger.list])
+
+=====================================================================
+1. exec(Package[apt-transport-https])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Passenger_repo/Package[apt-transport-https]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[ca-certificates])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Apt_key[Add key: 16378A33A6EF16762922526E561F9B9CAC40B2F7 from Apt::Source phusion_passenger])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Passenger_repo/Apt::Source[phusion_passenger]/Apt::Key[Add key: 16378A33A6EF16762922526E561F9B9CAC40B2F7 from Apt::Source phusion_passenger]/Apt_key[Add key: 16378A33A6EF16762922526E561F9B9CAC40B2F7 from Apt::Source phusion_passenger]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/apt/sources.list.d/phusion_passenger.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Passenger_repo/Apt::Source[phusion_passenger]/Apt::Setting[list-phusion_passenger]/File[/etc/apt/sources.list.d/phusion_passenger.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[preferences])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/File[preferences]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/apt/sources.list.d/phusion_passenger.list])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

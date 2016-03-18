@@ -1,0 +1,178 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 93
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[php5-cli])
+  4. (success) exec(Package[wget])
+  5. (success) exec(Exec[download composer])
+  6. (success) exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  7. (success) assert(Exec[download composer])
+  8. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  9. (success) assert(File[sources.list.d])
+  10. (success) assert(Package[php5-cli])
+  11. (success) assert(Package[php5-common])
+  12. (success) assert(Package[wget])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179940734 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.262328845 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-common]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.001037143 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.2744053 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 1.101482597 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Composer/Exec[download composer]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.48082868 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[dotdeb-wheezy]/Apt::Setting[list-dotdeb-wheezy]/File[/etc/apt/sources.list.d/dotdeb-wheezy.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 5.406135265 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.528770885 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.479632242 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.356263368 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 3.2481694 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 3.588879532 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

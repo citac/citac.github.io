@@ -1,0 +1,85 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 14
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Yumrepo[datadog])
+  2. (success) exec(Package[datadog-agent-base])
+  3. (success) exec(Package[datadog-agent])
+  4. (success) exec(Package[datadog-agent-base])
+  5. (success) exec(File[/etc/dd-agent])
+  6. (success) assert(Package[datadog-agent-base])
+
+=====================================================================
+1. exec(Yumrepo[datadog])
+=====================================================================
+
+Step result:    success
+Execution time: 0.295889287 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Yumrepo[datadog]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.3144192 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[datadog-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 20.481036244 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent::Redhat/Package[datadog-agent]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 0.511834337 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/etc/dd-agent])
+=====================================================================
+
+Step result:    success
+Execution time: 0.253347306 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Datadog_agent/File[/etc/dd-agent]/owner: owner changed 'dd-agent' to 'root'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(Package[datadog-agent-base])
+=====================================================================
+
+Step result:    success
+Execution time: 29.804891472 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

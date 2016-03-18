@@ -1,0 +1,73 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 19
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[redis])
+  2. (success) exec(Exec[/var/lib/redis/])
+  3. (success) exec(File[/etc/logrotate.d/redis-server])
+  4. (success) exec(File[/var/lib/redis/])
+  5. (success) assert(File[/etc/logrotate.d/redis-server])
+
+=====================================================================
+1. exec(Package[redis])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Redis/Package[redis]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[/var/lib/redis/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/logrotate.d/redis-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Redis/File[/etc/logrotate.d/redis-server]/content: content changed '{md5}06755b99ef70d62a56cff94cbfc36de7' to '{md5}74d711e8f1af7d1133fc9c556185108a'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/redis/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. assert(File[/etc/logrotate.d/redis-server])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,91 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 54
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/var/lib/puppet/concat])
+  2. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces])
+  3. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments])
+  4. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat.out])
+  5. (success) exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/01_interfaces_header])
+  6. (success) assert(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat.out])
+
+=====================================================================
+1. exec(File[/var/lib/puppet/concat])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Concat::Setup/File[/var/lib/puppet/concat]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/var/lib/puppet/concat/_etc_network_interfaces])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces]/ensure: created
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments]/ensure: created
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat.out])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat.out]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/01_interfaces_header])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Debnet/Concat::Fragment[interfaces_header]/File[/var/lib/puppet/concat/_etc_network_interfaces/fragments/01_interfaces_header]/ensure: defined content as '{md5}adc7c5728b9b08c388068a092c057137'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Failed to call refresh: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+Error: /Stage[main]/Debnet/Concat[/etc/network/interfaces]/Exec[concat_/etc/network/interfaces]: Could not find command '/var/lib/puppet/concat/bin/concatfragments.rb'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/var/lib/puppet/concat/_etc_network_interfaces/fragments.concat.out])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

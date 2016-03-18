@@ -1,0 +1,210 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 117
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (success) exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  3. (success) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  4. (success) assert(File[sources.list.d])
+  5. (failure) exec(Package[php5-common])
+  6. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  7. (skipped) assert(File[sources.list.d])
+  8. (skipped) assert(Package[php5-common])
+  9. (skipped) exec(Package[php5-cli])
+  10. (skipped) exec(Package[php5-dev])
+  11. (skipped) assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+  12. (skipped) assert(File[sources.list.d])
+  13. (skipped) assert(Package[php5-cli])
+  14. (skipped) assert(Package[php5-common])
+  15. (skipped) assert(Package[php5-dev])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.176478727 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.307433204 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[dotdeb-wheezy]/Apt::Setting[list-dotdeb-wheezy]/File[/etc/apt/sources.list.d/dotdeb-wheezy.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.754418201 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+4. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 3.401951104 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. exec(Package[php5-common])
+=====================================================================
+
+Step result:    failure
+Execution time: 1.834309967 seconds
+
+############## OUTPUT START ##############
+Error: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-common' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  lsof psmisc ucf
+The following NEW packages will be installed:
+  lsof php5-common psmisc ucf
+0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1142 kB of archives.
+After this operation, 2281 kB of additional disk space will be used.
+WARNING: The following packages cannot be authenticated!
+  php5-common
+E: There are problems and -y was used without --force-yes
+Error: /Stage[main]/Php::Packages/Package[php5-common]/ensure: change from purged to present failed: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install php5-common' returned 100: Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  lsof psmisc ucf
+The following NEW packages will be installed:
+  lsof php5-common psmisc ucf
+0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1142 kB of archives.
+After this operation, 2281 kB of additional disk space will be used.
+WARNING: The following packages cannot be authenticated!
+  php5-common
+E: There are problems and -y was used without --force-yes
+ERROR 01:35:27.401 [citac-puppet]: Failed to apply 'Package[php5-common]'.
+Notice: /Stage[main]/Php::Composer/Exec[download composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer/Exec[download composer]: Skipping because of failed dependencies
+Notice: /Package[php5-fpm]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/pool.d]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm/Php::Fpm::Pool[www]/File[/etc/php5/fpm/pool.d/www.conf]: Skipping because of failed dependencies
+Notice: /Package[php-pear]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php-pear]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Composer::Auto_update/Exec[update composer]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Config/File[/etc/php5/fpm/php-fpm.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm::Service/Service[php5-fpm]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Fpm/Anchor[::php::fpm::end]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php::Pear/Exec[::php::pear::auto_discover]: Skipping because of failed dependencies
+Notice: /Package[php5-dev]: Dependency Package[php5-common] has failures: true
+Warning: /Package[php5-dev]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php/Anchor[php::end]: Dependency Package[php5-common] has failures: true
+Warning: /Stage[main]/Php/Anchor[php::end]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. exec(Package[php5-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+11. assert(File[/etc/apt/sources.list.d/dotdeb-wheezy.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+12. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+13. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+14. assert(Package[php5-common])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+15. assert(Package[php5-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

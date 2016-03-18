@@ -1,0 +1,109 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 30
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(Package[git])
+  2. (failure) exec(Exec[git-clone-rbenv])
+  3. (skipped) exec(File[/usr/local/rbenv])
+  4. (skipped) exec(File[/usr/local/rbenv/plugins])
+  5. (skipped) exec(Package[libssl-dev])
+  6. (skipped) assert(Exec[git-clone-rbenv])
+  7. (skipped) assert(File[/usr/local/rbenv/plugins])
+  8. (skipped) assert(File[/usr/local/rbenv])
+  9. (skipped) assert(Package[git])
+  10. (skipped) assert(Package[libssl-dev])
+
+=====================================================================
+1. exec(Package[git])
+=====================================================================
+
+Step result:    success
+Execution time: 9.367286106 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Git/Package[git]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Exec[git-clone-rbenv])
+=====================================================================
+
+Step result:    failure
+Execution time: 20.481050887 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: Cloning into '/usr/local/rbenv'...
+Notice: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: fatal: unable to access 'https://github.com/sstephenson/rbenv.git/': Could not resolve host: github.com
+Error: /usr/bin/git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv returned 128 instead of one of [0]
+Error: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: change from notrun to 0 failed: /usr/bin/git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv returned 128 instead of one of [0]
+ERROR 11:17:41.991 [citac-puppet]: Failed to apply 'Exec[git-clone-rbenv]'.
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/shims]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/shims]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/plugins]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/plugins]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/versions]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/versions]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/usr/local/rbenv])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[/usr/local/rbenv/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. exec(Package[libssl-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(Exec[git-clone-rbenv])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[/usr/local/rbenv/plugins])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[/usr/local/rbenv])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+9. assert(Package[git])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+10. assert(Package[libssl-dev])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

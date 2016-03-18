@@ -1,0 +1,92 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 168
+Result:    ABORTED
+
+Steps:
+  1. (success) exec(File[sources.list.d])
+  2. (failure) exec(Apt_key[php::repo::debian])
+  3. (skipped) exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  4. (skipped) exec(File[preferences.d])
+  5. (skipped) assert(Apt_key[php::repo::debian])
+  6. (skipped) assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+  7. (skipped) assert(File[preferences.d])
+  8. (skipped) assert(File[sources.list.d])
+
+=====================================================================
+1. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.191760381 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    failure
+Execution time: 0.307603436 seconds
+
+############## OUTPUT START ##############
+Error: Could not set 'present' on ensure: Connection refused - connect(2) for "www.dotdeb.org" port 80 at 84:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Connection refused - connect(2) for "www.dotdeb.org" port 80 at 84:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Connection refused - connect(2) for "www.dotdeb.org" port 80
+Error: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Apt_key[php::repo::debian]/ensure: change from absent to present failed: Could not set 'present' on ensure: Connection refused - connect(2) for "www.dotdeb.org" port 80 at 84:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 02:31:51.189 [citac-puppet]: Failed to apply 'Apt_key[php::repo::debian]'.
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Anchor[apt_key 7E3F070089DF5277 present]: Dependency Apt_key[php::repo::debian] has failures: true
+Warning: /Stage[main]/Php::Repo::Debian/Apt::Key[php::repo::debian]/Anchor[apt_key 7E3F070089DF5277 present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Php::Repo::Debian/Apt::Source[source_php_wheezy-php55]/Apt::Setting[list-source_php_wheezy-php55]/File[/etc/apt/sources.list.d/source_php_wheezy-php55.list]: Dependency Apt_key[php::repo::debian] has failures: true
+Warning: /Stage[main]/Php::Repo::Debian/Apt::Source[source_php_wheezy-php55]/Apt::Setting[list-source_php_wheezy-php55]/File[/etc/apt/sources.list.d/source_php_wheezy-php55.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[php::repo::debian] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+4. exec(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+5. assert(Apt_key[php::repo::debian])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+6. assert(File[/etc/apt/sources.list.d/source_php_wheezy-php55.list])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+7. assert(File[preferences.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+
+=====================================================================
+8. assert(File[sources.list.d])
+=====================================================================
+
+Step result:    skipped
+Execution time:  seconds
+

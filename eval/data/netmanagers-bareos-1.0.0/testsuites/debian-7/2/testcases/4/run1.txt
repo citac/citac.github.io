@@ -1,0 +1,1628 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Group[bareos])
+  2. (success) assert(Group[bareos])
+  3. (success) exec(User[bareos])
+  4. (success) assert(Group[bareos])
+  5. (success) assert(User[bareos])
+  6. (success) exec(File[/etc/apt/sources.list.d/bareos.list])
+  7. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  8. (success) assert(Group[bareos])
+  9. (success) assert(User[bareos])
+  10. (success) exec(File[bareos.dir])
+  11. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  12. (success) assert(File[bareos.dir])
+  13. (success) assert(Group[bareos])
+  14. (success) assert(User[bareos])
+  15. (success) exec(Exec[bareos-key])
+  16. (success) assert(Exec[bareos-key])
+  17. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  18. (success) assert(File[bareos.dir])
+  19. (success) assert(Group[bareos])
+  20. (success) assert(User[bareos])
+  21. (success) exec(Exec[update-apt])
+  22. (success) assert(Exec[bareos-key])
+  23. (success) assert(Exec[update-apt])
+  24. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  25. (success) assert(File[bareos.dir])
+  26. (success) assert(Group[bareos])
+  27. (success) assert(User[bareos])
+  28. (success) exec(Package[bareos-filedaemon])
+  29. (success) assert(Exec[bareos-key])
+  30. (success) assert(Exec[update-apt])
+  31. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  32. (success) assert(File[bareos.dir])
+  33. (success) assert(Group[bareos])
+  34. (success) assert(Package[bareos-filedaemon])
+  35. (success) assert(User[bareos])
+  36. (success) exec(Package[bareos-database])
+  37. (success) assert(Exec[bareos-key])
+  38. (success) assert(Exec[update-apt])
+  39. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  40. (success) assert(File[bareos.dir])
+  41. (success) assert(Group[bareos])
+  42. (success) assert(Package[bareos-database])
+  43. (success) assert(Package[bareos-filedaemon])
+  44. (success) assert(User[bareos])
+  45. (success) exec(File[bareos-fd.conf])
+  46. (success) assert(Exec[bareos-key])
+  47. (success) assert(Exec[update-apt])
+  48. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  49. (success) assert(File[bareos-fd.conf])
+  50. (success) assert(File[bareos.dir])
+  51. (success) assert(Group[bareos])
+  52. (success) assert(Package[bareos-database])
+  53. (success) assert(Package[bareos-filedaemon])
+  54. (success) assert(User[bareos])
+  55. (success) exec(Package[bareos-director])
+  56. (success) assert(Exec[bareos-key])
+  57. (success) assert(Exec[update-apt])
+  58. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  59. (success) assert(File[bareos-fd.conf])
+  60. (success) assert(File[bareos.dir])
+  61. (success) assert(Group[bareos])
+  62. (success) assert(Package[bareos-database])
+  63. (success) assert(Package[bareos-director])
+  64. (success) assert(Package[bareos-filedaemon])
+  65. (success) assert(User[bareos])
+  66. (success) exec(File[bareos-dir.conf])
+  67. (success) assert(Exec[bareos-key])
+  68. (success) assert(Exec[update-apt])
+  69. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  70. (success) assert(File[bareos-dir.conf])
+  71. (success) assert(File[bareos-fd.conf])
+  72. (success) assert(File[bareos.dir])
+  73. (success) assert(Group[bareos])
+  74. (success) assert(Package[bareos-database])
+  75. (success) assert(Package[bareos-director])
+  76. (success) assert(Package[bareos-filedaemon])
+  77. (success) assert(User[bareos])
+  78. (success) exec(Service[bareos-fd])
+  79. (success) assert(Exec[bareos-key])
+  80. (success) assert(Exec[update-apt])
+  81. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  82. (success) assert(File[bareos-dir.conf])
+  83. (success) assert(File[bareos-fd.conf])
+  84. (success) assert(File[bareos.dir])
+  85. (success) assert(Group[bareos])
+  86. (success) assert(Package[bareos-database])
+  87. (success) assert(Package[bareos-director])
+  88. (success) assert(Package[bareos-filedaemon])
+  89. (success) assert(Service[bareos-fd])
+  90. (success) assert(User[bareos])
+  91. (success) exec(Service[bareos-dir])
+  92. (success) assert(Exec[bareos-key])
+  93. (success) assert(Exec[update-apt])
+  94. (success) assert(File[/etc/apt/sources.list.d/bareos.list])
+  95. (success) assert(File[bareos-dir.conf])
+  96. (success) assert(File[bareos-fd.conf])
+  97. (success) assert(File[bareos.dir])
+  98. (success) assert(Group[bareos])
+  99. (success) assert(Package[bareos-database])
+  100. (success) assert(Package[bareos-director])
+  101. (success) assert(Package[bareos-filedaemon])
+  102. (success) assert(Service[bareos-dir])
+  103. (success) assert(Service[bareos-fd])
+  104. (success) assert(User[bareos])
+
+=====================================================================
+1. exec(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.266262146 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/Group[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 5.19803391 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 0.367500369 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/User[bareos]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 5.155357323 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.537188642 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.596208215 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Repository/File[/etc/apt/sources.list.d/bareos.list]/ensure: defined content as '{md5}05a78b17c3a94760f65d7058ba9772d8'
+Notice: /Stage[main]/Bareos::Repository/Exec[bareos-key]: Triggered 'refresh' from 1 events
+Notice: /Stage[main]/Bareos::Repository/Exec[update-apt]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 4.904897569 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.555618514 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 4.07968078 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 0.248309578 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos/File[bareos.dir]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 5.244172991 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.337991841 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.164013442 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.395014888 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 0.20627276 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.34006301 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.374658232 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.140601523 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 2.941719798 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.414368125 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+21. exec(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 0.205346076 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 3.865031028 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.134209144 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.148483655 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.299455374 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.343471389 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.202736501 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. exec(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 4.696323625 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/Package[bareos-filedaemon]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+29. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.135720752 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+30. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.211513689 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+31. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.190349968 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+32. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.095983255 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+33. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.149527297 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+34. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.498540895 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+35. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.4691947 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+36. exec(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 4.383229475 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Database/Package[bareos-database]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+37. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.614798797 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+38. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.465147148 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+39. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.317180962 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+40. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.185506543 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+41. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.200560137 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+42. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.280093585 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+43. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.29674203 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+44. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.232305858 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+45. exec(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.296958222 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/File[bareos-fd.conf]/group: group changed 'bareos' to 'root'
+Notice: /Stage[main]/Bareos::Client/File[bareos-fd.conf]/mode: mode changed '0640' to '0644'
+Notice: /Stage[main]/Bareos::Client/Service[bareos-fd]: Triggered 'refresh' from 2 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+46. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.540224952 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+47. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.13113696 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+48. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 2.984087543 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+49. assert(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.24289146 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+50. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.31720196 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+51. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.3622147 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+52. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.248733639 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+53. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.267147534 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+54. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.417033692 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+55. exec(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 6.781405485 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Director/Package[bareos-director]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+56. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.269230299 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+57. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.206861856 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+58. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.222766141 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+59. assert(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.130747139 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+60. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.25019268 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+61. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.204927596 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+62. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.091967213 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+63. assert(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 3.325120655 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+64. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.135187907 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+65. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.223952378 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+66. exec(File[bareos-dir.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.263330231 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Director/File[bareos-dir.conf]/owner: owner changed 'bareos' to 'root'
+Notice: /Stage[main]/Bareos::Director/File[bareos-dir.conf]/group: group changed 'bareos' to 'root'
+Notice: /Stage[main]/Bareos::Director/File[bareos-dir.conf]/mode: mode changed '0640' to '0644'
+Notice: /Stage[main]/Bareos::Director/Service[bareos-dir]: Triggered 'refresh' from 3 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+67. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.452652931 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+68. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.127313397 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+69. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.315715082 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+70. assert(File[bareos-dir.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.180004048 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+71. assert(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.318995141 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+72. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.037893098 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+73. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.183998309 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+74. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.443688332 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+75. assert(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 3.332595639 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+76. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.198831556 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+77. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.498352141 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+78. exec(Service[bareos-fd])
+=====================================================================
+
+Step result:    success
+Execution time: 5.78344426 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/Service[bareos-fd]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+79. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.252747691 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+80. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.471520351 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+81. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.318387579 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+82. assert(File[bareos-dir.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.109121958 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+83. assert(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.319711154 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+84. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.277696049 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+85. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.384112911 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+86. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.299689864 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+87. assert(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 3.210139317 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+88. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.259185217 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+89. assert(Service[bareos-fd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.866839172 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/Service[bareos-fd]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+90. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.385904509 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+91. exec(Service[bareos-dir])
+=====================================================================
+
+Step result:    success
+Execution time: 30.521043505 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Director/Service[bareos-dir]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+92. assert(Exec[bareos-key])
+=====================================================================
+
+Step result:    success
+Execution time: 4.81939123 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+93. assert(Exec[update-apt])
+=====================================================================
+
+Step result:    success
+Execution time: 2.155216659 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+94. assert(File[/etc/apt/sources.list.d/bareos.list])
+=====================================================================
+
+Step result:    success
+Execution time: 3.051074683 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+95. assert(File[bareos-dir.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.341609449 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+96. assert(File[bareos-fd.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 3.358151344 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+97. assert(File[bareos.dir])
+=====================================================================
+
+Step result:    success
+Execution time: 3.321980369 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+98. assert(Group[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.318591579 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+99. assert(Package[bareos-database])
+=====================================================================
+
+Step result:    success
+Execution time: 3.151621086 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+100. assert(Package[bareos-director])
+=====================================================================
+
+Step result:    success
+Execution time: 3.329487496 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+101. assert(Package[bareos-filedaemon])
+=====================================================================
+
+Step result:    success
+Execution time: 3.591131792 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+102. assert(Service[bareos-dir])
+=====================================================================
+
+Step result:    success
+Execution time: 34.240626877 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Director/Service[bareos-dir]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+103. assert(Service[bareos-fd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.594548329 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Bareos::Client/Service[bareos-fd]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+104. assert(User[bareos])
+=====================================================================
+
+Step result:    success
+Execution time: 3.377590549 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,142 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 1
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[nscd])
+  2. (success) assert(Package[nscd])
+  3. (success) exec(File[nscd_config])
+  4. (success) assert(File[nscd_config])
+  5. (success) assert(Package[nscd])
+  6. (success) exec(Service[nscd_service])
+  7. (success) assert(File[nscd_config])
+  8. (success) assert(Package[nscd])
+  9. (success) assert(Service[nscd_service])
+
+=====================================================================
+1. exec(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 4.420675468 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/Package[nscd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.622644816 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.269836311 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/File[nscd_config]/content: content changed '{md5}67f4a346d27ce75415e337f069715215' to '{md5}99d8530b2eeeab57e2c1ea5fc01a5b73'
+Notice: /Stage[main]/Nscd/Service[nscd_service]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 2.462060842 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.201013474 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Service[nscd_service])
+=====================================================================
+
+Step result:    success
+Execution time: 0.450333292 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/Service[nscd_service]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 2.153186048 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 1.891959547 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Service[nscd_service])
+=====================================================================
+
+Step result:    success
+Execution time: 2.342273801 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/Service[nscd_service]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

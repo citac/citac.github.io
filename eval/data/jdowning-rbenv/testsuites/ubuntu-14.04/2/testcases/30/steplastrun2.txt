@@ -1,0 +1,13 @@
+Notice: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: Cloning into '/usr/local/rbenv'...
+Notice: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: fatal: unable to access 'https://github.com/sstephenson/rbenv.git/': Could not resolve host: github.com
+Error: /usr/bin/git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv returned 128 instead of one of [0]
+Error: /Stage[main]/Rbenv/Exec[git-clone-rbenv]/returns: change from notrun to 0 failed: /usr/bin/git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv returned 128 instead of one of [0]
+ERROR 11:17:41.991 [citac-puppet]: Failed to apply 'Exec[git-clone-rbenv]'.
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/shims]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/shims]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/plugins]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/plugins]: Skipping because of failed dependencies
+Notice: /Stage[main]/Rbenv/File[/usr/local/rbenv/versions]: Dependency Exec[git-clone-rbenv] has failures: true
+Warning: /Stage[main]/Rbenv/File[/usr/local/rbenv/versions]: Skipping because of failed dependencies

@@ -1,0 +1,313 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 3
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[amavisd-new])
+  2. (success) assert(Package[amavisd-new])
+  3. (success) exec(Package[clamav-daemon])
+  4. (success) assert(Package[amavisd-new])
+  5. (success) assert(Package[clamav-daemon])
+  6. (success) exec(Package[clamav-freshclam])
+  7. (success) assert(Package[amavisd-new])
+  8. (success) assert(Package[clamav-daemon])
+  9. (success) assert(Package[clamav-freshclam])
+  10. (success) exec(Service[clamav-freshclam])
+  11. (success) assert(Package[amavisd-new])
+  12. (failure) assert(Package[clamav-daemon])
+  13. (failure) assert(Package[clamav-freshclam])
+  14. (failure) assert(Service[clamav-freshclam])
+  15. (success) exec(User[clamav])
+  16. (success) assert(Package[amavisd-new])
+  17. (success) assert(Package[clamav-daemon])
+  18. (success) assert(Package[clamav-freshclam])
+  19. (success) assert(Service[clamav-freshclam])
+  20. (success) assert(User[clamav])
+
+=====================================================================
+1. exec(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 8.741317504 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Main/Package[amavisd-new]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 2.348738565 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 5.693777485 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Package[clamav-daemon]/ensure: ensure changed 'purged' to 'latest'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 2.69435375 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 2.954296907 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Package[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 1.131485914 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 2.674998971 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 2.841421849 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Package[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 2.921353371 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. exec(Service[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 0.393216719 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/Service[clamav-freshclam]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. assert(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 3.590782489 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[clamav-daemon])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.816691463 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  state/added: processes.running[5]: '{:pid=>2737, :name=>"freshclam", :uid=>103, :cmd=>"/usr/bin/freshclam -d --quiet --config-file=/etc/clamav/freshclam.conf"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(Package[clamav-freshclam])
+=====================================================================
+
+Step result:    failure
+Execution time: 4.015869923 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  state/added: processes.running[4]: '{:pid=>2737, :name=>"freshclam", :uid=>103, :cmd=>"/usr/bin/freshclam -d --quiet --config-file=/etc/clamav/freshclam.conf"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(Service[clamav-freshclam])
+=====================================================================
+
+Step result:    failure
+Execution time: 2.597928736 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+1 changes:
+  state/added: processes.running[4]: '{:pid=>2737, :name=>"freshclam", :uid=>103, :cmd=>"/usr/bin/freshclam -d --quiet --config-file=/etc/clamav/freshclam.conf"}'
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. exec(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 0.387195367 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Clamav/User[clamav]/groups: groups changed '' to 'amavis'
+Notice: /Stage[main]/Clamav/Service[clamav-daemon]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. assert(Package[amavisd-new])
+=====================================================================
+
+Step result:    success
+Execution time: 2.321095021 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Package[clamav-daemon])
+=====================================================================
+
+Step result:    success
+Execution time: 2.662700976 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 3.211855349 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Service[clamav-freshclam])
+=====================================================================
+
+Step result:    success
+Execution time: 1.832601357 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. assert(User[clamav])
+=====================================================================
+
+Step result:    success
+Execution time: 1.737751321 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

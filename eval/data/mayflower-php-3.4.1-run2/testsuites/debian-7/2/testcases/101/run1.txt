@@ -1,0 +1,179 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 101
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[php5-cli])
+  2. (success) exec(Package[php5-common])
+  3. (success) exec(Package[wget])
+  4. (success) exec(Exec[download composer])
+  5. (success) exec(File[/usr/local/bin/composer])
+  6. (success) exec(File[/etc/apt/apt.conf.d/15update-stamp])
+  7. (success) assert(Exec[download composer])
+  8. (success) assert(File[/etc/apt/apt.conf.d/15update-stamp])
+  9. (success) assert(File[/usr/local/bin/composer])
+  10. (success) assert(Package[php5-cli])
+  11. (success) assert(Package[php5-common])
+  12. (success) assert(Package[wget])
+
+=====================================================================
+1. exec(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 4.053814219 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Packages/Package[php5-cli]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 0.265688047 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 0.247726701 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 0.990186065 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Composer/Exec[download composer]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[/usr/local/bin/composer])
+=====================================================================
+
+Step result:    success
+Execution time: 0.287124761 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]/group: group changed 'staff' to 'root'
+Notice: /Stage[main]/Php::Composer/File[/usr/local/bin/composer]/mode: mode changed '0644' to '0555'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 2.412658351 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/ensure: defined content as '{md5}0962d70c4ec78bbfa6f3544ae0c41974'
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. assert(Exec[download composer])
+=====================================================================
+
+Step result:    success
+Execution time: 5.276512237 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[/etc/apt/apt.conf.d/15update-stamp])
+=====================================================================
+
+Step result:    success
+Execution time: 3.233987707 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(File[/usr/local/bin/composer])
+=====================================================================
+
+Step result:    success
+Execution time: 3.487557436 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[php5-cli])
+=====================================================================
+
+Step result:    success
+Execution time: 3.501839942 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+11. assert(Package[php5-common])
+=====================================================================
+
+Step result:    success
+Execution time: 2.845145231 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+12. assert(Package[wget])
+=====================================================================
+
+Step result:    success
+Execution time: 2.834132723 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

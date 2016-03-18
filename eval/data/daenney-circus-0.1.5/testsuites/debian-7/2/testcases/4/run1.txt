@@ -1,0 +1,449 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 4
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[python-dev])
+  2. (success) assert(Package[python-dev])
+  3. (success) exec(Package[build-essential])
+  4. (success) assert(Package[build-essential])
+  5. (success) assert(Package[python-dev])
+  6. (success) exec(Package[python-pip])
+  7. (success) exec(Package[circus])
+  8. (success) exec(File[/usr/bin/circusd])
+  9. (success) exec(File[/etc/circus])
+  10. (success) exec(File[/etc/circus/circusd.ini])
+  11. (success) exec(Ini_setting[max_retry in /etc/circus/circusd.ini])
+  12. (success) assert(File[/etc/circus/circusd.ini])
+  13. (success) assert(File[/etc/circus])
+  14. (success) assert(File[/usr/bin/circusd])
+  15. (success) assert(Ini_setting[max_retry in /etc/circus/circusd.ini])
+  16. (success) assert(Package[build-essential])
+  17. (success) assert(Package[circus])
+  18. (success) assert(Package[python-dev])
+  19. (success) assert(Package[python-pip])
+  20. (success) exec(Ini_setting[use in /etc/circus/circusd.ini])
+  21. (success) assert(File[/etc/circus/circusd.ini])
+  22. (success) assert(File[/etc/circus])
+  23. (success) assert(File[/usr/bin/circusd])
+  24. (success) assert(Ini_setting[max_retry in /etc/circus/circusd.ini])
+  25. (success) assert(Ini_setting[use in /etc/circus/circusd.ini])
+  26. (success) assert(Package[build-essential])
+  27. (success) assert(Package[circus])
+  28. (success) assert(Package[python-dev])
+  29. (success) assert(Package[python-pip])
+
+=====================================================================
+1. exec(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 4.622652392 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[python-dev]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. assert(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 5.327185618 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+3. exec(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 0.162876003 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 5.417673673 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+5. assert(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 3.377426005 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+6. exec(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time: 7.708577338 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[python-pip]/ensure: ensure changed 'purged' to 'present'
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(Package[circus])
+=====================================================================
+
+Step result:    success
+Execution time: 86.543503139 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/Package[circus]/ensure: created
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(File[/usr/bin/circusd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.235727586 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Install/File[/usr/bin/circusd]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(File[/etc/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 0.233012813 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/File[/etc/circus]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 0.341937563 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/File[/etc/circus/circusd.ini]/ensure: created
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Ini_setting[max_retry in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 0.303299813 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/Circus::Setting[max_retry]/Ini_setting[max_retry in /etc/circus/circusd.ini]/ensure: created
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. assert(File[/etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 6.538311601 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+13. assert(File[/etc/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 3.730974532 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+14. assert(File[/usr/bin/circusd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.48651057 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+15. assert(Ini_setting[max_retry in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 3.548666388 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+16. assert(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 3.431289194 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+17. assert(Package[circus])
+=====================================================================
+
+Step result:    success
+Execution time: 2.485763128 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+18. assert(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 3.686706388 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+19. assert(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time: 3.811431932 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+20. exec(Ini_setting[use in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 0.29664512 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Circus::Configure/Circus::Setting[use]/Ini_setting[use in /etc/circus/circusd.ini]/ensure: created
+Error: /Stage[main]/Circus::Services/Service[circus]: Failed to call refresh: Could not find init script for 'circus'
+Error: /Stage[main]/Circus::Services/Service[circus]: Could not find init script for 'circus'
+##############  OUTPUT END  ##############
+
+=====================================================================
+21. assert(File[/etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 5.987016251 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+22. assert(File[/etc/circus])
+=====================================================================
+
+Step result:    success
+Execution time: 3.263637208 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+23. assert(File[/usr/bin/circusd])
+=====================================================================
+
+Step result:    success
+Execution time: 3.374903443 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+24. assert(Ini_setting[max_retry in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 3.615180818 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+25. assert(Ini_setting[use in /etc/circus/circusd.ini])
+=====================================================================
+
+Step result:    success
+Execution time: 3.638242384 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+26. assert(Package[build-essential])
+=====================================================================
+
+Step result:    success
+Execution time: 3.305833752 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+27. assert(Package[circus])
+=====================================================================
+
+Step result:    success
+Execution time: 2.448670981 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+28. assert(Package[python-dev])
+=====================================================================
+
+Step result:    success
+Execution time: 3.486991294 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+29. assert(Package[python-pip])
+=====================================================================
+
+Step result:    success
+Execution time: 4.093398754 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

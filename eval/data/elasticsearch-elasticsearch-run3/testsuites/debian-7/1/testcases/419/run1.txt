@@ -1,0 +1,198 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 419
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[openjdk-7-jre])
+  2. (success) exec(File[sources.list])
+  3. (success) exec(File[sources.list.d])
+  4. (success) exec(File[01proxy])
+  5. (success) exec(File[old-proxy-file])
+  6. (success) exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+  7. (success) exec(File[elasticsearch.list])
+  8. (success) exec(Exec[apt_update])
+  9. (success) exec(Package[elasticsearch])
+  10. (success) exec(File[/usr/share/elasticsearch])
+  11. (success) exec(File[/usr/share/elasticsearch/plugins])
+  12. (success) exec(File[/etc/init.d/elasticsearch])
+  13. (success) assert(File[/usr/share/elasticsearch/plugins])
+
+=====================================================================
+1. exec(Package[openjdk-7-jre])
+=====================================================================
+
+Step result:    success
+Execution time: 68.513340431 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Prerequisites/Package[openjdk-7-jre]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[sources.list])
+=====================================================================
+
+Step result:    success
+Execution time: 0.399979838 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[sources.list.d])
+=====================================================================
+
+Step result:    success
+Execution time: 0.397290685 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[01proxy])
+=====================================================================
+
+Step result:    success
+Execution time: 0.404793041 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(File[old-proxy-file])
+=====================================================================
+
+Step result:    success
+Execution time: 0.389458206 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.576994221 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/Apt::Key[Add key: D88E42B4 from Apt::Source elasticsearch]/Apt_key[Add key: D88E42B4 from Apt::Source elasticsearch]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[elasticsearch.list])
+=====================================================================
+
+Step result:    success
+Execution time: 5.668245618 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Repo/Apt::Source[elasticsearch]/File[elasticsearch.list]/ensure: created
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:1 http://packages.elasticsearch.org stable Release.gpg [473 B]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:2 http://packages.elasticsearch.org stable Release [3316 B]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Err http://debian.mur.at wheezy Release.gpg
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Err http://debian.mur.at wheezy-updates Release.gpg
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Ign http://debian.mur.at wheezy Release
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Ign http://debian.mur.at wheezy-updates Release
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Err http://debian.mur.at wheezy/main amd64 Packages
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Err http://debian.mur.at wheezy-updates/main amd64 Packages
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns:   Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:3 http://packages.elasticsearch.org stable/main amd64 Packages [2318 B]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:4 http://security.debian.org wheezy/updates Release.gpg [1554 B]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:5 http://security.debian.org wheezy/updates Release [102 kB]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Get:6 http://security.debian.org wheezy/updates/main amd64 Packages [404 kB]
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: Fetched 514 kB in 5s (99.6 kB/s)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: W: Failed to fetch http://debian.mur.at/debian/dists/wheezy/Release.gpg  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: 
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: W: Failed to fetch http://debian.mur.at/debian/dists/wheezy-updates/Release.gpg  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: 
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: W: Failed to fetch http://debian.mur.at/debian/dists/wheezy/main/binary-amd64/Packages  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: 
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: W: Failed to fetch http://debian.mur.at/debian/dists/wheezy-updates/main/binary-amd64/Packages  Cannot initiate the connection to debian.mur.at:80 (2a02:3e0::14:80). - connect (101: Network is unreachable)
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: 
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]/returns: E: Some index files failed to download. They have been ignored, or old ones used instead.
+Error: /Stage[main]/Apt::Update/Exec[apt_update]: Failed to call refresh: /usr/bin/apt-get update returned 100 instead of one of [0]
+Error: /Stage[main]/Apt::Update/Exec[apt_update]: /usr/bin/apt-get update returned 100 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Exec[apt_update])
+=====================================================================
+
+Step result:    success
+Execution time: 0.415286629 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Package[elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 4.189249921 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Package/Package[elasticsearch]/ensure: ensure changed 'purged' to '1.4.2'
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/usr/share/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.510360388 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/owner: owner changed 'root' to 'elasticsearch'
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch]/group: group changed 'root' to 'elasticsearch'
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 0.503629111 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/usr/share/elasticsearch/plugins]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/etc/init.d/elasticsearch])
+=====================================================================
+
+Step result:    success
+Execution time: 0.551759212 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Elasticsearch::Config/File[/etc/init.d/elasticsearch]/ensure: removed
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. assert(File[/usr/share/elasticsearch/plugins])
+=====================================================================
+
+Step result:    success
+Execution time: 28.052701067 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

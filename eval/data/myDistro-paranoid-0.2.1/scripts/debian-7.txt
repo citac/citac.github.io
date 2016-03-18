@@ -1,0 +1,16 @@
+# https://forge.puppetlabs.com/myDistro/paranoid
+
+package {'sudo': }
+->
+user{'browser':}
+->
+user{'my_name':}
+->
+class { 'paranoid': } 
+->
+paranoid::user { 'browsing': 
+    master   => 'my_name' ,
+    puppet   => 'browser',
+    binaries => ['/usr/bin/firefox',
+                 '/usr/bin/thunderbird'],
+}

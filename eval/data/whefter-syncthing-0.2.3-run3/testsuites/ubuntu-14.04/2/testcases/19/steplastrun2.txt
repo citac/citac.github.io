@@ -1,0 +1,32 @@
+Error: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+Error: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+Wrapped exception:
+Connection timed out - connect(2) for "syncthing.net" port 443
+Error: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Apt_key[00654A3E]/ensure: change from absent to present failed: Could not set 'present' on ensure: Connection timed out - connect(2) for "syncthing.net" port 443 at 95:/tmp/citac/modules/apt/manifests/key.pp
+ERROR 06:33:26.490 [citac-puppet]: Failed to apply 'Apt_key[00654A3E]'.
+Notice: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Anchor[apt_key 00654A3E present]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Key[00654A3E]/Anchor[apt_key 00654A3E present]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/File[syncthing.list]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt::Update/Exec[apt_update]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Apt::Update/Exec[apt_update]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/Anchor[apt::source::syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Install/Apt::Source[syncthing]/Anchor[apt::source::syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Apt/Anchor[apt::update]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Apt/Anchor[apt::update]: Skipping because of failed dependencies
+Notice: /Package[syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Package[syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Exec[create syncthing instance example home]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/Augeas[syncthing example basic config]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing/Syncthing::Instance[example]/File[/etc/syncthing/example.conf]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/default/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/File[/etc/init.d/syncthing]: Skipping because of failed dependencies
+Notice: /Stage[main]/Syncthing::Service/Service[syncthing]: Dependency Apt_key[00654A3E] has failures: true
+Warning: /Stage[main]/Syncthing::Service/Service[syncthing]: Skipping because of failed dependencies

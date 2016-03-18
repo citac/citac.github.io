@@ -1,0 +1,62 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 2
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[nscd])
+  2. (success) exec(Package[nscd])
+  3. (success) exec(File[nscd_config])
+  4. (success) assert(Package[nscd])
+
+=====================================================================
+1. exec(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 5.048492951 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/Package[nscd]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 0.154946023 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[nscd_config])
+=====================================================================
+
+Step result:    success
+Execution time: 0.301375705 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Nscd/File[nscd_config]/content: content changed '{md5}67f4a346d27ce75415e337f069715215' to '{md5}99d8530b2eeeab57e2c1ea5fc01a5b73'
+Notice: /Stage[main]/Nscd/Service[nscd_service]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. assert(Package[nscd])
+=====================================================================
+
+Step result:    success
+Execution time: 2.639006848 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

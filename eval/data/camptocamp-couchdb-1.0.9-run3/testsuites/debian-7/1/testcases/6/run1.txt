@@ -1,0 +1,53 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 6
+Result:    FAILURE
+
+Steps:
+  1. (success) exec(Package[couchdb])
+  2. (success) exec(Service[couchdb])
+  3. (failure) assert(Service[couchdb])
+
+=====================================================================
+1. exec(Package[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 11.891186333 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Package[couchdb]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Service[couchdb])
+=====================================================================
+
+Step result:    success
+Execution time: 0.56798494 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. assert(Service[couchdb])
+=====================================================================
+
+Step result:    failure
+Execution time: 12.237616885 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Couchdb::Base/Service[couchdb]/enable: enable changed 'false' to 'true'
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+4 changes:
+  state/added: ports.listening[0]: '{:protocol=>"tcp", :port=>5984}'
+  state/removed: processes.running[7]: '{:pid=>665, :name=>"child_setup", :uid=>101, :cmd=>"/usr/lib/erlang/erts-5.9.1/bin/child_setup false . exec heart -pid 599 -ht 11 3:524287 7:1 8:0 -"}'
+  state/added: processes.running[6]: '{:pid=>665, :name=>"heart", :uid=>101, :cmd=>"heart -pid 599 -ht 11"}'
+  state/added: processes.running[7]: '{:pid=>681, :name=>"sh", :uid=>101, :cmd=>"sh -s disksup"}'
+##########  CHANGE SUMMARY END  ##########
+

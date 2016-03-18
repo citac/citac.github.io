@@ -1,0 +1,150 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 9
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(Package[exim4])
+  2. (success) exec(File[mailname])
+  3. (success) exec(File[update-exim4.conf.conf])
+  4. (success) exec(File[passwd.client])
+  5. (success) exec(Package[sasl2-bin])
+  6. (success) assert(File[mailname])
+  7. (success) assert(File[passwd.client])
+  8. (success) assert(File[update-exim4.conf.conf])
+  9. (success) assert(Package[exim4])
+  10. (success) assert(Package[sasl2-bin])
+
+=====================================================================
+1. exec(Package[exim4])
+=====================================================================
+
+Step result:    success
+Execution time: 6.193916473 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Exim_debian/Package[exim4]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(File[mailname])
+=====================================================================
+
+Step result:    success
+Execution time: 0.179465268 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Exim_debian/File[mailname]/content: content changed '{md5}ab38e5f42b9f2fdd28cd2af586339211' to '{md5}89d2c09285f63cbd16df833ee94e19ef'
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[update-exim4.conf.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 0.188326344 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Exim_debian/File[update-exim4.conf.conf]/content: content changed '{md5}ecf76e5f76daa267e3169a59a4333d11' to '{md5}d7bb246cb4ddad4a92a14a031dcc5841'
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(File[passwd.client])
+=====================================================================
+
+Step result:    success
+Execution time: 0.219851007 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill::Config::Exim_debian/File[passwd.client]/content: content changed '{md5}4b0013712a87d147c8303fa761e3c771' to '{md5}2d98c63efee55929c833b2ce29c1558d'
+Notice: /Stage[main]/Mandrill::Config::Exim_debian/Service[exim4]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Package[sasl2-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 2.826456907 seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Mandrill/Package[sasl2-bin]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. assert(File[mailname])
+=====================================================================
+
+Step result:    success
+Execution time: 2.5417777 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+7. assert(File[passwd.client])
+=====================================================================
+
+Step result:    success
+Execution time: 1.911350434 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+8. assert(File[update-exim4.conf.conf])
+=====================================================================
+
+Step result:    success
+Execution time: 1.954176736 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+9. assert(Package[exim4])
+=====================================================================
+
+Step result:    success
+Execution time: 1.986037183 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+
+=====================================================================
+10. assert(Package[sasl2-bin])
+=====================================================================
+
+Step result:    success
+Execution time: 2.195996126 seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

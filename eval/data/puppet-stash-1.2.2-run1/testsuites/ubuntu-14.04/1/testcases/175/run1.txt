@@ -1,0 +1,294 @@
+=====================================================================
+Test Case Result - Overview
+=====================================================================
+
+Test Case: Test Case 175
+Result:    SUCCESS
+
+Steps:
+  1. (success) exec(File[/opt/staging])
+  2. (success) exec(Group[stash])
+  3. (success) exec(File[/opt/staging/stash])
+  4. (success) exec(User[stash])
+  5. (success) exec(Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz])
+  6. (success) exec(File[/opt/stash])
+  7. (success) exec(File[/opt/stash/atlassian-stash-3.7.0])
+  8. (success) exec(Package[git])
+  9. (success) exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+  10. (success) exec(File[/home/stash])
+  11. (success) exec(Exec[chown_/opt/stash/atlassian-stash-3.7.0])
+  12. (success) exec(File[/home/stash/shared/])
+  13. (success) exec(File[/opt/stash/atlassian-stash-3.7.0/bin/setenv.sh])
+  14. (success) exec(File[/opt/stash/atlassian-stash-3.7.0/bin/user.sh])
+  15. (success) exec(File[/opt/stash/atlassian-stash-3.7.0/conf/server.xml])
+  16. (success) exec(File[/home/stash/shared/stash-config.properties])
+  17. (success) exec(File[/etc/init.d/stash])
+  18. (success) exec(Service[stash])
+  19. (success) exec(File[/opt/stash-backup])
+  20. (success) exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+  21. (success) exec(File[/opt/stash-backup/archives])
+  22. (success) assert(Exec[extract atlassian-stash-3.7.0.tar.gz])
+
+=====================================================================
+1. exec(File[/opt/staging])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Staging/File[/opt/staging]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+2. exec(Group[stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Group[stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+3. exec(File[/opt/staging/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::File[atlassian-stash-3.7.0.tar.gz]/File[/opt/staging/stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+4. exec(User[stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/User[stash]/ensure: created
+Notice: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]/returns: /bin/chown: cannot access '/opt/stash/atlassian-stash-3.7.0': No such file or directory
+Error: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: Failed to call refresh: /bin/chown -R stash:stash /opt/stash/atlassian-stash-3.7.0 returned 1 instead of one of [0]
+Error: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: /bin/chown -R stash:stash /opt/stash/atlassian-stash-3.7.0 returned 1 instead of one of [0]
+##############  OUTPUT END  ##############
+
+=====================================================================
+5. exec(Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::File[atlassian-stash-3.7.0.tar.gz]/Exec[/opt/staging/stash/atlassian-stash-3.7.0.tar.gz]/returns: executed successfully
+##############  OUTPUT END  ##############
+
+=====================================================================
+6. exec(File[/opt/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/File[/opt/stash]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+7. exec(File[/opt/stash/atlassian-stash-3.7.0])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/File[/opt/stash/atlassian-stash-3.7.0]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+8. exec(Package[git])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Package[git]/ensure: ensure changed 'purged' to 'present'
+##############  OUTPUT END  ##############
+
+=====================================================================
+9. exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Install/Staging::Extract[atlassian-stash-3.7.0.tar.gz]/Exec[extract atlassian-stash-3.7.0.tar.gz]/returns: executed successfully
+Notice: /Stage[main]/Stash::Install/Exec[chown_/opt/stash/atlassian-stash-3.7.0]: Triggered 'refresh' from 1 events
+##############  OUTPUT END  ##############
+
+=====================================================================
+10. exec(File[/home/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+11. exec(Exec[chown_/opt/stash/atlassian-stash-3.7.0])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+12. exec(File[/home/stash/shared/])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Config/File[/home/stash/shared/]/ensure: created
+Error: /Stage[main]/Stash::Service/Service[stash]: Failed to call refresh: Could not find init script or upstart conf file for 'stash'
+Error: /Stage[main]/Stash::Service/Service[stash]: Could not find init script or upstart conf file for 'stash'
+##############  OUTPUT END  ##############
+
+=====================================================================
+13. exec(File[/opt/stash/atlassian-stash-3.7.0/bin/setenv.sh])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/bin/setenv.sh]/content: content changed '{md5}8aca98f117ce5779ddd4458786c09d39' to '{md5}d81a8902aa8aa103ddb424ecda1493b9'
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/bin/setenv.sh]/mode: mode changed '0755' to '0750'
+Error: /Stage[main]/Stash::Service/Service[stash]: Failed to call refresh: Could not find init script or upstart conf file for 'stash'
+Error: /Stage[main]/Stash::Service/Service[stash]: Could not find init script or upstart conf file for 'stash'
+##############  OUTPUT END  ##############
+
+=====================================================================
+14. exec(File[/opt/stash/atlassian-stash-3.7.0/bin/user.sh])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/bin/user.sh]/content: content changed '{md5}5d75bb90da07bf838a1eabe8d156fca7' to '{md5}75fb99f5353df9ae2552a156e030869d'
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/bin/user.sh]/mode: mode changed '0755' to '0750'
+Error: /Stage[main]/Stash::Service/Service[stash]: Failed to call refresh: Could not find init script or upstart conf file for 'stash'
+Error: /Stage[main]/Stash::Service/Service[stash]: Could not find init script or upstart conf file for 'stash'
+##############  OUTPUT END  ##############
+
+=====================================================================
+15. exec(File[/opt/stash/atlassian-stash-3.7.0/conf/server.xml])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/conf/server.xml]/content: content changed '{md5}f782572cc26b8133ab17f25afea8eb95' to '{md5}664a61564794bf68e160d5d2c59cd3f6'
+Notice: /Stage[main]/Stash::Config/File[/opt/stash/atlassian-stash-3.7.0/conf/server.xml]/mode: mode changed '0644' to '0640'
+Error: /Stage[main]/Stash::Service/Service[stash]: Failed to call refresh: Could not find init script or upstart conf file for 'stash'
+Error: /Stage[main]/Stash::Service/Service[stash]: Could not find init script or upstart conf file for 'stash'
+##############  OUTPUT END  ##############
+
+=====================================================================
+16. exec(File[/home/stash/shared/stash-config.properties])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Config/File[/home/stash/shared/stash-config.properties]/ensure: defined content as '{md5}a348e518f897fdc1cdda85d1519ee661'
+Error: /Stage[main]/Stash::Service/Service[stash]: Failed to call refresh: Could not find init script or upstart conf file for 'stash'
+Error: /Stage[main]/Stash::Service/Service[stash]: Could not find init script or upstart conf file for 'stash'
+##############  OUTPUT END  ##############
+
+=====================================================================
+17. exec(File[/etc/init.d/stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Service/File[/etc/init.d/stash]/ensure: defined content as '{md5}435c5b2150ac1bda65ca594d93631e58'
+##############  OUTPUT END  ##############
+
+=====================================================================
+18. exec(Service[stash])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Service/Service[stash]/ensure: ensure changed 'stopped' to 'running'
+##############  OUTPUT END  ##############
+
+=====================================================================
+19. exec(File[/opt/stash-backup])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Backup/File[/opt/stash-backup]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+20. exec(Exec[extract atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+=====================================================================
+21. exec(File[/opt/stash-backup/archives])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+Notice: /Stage[main]/Stash::Backup/File[/opt/stash-backup/archives]/ensure: created
+##############  OUTPUT END  ##############
+
+=====================================================================
+22. assert(Exec[extract atlassian-stash-3.7.0.tar.gz])
+=====================================================================
+
+Step result:    success
+Execution time:  seconds
+
+############## OUTPUT START ##############
+
+##############  OUTPUT END  ##############
+
+########## CHANGE SUMMARY START ##########
+No changes.
+##########  CHANGE SUMMARY END  ##########
+

@@ -1,0 +1,20 @@
+# https://forge.puppetlabs.com/whefter/syncthing
+
+class { '::syncthing':
+  instances => {
+    'example' => {
+      home_path   => '/home/synctester/example_instance',
+      daemon_uid  => 'root',
+      daemon_gid  => 'root',
+
+      gui_tls     => true,
+      gui_address => '0.0.0.0',
+      gui_port    => '8888',
+
+      options     => {
+        'listenAddress' => '0.0.0.0:19000',
+        'startBrowser'  => 'false',
+      },
+    }
+  }
+}

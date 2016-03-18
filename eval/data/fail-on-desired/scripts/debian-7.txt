@@ -1,0 +1,12 @@
+exec { 'create source file':
+    command => 'touch /tmp/source',
+    creates => '/tmp/source',
+    unless  => 'test -e /tmp/target',
+    path    => '/bin:/usr/bin'
+}
+
+exec { 'move file':
+    command => 'mv /tmp/source /tmp/target',
+    path    => '/bin:/usr/bin',
+    require => Exec['create source file']
+}
