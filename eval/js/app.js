@@ -311,6 +311,7 @@ var app = angular.module("citac.eval", [
 ]);
 app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
         cfpLoadingBarProvider.includeSpinner = false;
+        cfpLoadingBarProvider.latencyThreshold = 500;
     }]);
 /// <reference path="typings/typings.d.ts"/>
 /// <reference path="app.ts"/>
