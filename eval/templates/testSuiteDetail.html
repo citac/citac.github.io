@@ -1,0 +1,113 @@
+﻿<ui-view>
+    <div class="pull-right">
+        <button ui-sref="specs.detail.testsuite({specId: specDetailController.spec.id, os: specDetailController.operatingSystem, suiteId: testSuiteDetailController.previousTestSuiteId})"
+                class="btn btn-primary btn-me" ng-disabled="!testSuiteDetailController.previousTestSuiteId" >
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </button>
+        <button ui-sref="specs.detail.testsuite({specId: specDetailController.spec.id, os: specDetailController.operatingSystem, suiteId: testSuiteDetailController.nextTestSuiteId})"
+                class="btn btn-primary btn-me" ng-disabled="!testSuiteDetailController.nextTestSuiteId">
+            <span class="glyphicon glyphicon-arrow-right"></span>
+        </button>
+    </div>
+
+    <h1>
+        <span>Test Suite #{{testSuiteDetailController.testSuite.id}}</span>
+        <small>{{specDetailController.spec.id}} ({{specDetailController.operatingSystem}})</small>
+    </h1>
+
+    <form class="form-horizontal form-compact">
+        <div class="row">
+            <div class="col-sm-6">
+                <fieldset>
+                    <legend>General</legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Description</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.description"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Status</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.status"></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-sm-6">
+                <fieldset>
+                    <legend>Execution Statistics</legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Failing Test Cases</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.failingTestCases"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Failing Execs</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.failingExecs"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Failing Asserts</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.failingAsserts"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Total Executed Steps</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static" ng-bind="testSuiteDetailController.testSuite.totalExecutedSteps | number:0"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Total Execution Time</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static">{{testSuiteDetailController.testSuite.totalExecutionTime | number:2}} s</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Test Cases ({{testSuiteDetailController.testSuite.testCases.length || 0}})</legend>
+
+            <table class="table table-condensed table-hover table-selectable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Overall Status</th>
+                        <th>Steps (execs / asserts)</th>
+                        <th>Failing steps (execs / asserts)</th>
+                        <th>Runs</th>
+                        <th>Total Executed Steps</th>
+                        <th>Total Execution Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="testCase in testSuiteDetailController.testSuite.testCases"
+                        ng-click="testSuiteDetailController.stateService.go('.testcase', {caseId: testCase.id})">
+                        <td>
+                            <a ui-sref=".testcase({caseId: testCase.id})">#{{testCase.id}}</a>
+                        </td>
+                        <td ng-bind="testCase.status" ng-class="{'success': testCase.status === 'success', 'danger': testCase.status === 'failure'}"></td>
+                        <td>{{testCase.execs + testCase.asserts}} ({{testCase.execs}} / {{testCase.asserts}})</td>
+                        <td>{{testCase.failingExecs + testCase.failingAsserts}} ({{testCase.failingExecs}} / {{testCase.failingAsserts}})</td>
+                        <td ng-bind="testCase.executionCount | number:0" class="text-right"></td>
+                        <td ng-bind="testCase.totalExecutedSteps | number:0" class="text-right"></td>
+                        <td class="text-right">{{testCase.totalExecutionTime | number:2}} s</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</ui-view>

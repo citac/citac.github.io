@@ -1,0 +1,162 @@
+﻿<ui-view>
+    <div class="pull-right">
+        <button ui-sref="^.testcase({caseId: testCaseDetailController.previousTestCaseId})"
+                class="btn btn-primary btn-me" ng-disabled="!testCaseDetailController.previousTestCaseId">
+            <span class="glyphicon glyphicon-arrow-left media-middle"></span>
+        </button>
+        <button ui-sref="^.testcase({caseId: testCaseDetailController.nextTestCaseId})"
+                class="btn btn-primary btn-me" ng-disabled="!testCaseDetailController.nextTestCaseId">
+            <span class="glyphicon glyphicon-arrow-right media-middle"></span>
+        </button>
+    </div>
+
+    <h1>
+        <span>Test Case #{{testCaseDetailController.testCase.id}}</span>
+        <small>Test Suite #{{testSuiteDetailController.testSuite.id}}</small>
+    </h1>
+
+    <form class="form-horizontal form-compact">
+        <div class="row">
+            <div class="col-sm-6">
+                <fieldset>
+                    <legend>General</legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Status</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static" ng-bind="testCaseDetailController.testCase.status"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Total Executed Steps</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static" ng-bind="testCaseDetailController.testCase.totalExecutedSteps | number:0"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Total Execution Time</label>
+                        <div class="col-sm-8">
+                            <p class="form-control-static">{{testCaseDetailController.testCase.totalExecutionTime | number:2}} s</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-sm-6">
+                <fieldset>
+                    <legend>Runs ({{testCaseDetailController.testCase.runs.length || 0}})</legend>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Result</th>
+                                        <th>Executed Steps</th>
+                                        <th>Execution Time</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="run in testCaseDetailController.testCase.runs">
+                                        <td>#{{run.id}}</td>
+                                        <td ng-bind="run.result" ng-class="{'success': run.result === 'success', 'danger': run.result === 'failure'}"></td>
+                                        <td class="text-right" ng-bind="run.executedSteps | number:0"></td>
+                                        <td class="text-right">{{run.executionTime | number:2}} s</td>
+                                        <td class="text-right">
+                                            <a ui-sref=".runoutput({runId: run.id})">View Output</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <fieldset>
+                    <legend>Steps ({{testCaseDetailController.testCase.testSteps.length || 0}})</legend>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <table class="table table-condensed table-hover table-selectable">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Type</th>
+                                        <th>Resource</th>
+                                        <th>Overall Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="testStep in testCaseDetailController.testCase.testSteps"
+                                    ng-click="testCaseDetailController.selectedStep = testStep">
+                                        <td>
+                                            <input type="radio" name="testStep"
+                                                   ng-model="testCaseDetailController.selectedStep"
+                                                   ng-value="testStep">
+                                        </td>
+                                        <td ng-bind="testStep.type"></td>
+                                        <td ng-bind="testStep.resource" class="technical"></td>
+                                        <td ng-bind="testStep.status" ng-class="{'success': testStep.status === 'success', 'danger': testStep.status === 'failure'}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-sm-6">
+                <fieldset ng-if="testCaseDetailController.selectedStep">
+                    <legend>
+                        <span>Step Details</span>
+                        <small>{{testCaseDetailController.selectedStep.type}}({{testCaseDetailController.selectedStep.resource}})</small>
+                    </legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Output of last run</label>
+                        <div class="col-xs-8"></div>
+                        <div class="col-xs-offset-2 col-xs-10">
+                            <pre ng-bind="testCaseDetailController.selectedStepLastRunOutput | trim"></pre>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="testCaseDetailController.selectedStepAttestedProperty">
+                        <label class="control-label col-xs-4">Attested Property</label>
+                        <div class="col-xs-8">
+                            <p class="form-control-static" ng-if="testCaseDetailController.selectedStepAttestedProperty.type === 'idempotence'">
+                                Idempotence of <span class="technical" ng-bind="testCaseDetailController.selectedStepAttestedProperty.resources[0]"></span>
+                            </p>
+                            <p class="form-control-static" ng-if="testCaseDetailController.selectedStepAttestedProperty.type === 'preservation'">
+                                Preservation of <span class="technical" ng-bind="testCaseDetailController.selectedStepAttestedProperty.resources[1]"></span> by <span class="technical" ng-bind="testCaseDetailController.selectedStepAttestedProperty.resources[0]"></span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="testCaseDetailController.selectedStepAttestedProperty.type === 'preservation' && testCaseDetailController.selectedResourceIdempotenceIssue">
+                        <div class="col-xs-offset-4 col-xs-8">
+                            <div class="alert alert-warning">
+                                <p>
+                                    <strong>Warning!</strong> The resource <span class="technical" ng-bind="testCaseDetailController.selectedStep.resource"></span>
+                                    is not idempotent. It is therefore highly likely that this preservation test case is a <em>false positive</em>.
+                                </p>
+                                <p>Certificates for Idempotence Issue:</p>
+                                <ul>
+                                    <li ng-repeat="stepReference in testCaseDetailController.selectedResourceIdempotenceIssue.detectedBy">
+                                        <a ui-sref="^.^.testsuite.testcase({suiteId: stepReference.testSuiteId, caseId: stepReference.testCaseId, stepIndex: stepReference.testStepIndex})">
+                                            Test Suite {{stepReference.testSuiteId}} / Test Case {{stepReference.testCaseId}} / Step #{{stepReference.testStepIndex}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</ui-view>

@@ -1,0 +1,155 @@
+﻿<ui-view>
+    <h1>{{specDetailController.spec.id}} ({{specDetailController.operatingSystem}})</h1>
+    <form class="form-horizontal form-compact">
+        <div class="row">
+            <div class="col-sm-4">
+                <fieldset>
+                    <legend>General</legend>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Status</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static">Issues Detected</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Resource Count</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static" ng-bind="specDetailController.spec.resourceCounts[specDetailController.operatingSystem]"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-6">Operating Systems</label>
+                        <div class="col-sm-6">
+                            <ul class="form-control-static list-unstyled">
+                                <li ng-repeat="operatingSystem in specDetailController.spec.operatingSystems">
+                                    <a ui-sref="specs.detail({specId: specDetailController.spec.id, os: operatingSystem})" ng-bind="operatingSystem"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-sm-4">
+                <fieldset>
+                    <legend>Dependency Graph</legend>
+
+                    <div class="form-group">
+                        <div class="col-sm-12 gallery">
+                            <a ng-click="specDetailController.openDependencyGraphModal()">
+                                <img ng-src="{{specDetailController.dependencyGraphUrl}}" alt="Dependency Graph" class="img-thumbnail dependency-graph">
+                            </a>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-sm-4">
+                <fieldset>
+                    <legend>Script</legend>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <pre ng-bind="specDetailController.script"></pre>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Detected Issues ({{specDetailController.spec.detectedIssues[specDetailController.operatingSystem].length}})</legend>
+
+            <div class="form-group" ng-if="specDetailController.spec.detectedIssues[specDetailController.operatingSystem].length === 0">
+                <div class="col-sm-12">
+                    <p class="form-control-static">No issues detected!</p>
+                </div>
+            </div>
+
+            <div class="form-group" ng-if="specDetailController.spec.detectedIssues[specDetailController.operatingSystem].length > 0">
+                <div class="col-sm-4">
+                    <table class="table table-condensed table-hover table-selectable table-borderless">
+                        <tbody>
+                            <tr ng-repeat="issue in specDetailController.spec.detectedIssues[specDetailController.operatingSystem]"
+                                ng-click="specDetailController.selectedIssue = issue"
+                                ng-class="{'active': specDetailController.selectedIssue === issue}">
+                                <td>
+                                    <input type="radio" name="detectedIssue" ng-model="specDetailController.selectedIssue" ng-value="issue">
+                                </td>
+                                <td ng-if="issue.type === 'idempotence'">
+                                    <span class="technical" ng-bind="issue.resources[0]"></span> is not idempotent
+                                </td>
+                                <td ng-if="issue.type === 'preservation'">
+                                    <span class="technical" ng-bind="issue.resources[0]"></span> does not preserve <span class="technical" ng-bind="issue.resources[1]"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-8" ng-if="specDetailController.selectedIssue">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Detected by</label>
+                        <div class="col-sm-9">
+                            <ul class="form-control-static list-unstyled">
+                                <li ng-repeat="stepReference in specDetailController.selectedIssue.detectedBy">
+                                    <a ui-sref=".testsuite.testcase({suiteId: stepReference.testSuiteId, caseId: stepReference.testCaseId, stepIndex: stepReference.testStepIndex})">
+                                        Test Suite {{stepReference.testSuiteId}} / Test Case {{stepReference.testCaseId}} / Step #{{stepReference.testStepIndex}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Details</label>
+                        <div class="col-sm-9">
+                            <pre ng-bind="specDetailController.selectedIssueLastRunDetails | trim"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Test Suites ({{specDetailController.testSuites.length}})</legend>
+
+            <table class="table table-condensed table-hover table-selectable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Test Cases</th>
+                        <th>Steps (execs / asserts)</th>
+                        <th>Failing Test Cases</th>
+                        <th>Failing execs / asserts</th>
+                        <th>Total Executed Steps</th>
+                        <th>Total Execution Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="testSuite in specDetailController.testSuites"
+                        ng-click="specDetailController.stateService.go('.testsuite', {suiteId: testSuite.id})"
+                        ng-class="{'active': specDetailController.selectedTestSuite === testSuite}">
+                        <td>
+                            <a ui-sref=".testsuite({suiteId: testSuite.id})">#{{testSuite.id}}</a>
+                        </td>
+                        <td ng-bind="testSuite.type"></td>
+                        <td class="text-right" ng-bind="testSuite.testCases"></td>
+                        <td class="text-right">
+                            {{testSuite.execs + testSuite.asserts}} ({{testSuite.execs}} / {{testSuite.asserts}})
+                        </td>
+                        <td class="text-right" ng-bind="testSuite.failingTestCases"
+                            ng-class="testSuite.failingTestCases === 0 ? 'success': 'danger'"></td>
+                        <td class="text-right">
+                            <span ng-bind="testSuite.failingExecs"></span>
+                            <span>/</span>
+                            <span ng-bind="testSuite.failingAsserts"></span>
+                        </td>
+                        <td class="text-right" ng-bind="testSuite.totalExecutedSteps | number:0"></td>
+                        <td class="text-right">{{testSuite.totalExecutionTime | number:2}} s</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</ui-view>

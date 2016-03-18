@@ -1,0 +1,22 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th>Nr</th>
+            <th>Configuration Specification</th>
+            <th>Operating System</th>
+            <th>Resource Count</th>
+            <th>Detected Issues</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="spec in specListController.specs">
+            <td>#{{$index + 1}}</td>
+            <td>
+                <a ui-sref="specs.detail({specId: spec.id, os: spec.operatingSystem})" ng-bind="spec.id"></a>
+            </td>
+            <td ng-bind="spec.operatingSystem"></td>
+            <td ng-bind="spec.resourceCount"></td>
+            <td ng-bind="spec.detectedIssues" ng-class="spec.detectedIssues > 0 ? 'danger' : 'success'"></td>
+        </tr>
+    </tbody>
+</table>
